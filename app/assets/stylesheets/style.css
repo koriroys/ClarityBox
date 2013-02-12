@@ -1,0 +1,85 @@
+body {
+	font-family: 'Nunito', sans-serif;
+	color: #FFFFFF;
+	background: #f87459;
+}
+
+a {
+	text-decoration: none;
+}
+
+.logo {
+	text-align: center;
+	margin-top: 150px;
+	margin-bottom: 80px;
+}
+
+.coming-soon{
+	text-align: center;
+}
+
+
+
+p {
+	font-size: 1em;
+}
+
+/*.signup {
+	margin-top: 520px;	
+
+}
+
+#learn {
+	float: left;
+	margin-left: 10px;
+	margin-top:30px;
+}
+
+#email {
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+}*/
+
+.email {
+	width: ;
+	display: inline;
+}
+
+.signup-button {
+	color:#FFFFFF;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: #c73c20;
+	border: none;
+	padding: 15px 15px;
+	border-radius: 5px;
+	margin-left: 5px;
+}
+
+.signup-button:hover {
+	background-color: #b5371e;
+}
+
+.signup {
+	text-align: center;
+	width: 400px;
+	margin: 100px auto;
+}
+
+.clear {
+	width: 200px;
+	display: inline;
+}
+
+.signup-email{
+	width: 220px;
+}
+
+.signup input {
+	padding: 19px;
+	border-radius: 5px;
+	border: none;
+
+}
+
