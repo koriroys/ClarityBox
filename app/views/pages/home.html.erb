@@ -1,27 +1,41 @@
-<link rel="stylesheet" href="normalize.css" type="text/css" media="screen">
-<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<body>
 
-<div class="container">
-	<div class="logo">
-		<%= link_to image_tag("logo.png") %>
-	</div>
+<div class="container ">
 
-	<div class="coming-soon">
-		<%= link_to image_tag("coming-soon.png") %>
-	</div>
+	<!--Homepage Main Section-->
+
+	<header class = "primary-logo group">
+
+		<h1>ClarityBox</h1>
+		<h2><i>See your company clearly.</i></h2>
+
+	</header>
+
+	<!--Coming Soon-->
+
+	<section class = "coming-soon group">
+
+		<h3>Coming soon</h3>
 
 
-	<!-- Begin MailChimp Signup Form -->
+		<!-- MailChimp Signup Form -->
 
-	<div class="signup" id="mc_embed_signup">
-		<form action="http://claritybox.us6.list-manage1.com/subscribe/post?u=bcd48aa0ef9e765c906723b20&amp;id=924b81bc7e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-			<input type="email" value="" name="EMAIL" class="signup-email" id="mce-EMAIL" placeholder="email@example.com" required>
+			<div class="signup group" id="mc_embed_signup">
+				
+				<form action="http://claritybox.us6.list-manage1.com/subscribe/post?u=bcd48aa0ef9e765c906723b20&amp;id=924b81bc7e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
-				<input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="signup-button">
-	
-		</form>	
-	</div>
+					<input type="email" value="" name="EMAIL" class="signup-email" id="mce-EMAIL" placeholder="email@example.com" required>
 
-	<!--End mc_embed_signup-->
+			<!--Signup Button-->
+
+					<input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="signup-button">
+			
+				</form>	
+
+			</div>
+
+	</section>	
 
 </div>
+
+</body>

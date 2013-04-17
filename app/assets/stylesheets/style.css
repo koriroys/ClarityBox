@@ -1,85 +1,298 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-	font-family: 'Nunito', sans-serif;
-	color: #FFFFFF;
-	background: #f87459;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-a {
-	text-decoration: none;
+
+/* 
+	Resetting Defaults 
+*/
+
+
+b, strong {
+  font-weight: bold;
+}
+i, em {
+  font-style: italic;
 }
 
-.logo {
+
+
+
+
+
+/*
+	Grid
+*/
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+
+/*
+  Clearfix
+*/
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+
+
+
+/* 
+	Custom Styles
+*/
+
+
+body {
+	background: #FFF;
+	font-family: 'Georgia', Arial, Helvetica, sans-serif;
+	color: #555;
+}
+
+
+
+/* 
+	Links 
+*/
+
+
+a:link {
+	text-decoration:none;
+	color: #F37359;
+}
+
+
+a:visited {
+	text-decoration:none;
+	color: #D6D5D4;
+}
+
+a:hover {
+	text-decoration:none;
+	color: #FFAD14;
+
+}
+
+a:active {
+	text-decoration:none;
+}
+
+
+/* 
+	Typography 
+*/
+
+h1{
+	font-size: 70px;
+}
+
+h2{
+	font-size: 26px;
+}
+
+h3{
+	font-size: 40px;
+
+}
+
+h4{
+	font-size: 30px;
+}
+
+
+p {
+	line-height: 190%;
+	font-size: 20px;
+	margin: 35px 0;
+}
+
+/* 
+	Homepage 
+*/
+
+.primary-logo{
 	text-align: center;
-	margin-top: 150px;
-	margin-bottom: 80px;
+	margin: 180px auto 0;
+	width: 400px;
+	
+}
+
+.primary-logo h2{
+	padding: 15px;
 }
 
 .coming-soon{
 	text-align: center;
+	text-transform: uppercase;
+	color: #C9C9C9;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.signup{
+	margin: 40px auto;
+	text-align: center;
 }
 
 
-
-p {
-	font-size: 1em;
-}
-
-/*.signup {
-	margin-top: 520px;	
-
-}
-
-#learn {
-	float: left;
-	margin-left: 10px;
-	margin-top:30px;
-}
-
-#email {
-	float: left;
-	margin-left: 20px;
-	margin-top: 10px;
-}*/
-
-.email {
-	width: ;
-	display: inline;
+.signup-email{
+	width: 300px;
+	height: 33px;
+	font-size: 20px;
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+	background-color: #E8E8E8;
+	font-family: 'Georgia', Arial, Helvetica, sans-serif;
 }
 
 .signup-button {
-	color:#FFFFFF;
-	font-weight: bold;
+	color: #fff;
+	font-size: 25px;
 	text-transform: uppercase;
-	background: #c73c20;
-	border: none;
-	padding: 15px 15px;
+	background: #F37359;
+	padding: 20px 23px 22px;
 	border-radius: 5px;
-	margin-left: 5px;
+	margin-left: 10px;
+	border: none;
+	font-family: 'Georgia', Arial, Helvetica, sans-serif;
 }
 
 .signup-button:hover {
-	background-color: #b5371e;
+	background-color: #EB9381;
 }
 
-.signup {
+
+/* 
+	Navigation 
+*/
+
+.primary-nav{
+	height: 100px;
+	padding: 40px;
+	margin-top: 30px;
+}
+
+.nav-logo{
+	float: left;
+}
+
+.nav-logo h1{
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+.nav-logo h2{
+	font-size: 16px;
+}
+
+.nav-elements{
+	float: right;
+}
+
+.nav-elements li{
+	float: left;
+	width: 100px;
+	padding: 10px;
 	text-align: center;
-	width: 400px;
-	margin: 100px auto;
 }
 
-.clear {
-	width: 200px;
-	display: inline;
+/*
+	Primary Content
+*/
+
+.primary-content{
+	width: 700px;
 }
 
-.signup-email{
-	width: 220px;
+.primary-content h3{
+	text-align: center;
+	line-height: 150%;
+	width: 600px;
+	margin: 40px auto 30px;
 }
 
-.signup input {
-	padding: 19px;
-	border-radius: 5px;
-	border: none;
-
+.primary-content h4{
+	font-style: italic;
+	margin: 100px 0 40px;
 }
 
+.primary-content ul{
+	margin: 30px 0;
+}
+
+.primary-content li{
+	line-height: 140%;
+	font-size: 20px;
+	margin: 18px 0 0 65px;
+	font-style: italic;
+}
+
+.contact h3{
+	margin: 70px;
+}
+
+.bottom-links {
+	text-align: center;
+}
+
+.bottom-links li {
+	float: left;
+}
