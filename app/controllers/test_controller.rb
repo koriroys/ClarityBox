@@ -7,4 +7,5 @@ class TestController < ApplicationController
 
 	def philosophy
 	end
+	
 end
