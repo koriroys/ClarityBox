@@ -43,4 +43,11 @@ class QuestionController < ApplicationController
     redirect_to "/question/wk#{params[:week_number]}"
   end
 
+  def destroy
+    q = Question.find_by_week_number(params[:week_number])
+    q.destroy
+    redirect_to "/question"
+
+  end
+
 end

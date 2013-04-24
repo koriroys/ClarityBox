@@ -23,6 +23,9 @@ ClarityBox::Application.routes.draw do
   get '/question/wk:week_number/edit', :controller => 'Question', :action => 'edit'
   put '/question/wk:week_number', :controller => 'Question', :action => 'update'
 
+#----DELETE
+  delete '/question/wk:week_number', :controller => 'Question', :action => 'destroy'
+
 
 
 

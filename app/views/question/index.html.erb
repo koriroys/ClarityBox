@@ -6,27 +6,30 @@
   <div>
     <% @all.each do |input| %>
 
-      <h4>
-        Week #<%= input.week_number %>
-      </h4>
+        <h4>
+          Week #<%= input.week_number %>
+        </h4>
 
-      <p>
-        (<%= input.week_start %> - <%= input.week_end %>)
-      </p>
+        <p>
+          (<%= input.week_start %> - <%= input.week_end %>)
+        </p>
 
-      <p>
-        "<%= input.question %>"
-      </p>
+        <p>
+          "<%= input.question %>"
+        </p>
 
-      <p><a href="/question/wk<%= input.week_number %>">
-        View roll-up >>
-      </a>
-      </p>
+        <p>
+          <a href="/question/wk<%= input.week_number %>">
+          View roll-up >>
+        </a>
+        </p>
 
-      <i><a href="/question/wk<%= input.week_number %>/edit">
-        Edit this question >>
-      </i></a>
+        <p><i><a href="/question/wk<%= input.week_number %>/edit">
+          Edit this question >>
+        </i></a></p>
 
+         <%= link_to "Delete >>", "http://localhost:3000/question/wk#{input.week_number}",
+                              :method => :delete, :confirm => "You're sure?" %>
 
     <% end %>
 
