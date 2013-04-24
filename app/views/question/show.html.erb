@@ -1,0 +1,21 @@
+
+<div class = "container primary-content group">
+  <h3>Week #<%= @each.week_number %> Roll-up</h3>
+
+      <p>
+        (<%= @each.week_start %> - <%= @each.week_end %>)
+      </p>
+
+      <p>"<%= @each.question %>"</p>
+
+      <p><i><a href="/question/wk<%= @each.week_number %>/edit">
+        Edit this question >>
+      </i></a></p>
+
+      <p><i><a href="/question">
+              View all questions >>
+            </i></a></p>
+
+
+</div>
+

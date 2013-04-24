@@ -1,20 +1,29 @@
 ClarityBox::Application.routes.draw do
 
-# Static Webpages
-	get '/', :controller => 'pages', :action => 'home'
-	get '/test', :controller => 'Test', :action => 'index'
-	get '/test/story', :controller => 'Test', :action => 'story'
-	get '/test/philosophy', :controller => 'Test', :action => 'philosophy'
+# -- CLARITYBOX.COM
 
-# Dynamic Webpages - View the roll-up
-	get '/rollup/wk:week_number', :controller => 'App', :action => 'view_rollup'
+	get '/', :controller => 'Pages', :action => 'index'
+	get '/about', :controller => 'Pages', :action => 'about'
+	get '/story', :controller => 'Pages', :action => 'story'
+	get '/philosophy', :controller => 'Pages', :action => 'philosophy'
 
-# Dynamic Webpages - Creating a Question
-	get '/question/new', :controller => 'App', :action => 'new_question_form'
 
-	get 'create_new_question', :controller => 'App', :action => 'create_new_question'
+# -- CLARITYBOX.COM/QUESTION
 
-	get '/question/complete', :controller => 'App', :action => 'create_new_question'
+# ---- CREATE
+
+  get '/question/new', :controller => 'Question', :action => 'new'
+  post '/question', :controller => 'Question', :action => 'create'
+
+# ---- READ
+  get '/question', :controller => 'Question', :action => 'index'
+  get '/question/wk:week_number', :controller => 'Question', :action => 'show'
+
+#----UPDATE
+  get '/question/wk:week_number/edit', :controller => 'Question', :action => 'edit'
+  put '/question/wk:week_number', :controller => 'Question', :action => 'update'
+
+
 
 
 

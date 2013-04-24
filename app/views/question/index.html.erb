@@ -1,0 +1,35 @@
+<div class = "container primary-content group">
+  <h3> All the questions</h3>
+
+  <h4><a href = "/question/new">Create a new question</a></h4>
+
+  <div>
+    <% @all.each do |input| %>
+
+      <h4>
+        Week #<%= input.week_number %>
+      </h4>
+
+      <p>
+        (<%= input.week_start %> - <%= input.week_end %>)
+      </p>
+
+      <p>
+        "<%= input.question %>"
+      </p>
+
+      <p><a href="/question/wk<%= input.week_number %>">
+        View roll-up >>
+      </a>
+      </p>
+
+      <i><a href="/question/wk<%= input.week_number %>/edit">
+        Edit this question >>
+      </i></a>
+
+
+    <% end %>
+
+
+  </div>
+</div>
