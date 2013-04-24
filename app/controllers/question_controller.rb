@@ -12,7 +12,7 @@ class QuestionController < ApplicationController
     q.question =params[:question]
     q.save
 
-    redirect_to "http://localhost:3000/question"
+    redirect_to "/question"
 
   end
 
@@ -40,7 +40,7 @@ class QuestionController < ApplicationController
     q.question =params[:question]
     q.save
 
-    redirect_to "http://localhost:3000/question/wk#{params[:week_number]}"
+    redirect_to "/question/wk#{params[:week_number]}"
   end
 
 end
