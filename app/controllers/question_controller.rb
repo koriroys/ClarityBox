@@ -25,6 +25,7 @@ class QuestionController < ApplicationController
   def show
     @each = Question.find_by_id(params[:id])
     # @responses = Response.find_all_by_question_id(params[:question_id])
+    # @response = Response.find_by_id(params[:question_id])
     @responses = Response.find_all_by_question_id(params[:question_id])
 
   end
