@@ -11,13 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130422210726) do
+ActiveRecord::Schema.define(:version => 20130425164159) do
 
   create_table "questions", :force => true do |t|
     t.string "week_number"
     t.string "week_start"
     t.string "week_end"
     t.string "question"
+  end
+
+  create_table "responses", :force => true do |t|
+    t.integer  "question_id"
+    t.text     "answer"
+    t.string   "user_name"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

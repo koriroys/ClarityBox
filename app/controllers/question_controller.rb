@@ -24,6 +24,8 @@ class QuestionController < ApplicationController
 
   def show
     @each = Question.find_by_id(params[:id])
+    # @responses = Response.find_all_by_question_id(params[:question_id])
+    @responses = Response.find_all_by_question_id(params[:question_id])
 
   end
 
@@ -49,6 +51,21 @@ class QuestionController < ApplicationController
     q.destroy
     redirect_to "/question"
 
+  end
+
+  def response_new
+    @q = Question.find_by_id(params[:id])
+  end
+
+  def response_create
+    r = Response.new
+    r.question_id = params[:question_id]
+    r.answer = params[:answer]
+    r.user_name = params[:user_name]
+
+    r.save
+
+    redirect_to "/question/#{r.question_id}"
   end
 
 end

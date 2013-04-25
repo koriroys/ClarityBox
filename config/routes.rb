@@ -27,6 +27,12 @@ ClarityBox::Application.routes.draw do
   delete '/question/:id', :controller => 'Question', :action => 'destroy'
 
 
+# -- CLARITYBOX.COM/RESPONSE
+
+# ---- CREATE
+
+  get '/question/:id/response_new', :controller => 'Question', :action => 'response_new', :as => :response_new
+  post 'question/:id/response_new', :controller => 'Question', :action => 'response_create'
 
 
 

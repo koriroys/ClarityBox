@@ -1,0 +1,28 @@
+<div class = "container primary-content group">
+
+  <h3>Your response for Week <%= @q.week_number %> </h3>
+
+    <p>
+        (<%= @q.week_start %> - <%= @q.week_end %>)
+    </p>
+
+
+  <h4>"<%= @q.question %>"</h4>
+
+  <%= form_tag "/question/#{:id}/response_new" do %>
+
+      <p>Your name:
+        <input type = "string" name = "user_name">
+      </p>
+
+      <p> Your response: </p>
+        <textarea type = "text" name = "answer">
+        </textarea>
+
+      <input type = "submit" name = "submit" class = "question-button">
+
+    <% end %>
+
+ <p>or <a href = "/question">Cancel</a></p>
+
+</div>

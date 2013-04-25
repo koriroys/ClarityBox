@@ -5,10 +5,11 @@ class CreateQuestions < ActiveRecord::Migration
 	    table.string :week_start
 	    table.string :week_end
 	    table.string :question
+    end
   end
 
   def down
   end
 
 end
-end
+# end
