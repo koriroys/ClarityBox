@@ -29,22 +29,23 @@ class QuestionController < ApplicationController
 
   def edit
     # @week_number = params[:week_number]
-    @each = Question.find_by_id(params[:id])
+    @question_content = Question.find_by_id(params[:id])
+    # @week_number = @question_content.week_number
   end
 
   def update
-    q = Question.find_by_week_number(params[:week_number])
+    q = Question.find_by_id(params[:id])
     q.week_number = params[:week_number]
     q.week_start = params[:week_start]
     q.week_end = params[:week_end]
     q.question =params[:question]
     q.save
 
-    redirect_to "/question/wk#{params[:week_number]}"
+    redirect_to "/question/#{params[:id]}"
   end
 
   def destroy
-    q = Question.find_by_week_number(params[:week_number])
+    q = Question.find_by_id(params[:id])
     q.destroy
     redirect_to "/question"
 

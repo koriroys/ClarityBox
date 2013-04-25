@@ -1,21 +1,21 @@
 <div class = "container primary-content group">
-  <h3>Edit the question for Week <%= @week_number %></h3>
+  <h3>Edit the question for Week <%= @question_content.week_number %></h3>
 
-<%= form_tag("/question/wk#{@week_number}", { :method => :put }) do %>
+<%= form_tag("/question/#{@question_content.id}", { :method => :put }) do %>
 
     <p>This is week
-        <input type = "text" name = "week_number" value ="<%= @each.week_number %>">.
+        <input type = "text" name = "week_number" value ="<%= @question_content.week_number %>">.
     </p>
 
     <p>The week begins on
-        <input type = "text" name = "week_start" value = "<%= @each.week_start %>">
+        <input type = "text" name = "week_start" value = "<%= @question_content.week_start %>">
       and ends on
-        <input type = "text" name = "week_end" value = "<%= @each.week_end %>">.
+        <input type = "text" name = "week_end" value = "<%= @question_content.week_end %>">.
     </p>
 
     <p>What question do you want to ask?</p>
 
-      <textarea type = "text" name = "question"><%= @each.question %>
+      <textarea type = "text" name = "question"><%= @question_content.question %>
       </textarea>
 
       <input type = "submit" name = "submit" class = "question-button">
