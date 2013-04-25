@@ -4,7 +4,7 @@
   <h4><a href = "/question/new">Create a new question</a></h4>
 
   <div>
-    <% @all.each do |input| %>
+    <% @questions.each do |input| %>
 
         <h4>
           Week #<%= input.week_number %>
@@ -18,18 +18,23 @@
           "<%= input.question %>"
         </p>
 
-        <p>
-          <a href="/question/wk<%= input.week_number %>">
+<!--         <p>
+          <a href="/question/<%= input.id %>">
           View roll-up >>
         </a>
         </p>
+ -->
+        <p>
+          <%= link_to 'View roll-up >>', roll_up_url(input.id) %>
+        </p>
 
-        <p><i><a href="/question/wk<%= input.week_number %>/edit">
+        <p><i><a href="/question/<%= input.id %>/edit">
           Edit this question >>
         </i></a></p>
 
-         <%= link_to "Delete >>", "http://localhost:3000/question/wk#{input.week_number}",
-                              :method => :delete, :confirm => "You're sure?" %>
+
+         <%= link_to "Delete >>", "question/#{input.id}",
+                      :method => :delete, :confirm => "You're sure?" %>
 
     <% end %>
 

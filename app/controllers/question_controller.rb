@@ -17,19 +17,19 @@ class QuestionController < ApplicationController
   end
 
   def index
-    @all = Question.all
+    @questions = Question.all
 
   end
 
 
   def show
-    @each = Question.find_by_week_number(params[:week_number])
+    @each = Question.find_by_id(params[:id])
 
   end
 
   def edit
-    @week_number = params[:week_number]
-    @each = Question.find_by_week_number(params[:week_number])
+    # @week_number = params[:week_number]
+    @each = Question.find_by_id(params[:id])
   end
 
   def update

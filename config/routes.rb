@@ -17,14 +17,14 @@ ClarityBox::Application.routes.draw do
 
 # ---- READ
   get '/question', :controller => 'Question', :action => 'index'
-  get '/question/wk:week_number', :controller => 'Question', :action => 'show'
+  get '/question/:id', :controller => 'Question', :action => 'show', :as => :roll_up
 
 #----UPDATE
-  get '/question/wk:week_number/edit', :controller => 'Question', :action => 'edit'
-  put '/question/wk:week_number', :controller => 'Question', :action => 'update'
+  get '/question/:id/edit', :controller => 'Question', :action => 'edit'
+  put '/question/:id', :controller => 'Question', :action => 'update'
 
 #----DELETE
-  delete '/question/wk:week_number', :controller => 'Question', :action => 'destroy'
+  delete '/question/:id', :controller => 'Question', :action => 'destroy'
 
 
 
