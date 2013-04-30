@@ -167,7 +167,7 @@ h4{
 
 p {
 	line-height: 190%;
-	font-size: 20px;
+	font-size: 24px;
 	margin: 35px 0;
 }
 
@@ -258,7 +258,7 @@ p {
 .nav-elements li{
 	float: left;
 	width: 100px;
-	padding: 10px;
+	padding: 5px;
 	text-align: center;
 }
 
@@ -289,7 +289,7 @@ p {
 	text-align: center;
 	line-height: 150%;
 	width: 700px;
-	margin: 40px auto 30px;
+	margin: 50px auto 40px;
 }
 
 .primary-content h4{
