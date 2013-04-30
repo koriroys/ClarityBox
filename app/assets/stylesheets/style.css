@@ -107,7 +107,7 @@ body {
 	font-family: 'minion pro', sans-serif;
 
 
-color: #555;
+color: #454545;
 }
 
 
@@ -119,18 +119,20 @@ color: #555;
 
 a:link {
 	text-decoration:none;
-	color: #F37359;
+/*	color: #F37359;*/
+	color: #16C7C7;
 }
 
 
 a:visited {
 	text-decoration:none;
-	color: #F37359;
+	color: #16C7C7;
 }
 
 a:hover {
 	text-decoration:none;
 	color: #FFAD14;
+	color: #1ADBDB;
 
 }
 
@@ -144,19 +146,19 @@ a:active {
 */
 
 h1{
-	font-size: 70px;
-	font-family: Georgia;
+	font-size: 80px;
+/*	font-family: Georgia;*/
 
 
 }
 
 h2{
-	font-size: 26px;
+	font-size: 30px;
 
 }
 
 h3{
-	font-size: 40px;
+	font-size: 50px;
 
 }
 
@@ -215,7 +217,7 @@ p {
 	color: #fff;
 	font-size: 25px;
 	text-transform: uppercase;
-	background: #F37359;
+	background: #16C7C7;
 	padding: 20px 23px 22px;
 	border-radius: 5px;
 	margin-left: 10px;
@@ -224,7 +226,7 @@ p {
 }
 
 .signup-button:hover {
-	background-color: #EB9381;
+	background-color: #1ADBDB;
 }
 
 
@@ -234,7 +236,7 @@ p {
 
 .primary-nav{
 	height: 100px;
-	padding: 40px;
+	padding: 30px;
 	margin-top: 30px;
 }
 
@@ -243,12 +245,13 @@ p {
 }
 
 .nav-logo h1{
-	font-size: 20px;
+	font-size: 24px;
 	padding-bottom: 10px;
 }
 
 .nav-logo h2{
-	font-size: 16px;
+	font-size: 18px;
+	color: 	#BFBFBF;
 }
 
 .nav-elements{
@@ -257,17 +260,22 @@ p {
 
 .nav-elements li{
 	float: left;
-	width: 100px;
-	padding: 5px;
+	width: 120px;
 	text-align: center;
+/*	text-transform: uppercase;*/
+	font-style: italic;
+	font-size: 18px;
+
 }
 
 /*
 	Primary Header
 */
 .primary-header{
-	width: 700px;
+	width: 800px;
 	height: 140px;
+	margin-top: 50px;
+
 }
 
 .primary-header h3{
@@ -281,7 +289,9 @@ p {
 */
 
 .primary-content{
-	width: 700px;
+	width: 800px;
+	margin-top: 50px;
+	margin-bottom: 100px;
 
 }
 
@@ -294,7 +304,8 @@ p {
 
 .primary-content h4{
 	font-style: italic;
-	margin: 100px 0 40px;
+	margin-top: 100px;
+
 }
 
 .primary-content h4 a:hover{
@@ -307,13 +318,14 @@ p {
 
 .primary-content li{
 	line-height: 140%;
-	font-size: 20px;
+	font-size: 24px;
 	margin: 18px 0 0 65px;
 	font-style: italic;
 }
 
 .contact h3{
-	margin: 70px;
+	margin-top: 100px;
+	margin-bottom: 100px;
 }
 
 .bottom-links {
