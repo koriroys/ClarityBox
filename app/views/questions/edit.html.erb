@@ -4,7 +4,7 @@
         <%= form_tag(question_url(@question), method: 'put') do%>
 
             <p>This is Week #
-                <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :week_number) %>
+                <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :week_number, @question.week_id)%>
             </p>
 
             <p>What question do you want to ask?
@@ -19,6 +19,8 @@
         <% end %>
 
     <p>or <%= link_to 'Cancel', questions_url %></p>
+
+        <%= link_to 'Delete', question_url(@question), method: 'delete', data: { confirm: "You sure about that?" } %>
 
 
   </div>
