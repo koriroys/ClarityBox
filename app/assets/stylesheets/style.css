@@ -104,10 +104,8 @@ body {
 	background: #FFF;
 /*	font-family: 'Georgia', Arial, Helvetica, sans-serif;
 */
-	font-family: 'minion pro', sans-serif;
-
-
-color: #454545;
+	font-family: 'minion pro', 'Georgia', Arial, Helvetica, sans-serif;
+	color: #454545;
 }
 
 
@@ -173,6 +171,40 @@ p {
 	margin: 35px 0;
 }
 
+
+/*
+
+Buttons + Text Fields
+
+*/
+
+.text-field{
+	font-size: 24px;
+	padding: 34px 50px 26px 40px;
+	border-radius: 5px;
+	border: none;
+	background-color: #E8E8E8;
+	font-family: 'minion pro', 'Georgia', Arial, Helvetica, sans-serif;
+}
+
+.button {
+	color: #fff;
+	font-size: 36px;
+	text-transform: uppercase;
+	background: #16C7C7;
+	padding: 23px 20px 20px 20px;
+	border-radius: 5px;
+	border: none;
+	font-family: 'minion pro', 'Georgia', Arial, Helvetica, sans-serif;
+}
+
+.button:hover {
+	background-color: #1ADBDB;
+}
+
+
+
+
 /*
 	Homepage
 */
@@ -193,41 +225,24 @@ p {
 	text-transform: uppercase;
 	color: #C9C9C9;
 	margin-top: 100px;
-	margin-bottom: 100px;
 }
 
 .signup{
-	margin: 40px auto;
+	margin: 20px auto;
 	text-align: center;
 }
 
 
-.signup-email{
-	width: 300px;
-	height: 33px;
-	font-size: 20px;
-	padding: 20px;
-	border-radius: 5px;
-	border: none;
-	background-color: #E8E8E8;
-	font-family: 'Georgia', Arial, Helvetica, sans-serif;
+.signup.text-field{
+
 }
 
-.signup-button {
-	color: #fff;
-	font-size: 25px;
-	text-transform: uppercase;
-	background: #16C7C7;
-	padding: 20px 23px 22px;
-	border-radius: 5px;
-	margin-left: 10px;
-	border: none;
-	font-family: 'Georgia', Arial, Helvetica, sans-serif;
+.signup.button{
+	margin-left: 15px;
+
 }
 
-.signup-button:hover {
-	background-color: #1ADBDB;
-}
+
 
 
 /*
@@ -386,9 +401,5 @@ textarea {
 	height: 80px;
 }
 
-.question-button{
-	display: block;
-	margin-top: 20px;
-}
 
 
