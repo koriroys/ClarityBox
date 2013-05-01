@@ -13,7 +13,7 @@ class ResponsesController < ApplicationController
   end
 
   def create
-    @response = Role.new
+    @response = Response.new
     @response.response_text = params[:response_text]
     @response.user_name= params[:user_name]
     @response.question_id = params[:question_id]

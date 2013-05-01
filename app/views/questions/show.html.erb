@@ -1,28 +1,43 @@
 <div class = "container">
-    <header class = "primary-logo">
-
-      <h1>This week's question</h1>
-
+  <header class = "primary-logo">
+    <h1>The question</h1>
   </header>
+
+  <div class = "primary-content app">
+      <div class = "all-questions group">
+
+        <h4>
+            Week #<%= @question.week.week_number %>
+          <time>
+            (<%= @question.week.week_start %> - <%= @question.week.week_stop %>)
+          </time>
+        </h4>
+
+
+          <p>
+            "<%= @question.question_text %>"
+          </p>
+
+      </div>
+    </div>
+
+
+
+    <header class = "primary-logo">
+        <h1>The responses</h1>
+    </header>
 
 
     <div class = "primary-content app">
         <div class = "all-questions group">
 
           <h4>
-              Week #<%= @question.week.week_number %>
-            <time>
-              (<%= @question.week.week_start %> - <%= @question.week.week_stop %>)
-            </time>
+              Some name:  "Some text"
           </h4>
-
-
-            <p>
-              "<%= @question.question_text %>"
-            </p>
-
 
         </div>
     </div>
 
 </div>
+
+

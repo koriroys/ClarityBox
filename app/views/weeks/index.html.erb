@@ -1,13 +1,14 @@
 <div class = "container">
 
       <header class = "primary-logo">
-          <h1>Your Time with ClarityBox</h1>
+          <h1>Manage your ClarityBox</h1>
       </header>
 
 
       <div class = "new-question">
         <%= link_to 'Begin a new week', new_week_url, :class => 'button'%>
       </div>
+
 
 
       <div class = "primary-content app">
@@ -28,10 +29,14 @@
 
 
           <% end %>
-
-
-
-
       </div>
+
+      <footer>
+        <div class = "button-set">
+            <%= link_to 'See all questions', questions_url, :class => 'button small '%>
+
+            <%= link_to 'See all responses', responses_url, :class => 'button small'%>
+      </div>
+    </footer>
 
 </div>

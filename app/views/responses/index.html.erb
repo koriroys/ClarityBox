@@ -1,0 +1,41 @@
+<div class = "container">
+
+
+
+  <header class = "primary-logo">
+
+      <h1>All the responses</h1>
+
+  </header>
+
+
+
+
+  <div class = "primary-content app">
+
+    <% @responses.each do |response| %>
+
+
+      <h4>
+        <%= response.user_name %>:  "<%= response.response_text %>"
+      </h4>
+
+
+
+
+    <% end %>
+
+  </div>
+
+        <footer>
+        <div class = "button-set">
+            <%= link_to 'See all weeks', weeks_url, :class => 'button small '%>
+
+            <%= link_to 'See all questions', questions_url, :class => 'button small'%>
+      </div>
+    </footer>
+
+</div>
+
+
+
