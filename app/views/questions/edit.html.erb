@@ -1,0 +1,25 @@
+<div class = "container primary-content group">
+  <h3>Edit a  question.</h3>
+
+        <%= form_tag(question_url(@question), method: 'put') do%>
+
+            <p>This is Week #
+                <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :week_number) %>
+            </p>
+
+            <p>What question do you want to ask?
+                <%= text_area_tag :question_text, @question.question_text %>
+            </p>
+
+
+
+          <div class = "button-set">
+            <%= submit_tag "Save", :class => 'button' %>
+
+        <% end %>
+
+    <p>or <%= link_to 'Cancel', questions_url %></p>
+
+
+  </div>
+</div>

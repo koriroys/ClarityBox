@@ -1,7 +1,7 @@
 <div class = "container primary-content group">
   <h3>Edit your week.</h3>
 
-        <%= form_tag(weeks_url(@week), method: 'put') do%>
+        <%= form_tag(week_url(@week), method: 'put') do%>
 
             <p>This is Week #
                 <%= text_field_tag :week_number, @week.week_number %>
