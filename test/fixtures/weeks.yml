@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  user_name: MyString
-  response_text: MyText
+  week_number: 1
+  week_start: MyString
+  week_stop: MyString
   question_id: 1
 
 two:
-  user_name: MyString
-  response_text: MyText
+  week_number: 1
+  week_start: MyString
+  week_stop: MyString
   question_id: 1

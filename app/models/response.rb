@@ -1,3 +1,3 @@
 class Response < ActiveRecord::Base
-  attr_accessible :answer, :question_id, :user_name
+  attr_accessible :question_id, :response_text, :user_name
 end
