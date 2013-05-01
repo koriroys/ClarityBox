@@ -1,50 +1,70 @@
-<div class = "container primary-content group">
-  <h3> See your company clearly.</h3>
-
-  <a href = "/question/new" class = "button">Create a new question</a>
-
-  <div>
-    <% @questions.each do |input| %>
-
-        <h4>
-          Week #<%= input.week_number %>
-        </h4>
-
-        <p>
-          (<%= input.week_start %> - <%= input.week_end %>)
-        </p>
-
-        <p>
-          "<%= input.question %>"
-        </p>
-
-<!--         <p>
-          <a href="/question/<%= input.id %>">
-          View roll-up >>
-        </a>
-        </p>
- -->
-
-        <p>
-          <b><%= link_to 'Respond to this question >>', response_new_url(input.id) %>
-
-          </b>
-        </p>
-
-        <p>
-          <%= link_to 'View roll-up >>', roll_up_url(input.id) %>
-        </p>
-
-        <p><i><a href="/question/<%= input.id %>/edit">
-          Edit this question >>
-        </i></a></p>
+<div class = "container">
 
 
-         <%= link_to "Delete >>", "question/#{input.id}",
-                      :method => :delete, :confirm => "You're sure?" %>
 
-    <% end %>
+  <header class = "primary-logo">
+
+      <h1>See your company clearly.</h1>
+
+    </header>
 
 
-  </div>
+
+
+
+
+
+    <div class = "new-question">
+        <a href = "/question/new" class = "button">Ask a question</a>
+    </div>
+
+  <div class = "primary-content app">
+
+
+        <% @questions.each do |input| %>
+
+        <div class = "all-questions group">
+
+            <h4>
+              Week #<%= input.week_number %>
+              <time>
+                (<%= input.week_start %> - <%= input.week_end %>)
+              </time>
+            </h4>
+
+
+            <p>
+              "<%= input.question %>"
+            </p>
+
+    <!--         <p>
+              <a href="/question/<%= input.id %>">
+              View roll-up >>
+            </a>
+            </p>
+     -->
+
+          <div class = "button-set">
+
+                <%= link_to 'Respond', response_new_url(input.id), :class => 'button small' %>
+
+
+                <%= link_to 'View', roll_up_url(input.id), :class => 'button small'%>
+
+
+              <a href="/question/<%= input.id %>/edit" class = "button small">
+                Edit
+              </i></a>
+
+            </div>
+
+
+          </div>
+        <% end %>
+
+      </div>
+
+
+
 </div>
+

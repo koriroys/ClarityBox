@@ -3,7 +3,7 @@
 
 <%= form_tag("/question/#{@question_content.id}", { :method => :put }) do %>
 
-    <p>This is week
+    <p>This is Week #
         <input type = "text" name = "week_number" value ="<%= @question_content.week_number %>">.
     </p>
 
@@ -27,4 +27,7 @@
   </p>
 
 
+
+             <%= link_to "Delete >>", "question/#{@question_content.id}",
+                          :method => :delete, :confirm => "You're sure?" %>
 </div>
