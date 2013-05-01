@@ -199,6 +199,7 @@ Buttons + Text Fields
 }
 
 .button:hover {
+	color: #fff;
 	background-color: #1ADBDB;
 }
 
@@ -423,7 +424,8 @@ a.button{
 }
 
 .button.small:hover {
-	background: #4CCFCF
+	background: #4CCFCF;
+
 
 	}
 
