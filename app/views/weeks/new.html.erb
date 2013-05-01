@@ -1,0 +1,26 @@
+<div class = "container primary-content group">
+  <h3>Begin a new week.</h3>
+
+        <%= form_tag(weeks_url, method: 'post') do%>
+
+            <p>This is Week #
+                <%= text_field_tag :week_number %>
+            </p>
+
+            <p>The week begins on
+                <%= text_field_tag :week_start %>
+                and ends on
+                <%= text_field_tag :week_stop %>
+            </p>
+
+
+
+          <div class = "button-set">
+            <%= submit_tag "Submit", :class => 'button' %>
+
+        <% end %>
+
+    <p>or <%= link_to 'Cancel', weeks_url %></p>
+
+  </div>
+</div>
