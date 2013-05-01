@@ -60,7 +60,7 @@ ClarityBox::Application.routes.draw do
 
   # READ
   get '/responses', controller: 'Responses', action: 'index', as: 'responses'
-  get '/responses/:id', controller: 'Responses', action: 'show', as: 'responses'
+  get '/responses/:id', controller: 'Responses', action: 'show', as: 'response'
 
   # UPDATE
   get '/responses/:id/edit', controller: 'Responses', action: 'edit', as: 'edit_response'
