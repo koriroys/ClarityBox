@@ -69,8 +69,14 @@ i, em {
 	Grid
 */
 
+
 .container {
   max-width: 960px;
+  margin: 0 auto;
+}
+
+.smaller-container {
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -151,17 +157,16 @@ h1{
 }
 
 h2{
-	font-size: 30px;
+	font-size: 60px;
 
 }
 
 h3{
-	font-size: 48px;
-
+	font-size: 46px;
 }
 
 h4{
-	font-size: 36px;
+	font-size: 32px;
 }
 
 
@@ -172,6 +177,23 @@ p {
 }
 
 
+/*	Styling*/
+
+.center{
+	text-align: center;
+}
+
+.italic{
+	font-style: italic;
+}
+
+.top-space{
+	margin-top: 150px;
+}
+
+
+
+
 /*
 
 Buttons + Text Fields
@@ -180,7 +202,7 @@ Buttons + Text Fields
 
 .text-field{
 	font-size: 24px;
-	padding: 34px 50px 26px 40px;
+	padding: 27px;
 	border-radius: 5px;
 	border: none;
 	background-color: #E8E8E8;
@@ -189,10 +211,10 @@ Buttons + Text Fields
 
 .button {
 	color: #fff;
-	font-size: 36px;
+	font-size: 28px;
 	text-transform: uppercase;
 	background: #16C7C7;
-	padding: 23px 20px 20px 20px;
+	padding: 24px;
 	border-radius: 5px;
 	border: none;
 	font-family: 'minion pro', 'Georgia', Arial, Helvetica, sans-serif;
@@ -204,6 +226,10 @@ Buttons + Text Fields
 }
 
 
+.no-hover a:hover{
+	color: #555;
+}
+
 
 
 /*
@@ -211,13 +237,11 @@ Buttons + Text Fields
 */
 
 .primary-logo{
-	text-align: center;
-	margin: 180px auto 0;
-	width: 800px;
+	margin: 200px auto 0;
 }
 
-.primary-logo h2{
-	padding: 15px;
+.primary-logo h4{
+	margin: 15px;
 }
 
 .coming-soon{
@@ -244,17 +268,23 @@ Buttons + Text Fields
 	Navigation
 */
 
+header {
+	background: #fff;
+	position:fixed;
+}
+
 .primary-nav{
-	height: 100px;
-	padding: 30px;
-	margin-top: 30px;
+	height: 160px;
+	width: 100%;
+}
+
+.sticky{
+	height: 20px;
+	padding:80px 0;
 }
 
 .nav-logo{
 	float: left;
-}
-
-.nav-logo h1{
 	font-size: 24px;
 	padding-bottom: 10px;
 }
@@ -272,25 +302,11 @@ Buttons + Text Fields
 	float: left;
 	width: 120px;
 	text-align: center;
-/*	text-transform: uppercase;*/
 	font-style: italic;
 	font-size: 18px;
 
 }
 
-/*
-	Primary Header
-*/
-.primary-header{
-	width: 800px;
-	height: 140px;
-	margin-top: 50px;
-
-}
-
-.primary-header h3{
-	text-align: center;
-	line-height: 150%;
 
 
 }
@@ -299,28 +315,18 @@ Buttons + Text Fields
 */
 
 .primary-content{
+	overflow: auto;
 	width: 800px;
-	margin-top: 50px;
-	margin-bottom: 100px;
-
 }
 
-.primary-content h3{
+.primary-content h2{
 	text-align: center;
 	line-height: 150%;
 	width: 700px;
-	margin: 50px auto 40px;
+	margin: 250px auto 150px;
 }
 
-.primary-content h4{
-	font-style: italic;
-	margin-top: 100px;
 
-}
-
-.primary-content h4 a:hover{
-	color: #555;
-}
 
 .primary-content ul{
 	margin: 30px 0;
@@ -346,6 +352,8 @@ Buttons + Text Fields
 	float: left;
 }
 
+
+
 /*Footer*/
 
 footer{
@@ -360,7 +368,6 @@ footer ul{
 	height: 20px;
 	margin: 0 auto;
 	padding-top: 100px;
-
 }
 
 
@@ -372,7 +379,19 @@ footer li{
 	font-style: italic;
 	font-size: 18px;
 	margin: 0 10px 0;
+}
 
+
+footer a:link{
+	color: #B3B3B3;
+}
+
+footer a:visited{
+	color: #B3B3B3;
+}
+
+footer a:hover{
+	color: #D9D9D9;
 }
 
 

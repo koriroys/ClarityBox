@@ -1,40 +1,36 @@
-<body>
+
 	<!--Navigation-->
 
-<header class = "primary-nav container group">
+<header class = "primary-nav">
 
-	<div class = "nav-logo">
-		<h1><a href = "/about">ClarityBox</a></h1>
+	<div class = "sticky container">
+
+		<h1 class = "nav-logo"><%= link_to 'ClarityBox', about_url%></h1>
 		<!-- <h2><i>See your company clearly.</i></h2> -->
+
+		<nav class = "nav-elements">
+			<ul>
+				<li><a href="#problem">Problem</a></li>
+				<li><a href="#solution">Solution</a></li>
+				<li><a href="#process">Process</a></li>
+				<li><a href="#testimonials">Testimonials</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
 	</div>
-
-	<nav class = "nav-elements">
-		<ul>
-			<li><a href="#problem">Problem</a></li>
-			<li><a href="#solution">Solution</a></li>
-			<li><a href="#process">Process</a></li>
-			<li><a href="#testimonials">Testimonials</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</ul>
-	</nav>
-
 </header>
 
 	<!--Main headline area-->
+<div class = "smaller-container">
+	<div class = "primary-content group">
 
-	<section class="primary-header container group">
-	<!-- 	<h3>Your company can become better.</h3>
- -->
-		<h3>What does everyone at your company <em>actually </em>think?</h3>
-		<!--<h2>Get the clearest insights to improve your company.</h2>-->
+		<h2>What does everyone at your company <em>actually </em>think?</h2>
 
-	</section>
 
 	<!--Site content-->
 
-	<section class = "primary-content container group"
-		<div class="problem group">
-			<h4><a name = "problem">Problem</a></h4>
+			<h3 class = "italic top-space no-hover"><a name = "problem">Problem</a></h3>
 			<p>As a leader, you want a clear picture of your company so it can improve.</p>
 			<p>You want to know:</p>
 			<ul>
@@ -43,22 +39,21 @@
 				<li>What are the things your company should be doing, but it's not?</li>
 			</ul>
 
-		</div>
 
-		<div class="solution group">
-			<h4><a name = "solution">Solution</a></h4>
-			<p>An inside look at your company. It's the insight you wish you had, but can't, by virtue of your position.</p>
-			<p>With ClarityBox, you'll walk away with:</p>
+
+
+			<h3 class = "italic top-space no-hover"><a name = "solution">Solution</a></h3>
+			<p>With ClarityBox, you get an inside look at your company. It's the insight you wish you had, but can't by virtue of your position.</p>
+			<p>You'll walk away with:</p>
 			<ul>
-				<li>A complete clear picture of how everyone in your company feels</li>
-				<li>An awareness of the underlying issues your company should address</li>
-				<li>Your company feeling heard and respected</li>
+				<li>A complete, clear picture of how everyone in your company feels</li>
+				<li>An awareness of the blindspots your company should address</li>
+				<li>Each person at your company feeling heard and respected</li>
 			</ul>
-		</div>
 
-		<div class="process group">
-			<h4><a name = "process">Process</a></h4>
-			<p>I interview each person in your company. I present an in-depth, panoramic view of how everyone feels.</p>
+
+			<h3 class = "italic top-space no-hover"><a name = "process">Process</a></h3>
+			<p>I interview each person in your company. Then, I present an in-depth, panoramic view of how everyone feels.</p>
 			<p><b>The Interviews:</b></p>
 			<ul>
 				<li>One hour each</li>
@@ -72,7 +67,7 @@
 				<li>A personally designed deck with the key insights</li>
 			</ul>
 			<p>I am based in Chicago, Illinois. Not local? No worries, I'm happy to arrange remote interviews or travel to where you are. </p>
-		</div>
+
 
 <!-- 		<div class="outcome group">
 			<h4><a name = "outcome">Outcome</a></h4>
@@ -80,14 +75,14 @@
 			<p><strong>Each individual at your company will feel valued.</strong> They will appreciate being heard, and that you cared to listen.</p>
 		</div> -->
 
-		<div class="testimonials group">
-			<h4><a name = "testimonials">Testimonials</a></h4>
+
+			<h3 class = "italic top-space no-hover"><a name = "testimonials">Testimonials</a></h3>
 			<p>I've been fortunate to help some wonderful companies. Here's what they had to say:</p>
 			<ul>
 				<li>37signals</li>
 				<li>The Starter League</li>
 			</ul>
-		</div>
+
 
 <!-- 		<div class="pricing group">
 			<h4><a name = "pricing">Pricing</a></h4>
@@ -98,25 +93,22 @@
 		</div> -->
 
 
-		<div class="contact group">
-			<h4><a name = "contact">Contact</a></h4>
+			<h3 class = "italic top-space no-hover"><a name = "contact">Contact</a></h3>
 
-			<h3><a href="http://claritybox.wufoo.com/forms/z7x3p3/">Let's work together.</a></h3>
+			<h3 class = "center"><a href="http://claritybox.wufoo.com/forms/z7x3p3/">Let's work together.</a></h3>
 
 			<p>Thoughts or questions? I'd love to hear from you at <a href="mailto:claire@claritybox.co">claire@claritybox.co</a> or 612.578.9342</p>
 			<p>Learn more about <a href="/philosophy">my philosophy</a> and <a href="/story">my story</a>.</p>
 			<p>Say hi on <a href="http://twitter.com/cjlew23">Twitter</a>.</p>
+
+
 		</div>
-
-	</section>
-
-
-
-	</body>
+	</div>
 
 
 
-	<footer class = "group">
+
+	<footer class = "top-space group">
 
 
 		<ul>
@@ -126,7 +118,6 @@
 			<li><a href="#testimonials">Testimonials</a></li>
 			<li><a href="#contact">Contact</a></li>
 		</ul>
-
 
 	</footer>
 
