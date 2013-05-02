@@ -399,20 +399,16 @@ a.button{
 	margin: 50px auto 150px;
 }
 
-.all-questions{
-	margin-bottom: 80px;
-}
-
 .all-questions h4 {
-	margin-bottom: 40px;
+	margin-bottom: 20px;
+
 	font-size: 32px;
 }
 
 .all-questions p {
 	text-align: center;
 	font-size: 46px;
-	line-height: 120%;
-	margin-bottom: 80px;
+
 }
 
 .button.small {
@@ -425,14 +421,14 @@ a.button{
 
 .button.small:hover {
 	background: #4CCFCF;
-
-
 	}
 
 .button-set{
 	text-align: center;
 	margin-top: 40px;
 }
+
+
 
 .text-field.small{
 	font-size: 16px;
@@ -456,5 +452,15 @@ textarea {
 }
 
 
+
+footer .button.small {
+	background: #C9C9C9;
+
+
+}
+
+footer .button.small:hover {
+	background: #DEDEDE;
+	}
 
 

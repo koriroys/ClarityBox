@@ -4,27 +4,16 @@
 
   <header class = "primary-logo">
 
-      <h1>All the responses</h1>
+      <h1>Create clarity in your company.</h1>
+
 
   </header>
 
 
 
 
-  <div class = "primary-content app">
-
-    <% @responses.each do |response| %>
-
-
-      <h4>
-        <%= response.user_name %>:  "<%= response.response_text %>"
-      </h4>
-
-
-
-
-    <% end %>
-
+  <div class = "new-question">
+    <%= link_to 'Begin', questions_url, :class => 'button'%>
   </div>
 
         <footer>
