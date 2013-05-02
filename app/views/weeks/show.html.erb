@@ -1,12 +1,11 @@
 <div class = "container">
-  <header class = "primary-logo">
-    <h1>The question</h1>
-  </header>
 
-  <div class = "primary-content app">
-      <div class = "all-questions group">
+  <h1 class = "top-space center">This week's responses</h1>
 
-        <h4>
+
+      <div class = "primary-content app">
+
+         <h4 class = "top-space">
             Week #<%= @week.week_number %>
           <time>
             (<%= @week.week_start %> - <%= @week.week_stop %>)
@@ -14,27 +13,15 @@
         </h4>
 
         <% @week.questions.each do |question| %>
-          <p>
+          <h3 class = "center italic">
             "<%= question.question_text %>"
-          </p>
+          </h3>
 
 
-      </div>
-    </div>
-
-
-
-    <header class = "primary-logo">
-        <h1>The responses</h1>
-    </header>
-
-
-    <div class = "primary-content app">
-        <div class = "all-questions group">
 
       <% question.responses.each do |response| %>
 
-          <h4>
+          <h4 class = "top-space italic">
               <%= response.user_name %>:  "<%= response.response_text %>"
           </h4>
 
@@ -42,20 +29,14 @@
 
       </div>
 
-    </div>
-
   <% end %>
 
-   <footer>
-        <div class = "button-set">
-
-            <%= link_to 'See all weeks', weeks_url, :class => 'button small '%>
-
-            <%= link_to 'See all questions', questions_url, :class => 'button small '%>
-
-            <%= link_to 'See all responses', responses_url, :class => 'button small'%>
-      </div>
-    </footer>
+  <footer class = "top-space group ">
+      <ul class = "app">
+        <li><%= link_to 'See all questions', questions_url %></li>
+        <li><%= link_to 'Start over', responses_url %></li>
+      </ul>
+  </footer>
 
 
 </div>

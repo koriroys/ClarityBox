@@ -1,42 +1,42 @@
 <div class = "container">
 
 
-          <h1 class = "primary-logo">What week is it?</h1>
+    <h1 class = "top-space center">What week is it?</h1>
 
 
 
-      <div class = "primary-content app">
+    <div class = "primary-content app">
 
-          <% @weeks.each do |week| %>
+        <% @weeks.each do |week| %>
 
-            <h4>
-       <!--         Week #<%= week.week_number %> -->
+          <h4 class = "top-space">
+     <!--         Week #<%= week.week_number %> -->
 
-              <%= link_to week.week_number, question_url(week.week_number), :class => 'button' %>
-              (<%= week.week_start %> - <%= week.week_stop %>)
+            <%= link_to week.week_number, question_url(week.week_number), :class => 'button' %>
+            (<%= week.week_start %> - <%= week.week_stop %>)
 
-            </h4>
+          </h4>
 
-            <p>
-              <%= link_to 'Edit', edit_week_url(week) %>
-            </p>
+          <p>
+            <%= link_to 'Edit', edit_week_url(week) %>
+          </p>
 
 
-          <% end %>
-      </div>
+        <% end %>
 
-      <div class = "new-question">
+   </div>
+
+    <div class = "margin-auto">
         <%= link_to 'Create a new week', new_week_url, :class => 'button'%>
-      </div>
+    </div>
 
 
 
-      <footer>
-        <div class = "button-set">
-            <%= link_to 'See all questions', questions_url, :class => 'button small '%>
-
-            <%= link_to 'See all responses', responses_url, :class => 'button small'%>
-      </div>
+    <footer class = "top-space group ">
+        <ul class = "app">
+          <li><%= link_to 'Ask a question', questions_url %></li>
+          <li><%= link_to 'Start over', weeks_url %></li>
+        </ul>
     </footer>
 
 </div>

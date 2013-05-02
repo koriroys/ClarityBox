@@ -163,6 +163,7 @@ h2{
 
 h3{
 	font-size: 46px;
+	padding: 40px 0;
 }
 
 h4{
@@ -188,11 +189,13 @@ p {
 }
 
 .top-space{
-	margin-top: 150px;
+	margin-top: 100px;
 }
 
 
-
+.large-top-space{
+	margin-top: 200px;
+}
 
 /*
 
@@ -407,7 +410,7 @@ a.button{
 
 }
 
-.new-question{
+.margin-auto{
 	text-align: center;
 	width: 960px;
 	margin: 130px 0;
@@ -444,7 +447,9 @@ a.button{
 
 .button-set{
 	text-align: center;
-	margin-top: 40px;
+	margin: 40px 0 100px;
+
+
 }
 
 
@@ -471,7 +476,6 @@ textarea {
 }
 
 
-
 footer .button.small {
 	background: #C9C9C9;
 
@@ -480,6 +484,11 @@ footer .button.small {
 
 footer .button.small:hover {
 	background: #DEDEDE;
+	}
+
+
+ul.app {
+		width: 300px;
 	}
 
 

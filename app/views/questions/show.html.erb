@@ -1,12 +1,11 @@
 <div class = "container">
-  <header class = "primary-logo">
-    <h1>This week's question</h1>
-  </header>
+
+    <h1 class = "top-space center">This week's question</h1>
+
 
   <div class = "primary-content app">
-      <div class = "all-questions group">
 
-        <h4>
+        <h4 class = "top-space">
             Week #<%= @question.week.week_number %>
           <time>
             (<%= @question.week.week_start %> - <%= @question.week.week_stop %>)
@@ -14,41 +13,36 @@
         </h4>
 
 
-          <p>
+          <h3 class = "center italic">
             "<%= @question.question_text %>"
-          </p>
-
-      </div>
-    </div>
+          </h3>
 
 
-
-    <div class = "primary-content app">
 
       <%= form_tag(responses_url, method: 'post') do %>
 
             <%= hidden_field_tag :question_id, params[:id] %>
 
 
-            <p>Your name:
-              <%= text_field_tag :user_name %>
+            <p>Your thoughts:</p>
+            <p>
+              <%= text_area_tag :response_text %>
             </p>
 
 
-            <p>Your thoughts:
-              <%= text_area_tag :response_text %>
+            <p>Your name:
+              <%= text_field_tag :user_name %>
             </p>
 
             <div class = "button-set">
               <%= submit_tag 'Respond', :class => 'button' %>
 
-              <p>or <%= link_to 'Back to all questions', questions_url %></p>
+              <p><%= link_to 'Wrong week?', weeks_url %></p>
+
 
             </div>
 
       <% end %>
-
-
 
     </div>
 
@@ -56,21 +50,12 @@
 
 
 
-
-
-
-
-
-   <footer>
-        <div class = "button-set">
-
-            <%= link_to 'See all weeks', weeks_url, :class => 'button small '%>
-
-            <%= link_to 'See all questions', questions_url, :class => 'button small '%>
-
-            <%= link_to 'See all responses', responses_url, :class => 'button small'%>
-      </div>
-    </footer>
+  <footer class = "top-space group ">
+      <ul class = "app">
+        <li><%= link_to 'Ask a question', questions_url %></li>
+        <li><%= link_to 'Start over', responses_url %></li>
+      </ul>
+  </footer>
 
 
 </div>
