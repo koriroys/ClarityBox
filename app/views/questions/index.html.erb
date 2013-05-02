@@ -4,14 +4,15 @@
 
   <header class = "primary-logo">
 
-      <h1>All the weeks</h1>
+      <h1>All the questions</h1>
+
+
 
   </header>
 
-
-
-
-
+  <div class = "new-question">
+    <%= link_to 'Ask a question', new_question_url, :class => 'button'%>
+  </div>
 
 
 
@@ -51,6 +52,7 @@
         <% end %>
 
     </div>
+
 
           <footer>
         <div class = "button-set">
