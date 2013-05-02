@@ -42,9 +42,9 @@
 
             <div class = "button-set">
 
-                <%= link_to 'Respond', new_response_url, :class => 'button small' %>
+                <%= link_to 'Respond', question_url(question), :class => 'button small' %>
 
-                <%= link_to 'View', question_url(question), :class => 'button small'%>
+                <%= link_to 'View', week_url(question.week_id), :class => 'button small'%>
 
                 <%= link_to 'Edit', edit_question_url(question), :class => 'button small'%>
 

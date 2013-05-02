@@ -7,16 +7,17 @@
       <div class = "all-questions group">
 
         <h4>
-            Week #<%= @question.week.week_number %>
+            Week #<%= @week.week_number %>
           <time>
-            (<%= @question.week.week_start %> - <%= @question.week.week_stop %>)
+            (<%= @week.week_start %> - <%= @week.week_stop %>)
           </time>
         </h4>
 
-
+        <% @week.questions.each do |question| %>
           <p>
-            "<%= @question.question_text %>"
+            "<%= question.question_text %>"
           </p>
+
 
       </div>
     </div>
@@ -24,48 +25,26 @@
 
 
     <header class = "primary-logo">
-        <h1>Your response</h1>
+        <h1>The responses</h1>
     </header>
 
 
-
     <div class = "primary-content app">
+        <div class = "all-questions group">
 
-      <%= form_tag(responses_url, method: 'post') do %>
+      <% question.responses.each do |response| %>
 
-            <%= hidden_field_tag :question_id, params[:id] %>
+          <h4>
+              <%= response.user_name %>:  "<%= response.response_text %>"
+          </h4>
 
+        <% end %>
 
-            <p>Your name:
-              <%= text_field_tag :user_name %>
-            </p>
-
-
-            <p>Your thoughts:
-              <%= text_area_tag :response_text %>
-            </p>
-
-            <div class = "button-set">
-              <%= submit_tag 'Respond', :class => 'button' %>
-
-              <p>or <%= link_to 'Back to all questions', questions_url %></p>
-
-            </div>
-
-      <% end %>
-
-
+      </div>
 
     </div>
 
-
-
-
-
-
-
-
-
+  <% end %>
 
    <footer>
         <div class = "button-set">

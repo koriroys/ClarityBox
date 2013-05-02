@@ -13,13 +13,14 @@ class ResponsesController < ApplicationController
   end
 
   def create
+    # raise params.inspect
     @response = Response.new
     @response.response_text = params[:response_text]
     @response.user_name= params[:user_name]
     @response.question_id = params[:question_id]
 
     if @response.save
-            redirect_to responses_url
+            redirect_to week_url(@response.question.week_id)
           else
       render 'new'
     end
