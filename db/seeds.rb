@@ -17,7 +17,7 @@ Week.destroy_all
 week_hashes.each do |w_hash|
   w = Week.new
   w.week_number = w_hash[:week_number]
-  w.week_start = w_hash[:dob]
+  w.week_start = w_hash[:week_start]
   w.week_stop = w_hash[:week_stop]
   w.save
 end
@@ -25,9 +25,9 @@ puts "There are now #{Week.count} rows in the weeks table."
 
 
 question_hashes = [
-  { :question_text => "What are you most proud of?", :week_id => Question.find_by_week_number("1").id },
-  { :question_text => "What's your vision for the company'?", :week_id => Question.find_by_week_number("2").id },
-  { :question_text => "What frustrates you?", :week_id => Question.find_by_week_number("3").id },
+  { :question_text => "What are you most proud of?", :week_id => Week.find_by_week_number("1").id },
+  { :question_text => "What's your vision for the company'?", :week_id => Week.find_by_week_number("2").id },
+  { :question_text => "What frustrates you?", :week_id => Week.find_by_week_number("3").id },
 
 ]
 
