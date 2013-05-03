@@ -1,33 +1,31 @@
-
-
-<body>
 	<!--Navigation-->
 
-<header class = "primary-nav container group">
+<header class = "primary-nav">
 
-	<div class = "nav-logo">
-		<h1><a href = "/about">ClarityBox</a></h1>
-		<h2><i>See your company clearly.</i></h2>
+	<div class = "sticky container">
+
+		<h1 class = "nav-logo"><%= link_to 'ClarityBox', about_url%></h1>
+		<!-- <h2><i>See your company clearly.</i></h2> -->
+
+		<nav class = "nav-elements">
+			<ul>
+				<li><a href="#problem">Problem</a></li>
+				<li><a href="#solution">Solution</a></li>
+				<li><a href="#process">Process</a></li>
+				<li><a href="#testimonials">Testimonials</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
 	</div>
-
-	<nav class = "nav-elements">
-		<ul>
-			<li><a href="/test/#problem">Problem</a></li>
-			<li><a href="/test/#solution">Solution</a></li>
-			<li><a href="/test/#testimonials">Testimonials</a></li>
-			<li><a href="/test/#contact">Contact</a></li>
-		</ul>
-	</nav>
-
 </header>
-
 
 
 	<!--Site content-->
 
-
-	<div class="philosophy primary-content container group">
-		<h3>My Philosophy</h3>
+<div class = "smaller-container">
+	<div class="primary-content container group">
+		<h2>My Philosophy</h2>
 		<p>I believe people should be happier at work. We spend too much of lives working for us not to be.</p>
 
 		<p>We are unhappiest at work when we feel we can't say what we want. Ineffective communication is the root of almost every organizational problem. The things that go unsaid are what hurt a company the most.</p>
@@ -50,5 +48,23 @@
 			<li>Trust:  The relationship I have with the organization is predicated on trust, and will never be violated.</li>
 		</ul> -->
 	</div>
+</div>
 
-</body>
+
+<!-- Footer -->
+
+
+	<footer class = "top-space group">
+
+
+		<ul>
+			<li><%= link_to 'Philosophy', philosophy_url %></li>
+			<li><%= link_to 'Story', story_url %></li>
+			<li><%= link_to 'Blog', 'http://clairelew.com/blog' %></li>
+			<li><%= link_to 'Twitter', 'http://twitter.com/theclaritybox' %></li>
+		</ul>
+
+	</footer>
+
+
+

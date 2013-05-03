@@ -1,36 +1,55 @@
-<body>
 	<!--Navigation-->
-<header class = "primary-nav container group">
 
-	<div class = "nav-logo">
-		<h1><a href = "/about">ClarityBox</a></h1>
-		<h2><i>See your company clearly.</i></h2>
+<header class = "primary-nav">
+
+	<div class = "sticky container">
+
+		<h1 class = "nav-logo"><%= link_to 'ClarityBox', about_url%></h1>
+		<!-- <h2><i>See your company clearly.</i></h2> -->
+
+		<nav class = "nav-elements">
+			<ul>
+				<li><a href="#problem">Problem</a></li>
+				<li><a href="#solution">Solution</a></li>
+				<li><a href="#process">Process</a></li>
+				<li><a href="#testimonials">Testimonials</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
 	</div>
-
-	<nav class = "nav-elements">
-		<ul>
-			<li><a href="/test/#problem">Problem</a></li>
-			<li><a href="/test/#solution">Solution</a></li>
-			<li><a href="/test/#testimonials">Testimonials</a></li>
-			<li><a href="/test/#contact">Contact</a></li>
-		</ul>
-	</nav>
-
 </header>
 
 
 	<!--Site content-->
 
-
-<div class="story primary-content container group">
-			<h3>My Story</h3>
-			<p>Hi, I'm Claire Lew and I live in Chicago.</p>
+<div class = "smaller-container">
+	<div class="primary-content container group">
+			<h2>My Story</h2>
+			<p>Hi, I'm <%= link_to 'Claire Lew', 'http://clairelew.com'%> and I live in Chicago.</p>
 			<p>When I was 13 years old, I bought a book called What Should I Do With My Life?. It was a  precocious move, but it triggered my first questions about how people can pursue meaningful work.</p>
 			<p>I attended Northwestern University, where thanks to a few friends I stumbled across my major Learning and Organizational Change. It sparked my realization that organizations have an amazing capacity to solve important problems in our world.</p>
 			<p>Ever since then, my passion has been building and improving organizations.  From serving as student body president in college, to helping start a company, to helping growing another company, that is what has consistently motivated the work I've chosen to do.</p>
-			<p>Through all of it, I noticed how difficult it was for an organization to improve. I witnessed the pain of ineffective communication - how simply not knowing how other people feel significantly affects an organization's productivity and employee happiness.</p>
+			<p>Through all of it, I noticed how difficult it was for an organization to improve. Like many people, I experienced the pain of ineffective communication time and time again - and it struck me how painful this problem was. How much simply not knowing how other people feel affects an organization's productivity and happiness.</p>
 			<p>I wanted to dedicate myself to solving that problem, so I founded ClarityBox. I wanted to create something simple, genuine, and personal that would help my friends and family communicate better at work. Something that would make them feel a bit happier.</p>
 			<p>That is my ultimate quest:  to help more people feel happier at work. It's a long road ahead, but I hope you'll join me for the journey.</p>
+		</div>
 	</div>
 
-</body>
+
+<!-- Footer -->
+
+
+	<footer class = "top-space group">
+
+
+		<ul>
+			<li><%= link_to 'Philosophy', philosophy_url %></li>
+			<li><%= link_to 'Story', story_url %></li>
+			<li><%= link_to 'Blog', 'http://clairelew.com/blog' %></li>
+			<li><%= link_to 'Twitter', 'http://twitter.com/theclaritybox' %></li>
+		</ul>
+
+	</footer>
+
+
