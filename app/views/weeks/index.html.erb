@@ -12,7 +12,7 @@
           <h4 class = "top-space">
      <!--         Week #<%= week.week_number %> -->
 
-            <%= link_to week.week_number, question_url(week.question_id), :class => 'button' %>
+            <%= link_to week.week_number, week_url(week.question_id), :class => 'button' %>
             (<%= week.week_start %> - <%= week.week_stop %>)
 
           </h4>
