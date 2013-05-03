@@ -133,7 +133,7 @@ a:visited {
 	color: #16C7C7;
 }
 
-a:hover {
+nav a:hover {
 	text-decoration:none;
 	color: #FFAD14;
 	color: #1ADBDB;
