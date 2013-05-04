@@ -8,9 +8,9 @@
 
 
 week_hashes = [
-  { :week_number => "1", :week_start => "March 1", :week_stop => "March 5"},
-  { :week_number => "2", :week_start => "March 7", :week_stop => "March 13"},
-  { :week_number => "3", :week_start => "March 15", :week_stop => "March 20"},
+  { :week_number => "1", :week_start => "March 1", :week_stop => "March 5", :question_id => "1"},
+  { :week_number => "2", :week_start => "March 7", :week_stop => "March 13", :question_id => "2"},
+  { :week_number => "3", :week_start => "March 15", :week_stop => "March 20", :question_id => "3"},
 ]
 
 Week.destroy_all
@@ -19,6 +19,7 @@ week_hashes.each do |w_hash|
   w.week_number = w_hash[:week_number]
   w.week_start = w_hash[:week_start]
   w.week_stop = w_hash[:week_stop]
+  w.question_id = w_hash[:question_id]
   w.save
 end
 puts "There are now #{Week.count} rows in the weeks table."
