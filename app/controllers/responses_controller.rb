@@ -37,7 +37,7 @@ class ResponsesController < ApplicationController
     @response.question_id = params[:question_id]
 
     if @response.save
-            redirect_to responses_url
+            redirect_to week_url(@response.question)
           else
       render 'edit'
     end
