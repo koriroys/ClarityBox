@@ -34,10 +34,10 @@ class ResponsesController < ApplicationController
     @response = Response.find_by_id(params[:id])
     @response.response_text = params[:response_text]
     @response.user_name= params[:user_name]
-    @response.question_id = params[:question_id]
+    # @response.question_id = params[:question_id]
 
     if @response.save
-            redirect_to week_url(@response)
+            redirect_to week_url(@response.question.week_id)
           else
       render 'edit'
     end

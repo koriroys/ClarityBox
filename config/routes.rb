@@ -14,7 +14,6 @@ ClarityBox::Application.routes.draw do
     #------------------------------
 
 
-
  # Routes for the Week resource:
   # CREATE
   get '/weeks/new', controller: 'Weeks', action: 'new', as: 'new_week'
@@ -69,6 +68,31 @@ ClarityBox::Application.routes.draw do
   # DELETE
   delete '/responses/:id', controller: 'Responses', action: 'destroy'
   #------------------------------
+
+
+# Routes for the User resource:
+
+#CREATE
+
+  get '/users/new' => 'Users#new', as: :new_user
+  post '/users' => 'Users#create'
+
+
+#READ
+
+  get '/users' => 'Users#index', as: :users
+  get '/users/:id' => 'Users#show', as: :user
+
+#UPDATE
+
+  get '/users/:id/edit' => 'Users#edit', as: :edit_user
+  put '/users/:id' => 'Users#update'
+
+
+#DELETE
+
+  delete '/users/:id' => 'Users#destroy'
+
 
 
 

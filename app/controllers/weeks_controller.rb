@@ -13,14 +13,15 @@ class WeeksController < ApplicationController
   end
 
   def create
+    # raise weeks_url.inspect
     @week = Week.new
     @week.week_number = params[:week_number]
     @week.week_start = params[:week_start]
     @week.week_stop = params[:week_stop]
 
     if @week.save
-            redirect_to weeks_url
-          else
+      redirect_to weeks_url
+    else
       render 'new'
     end
   end

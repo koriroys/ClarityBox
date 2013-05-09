@@ -1,0 +1,13 @@
+<h1>All the users</h1>
+
+
+<% @users.each do |user| %>
+
+  <p><%= user.first_name %> <%= user.last_name %>
+  </p>
+
+   <p><%= user.company.name %>
+  </p>
+
+
+<% end %>
