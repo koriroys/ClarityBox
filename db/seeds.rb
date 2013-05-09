@@ -8,9 +8,9 @@
 
 
 week_hashes = [
-  { :week_number => "1", :week_start => "March 1", :week_stop => "March 5", :question_id => "1"},
-  { :week_number => "2", :week_start => "March 7", :week_stop => "March 13", :question_id => "2"},
-  { :week_number => "3", :week_start => "March 15", :week_stop => "March 20", :question_id => "3"},
+  { :week_number => "1", :week_start => "March 1", :week_stop => "March 5", :question_id => "5"},
+  { :week_number => "2", :week_start => "March 7", :week_stop => "March 13", :question_id => "6"},
+  { :week_number => "3", :week_start => "March 15", :week_stop => "March 20", :question_id => "7"},
 ]
 
 Week.destroy_all
