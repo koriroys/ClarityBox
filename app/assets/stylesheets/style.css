@@ -272,7 +272,7 @@ Buttons + Text Fields
 */
 
 header {
-	background: #fff;
+	background: linear-gradient(white 70%, rgba(255, 255, 255, 0));
 	position:fixed;
 }
 
