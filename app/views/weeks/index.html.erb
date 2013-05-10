@@ -5,7 +5,7 @@
 
 
 
-    <div class = "primary-content app">
+    <div class = "primary-content app center">
 
         <% @weeks.each do |week| %>
 
@@ -15,15 +15,15 @@
     <% if week.question_id.present? %>
 
 
-            <%= link_to week.week_number, question_url(week.question_id), :class => 'button' %>
+            <%= link_to 'Week #' + week.week_number.to_s, question_url(week.question_id), :class => 'button' %>
 
           <% else %>
 
-            <%= link_to 'Ask a question', new_question_url, :class => 'button small'%>
+            <%= link_to 'Ask a question for Week #' + week.week_number.to_s, new_question_url, :class => 'button'%>
 
           <% end %>
 
-            (<%= week.week_start %> - <%= week.week_stop %>)
+            <p>(<%= week.week_start %> - <%= week.week_stop %>)</p>
 
           </h4>
 
@@ -37,7 +37,7 @@
    </div>
 
     <div class = "margin-auto">
-        <%= link_to 'Create a new week', new_week_url, :class => 'button'%>
+        <%= link_to 'Create a new week', new_week_url, :class => 'button small'%>
     </div>
 
 
