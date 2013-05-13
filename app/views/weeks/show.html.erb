@@ -35,6 +35,12 @@
 
   <% end %>
 
+
+  <div class = "margin-auto">
+    <%= link_to 'Respond', question_url(@week.question_id), :class => 'button ' %>
+  </div>
+
+
   <footer class = "top-space group ">
       <ul class = "app">
         <li><%= link_to 'See all questions', questions_url %></li>
