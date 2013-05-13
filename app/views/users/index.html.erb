@@ -1,13 +1,15 @@
-<h1>All the users</h1>
+<div class = "container">
 
 
-<% @users.each do |user| %>
-
-  <p><%= user.first_name %> <%= user.last_name %>
-  </p>
-
-   <p><%= user.company.name %>
-  </p>
+    <h1 class = "large-top-space center">All the users</h1>
 
 
-<% end %>
+    <% @users.each do |user| %>
+
+      <p><%= user.first_name %> <%= user.last_name %>, <em><%= user.company.name %></em> (<%= user.user_role %>)</p>
+
+
+
+
+
+    <% end %>

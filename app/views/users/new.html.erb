@@ -1,8 +1,9 @@
+<div class = "container">
 
-<div class = "primary-app-content">
+   <h1 class = "large-top-space center">New User</h1>
 
+      <div class = "primary-app-content">
 
-    <h1>New User</h1>
 
       <%= form_for @user, class: 'user-form' do |f| %>
 
@@ -34,10 +35,13 @@
         <%= f.password_field :password_confirmation %>
       </p>
 
+
+  <div class = "margin-auto">
+
       <%= f.submit :class => 'button' %>
 
 
-
+  </div>
       <% end %>
 
 
