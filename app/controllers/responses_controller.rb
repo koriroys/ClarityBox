@@ -46,6 +46,6 @@ class ResponsesController < ApplicationController
   def destroy
     @response = Response.find_by_id(params[:id])
     @response.destroy
-        redirect_to responses_url
+        redirect_to week_url(@response.question.week_id)
       end
 end

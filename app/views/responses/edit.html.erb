@@ -32,7 +32,7 @@
 
       <p>or <%= link_to 'Cancel', questions_url %></p>
 
-        <%= link_to 'Delete', response_url(@response.question_id), method: 'delete', data: { confirm: "You sure about that?" } %>
+        <%= link_to 'Delete', response_url(@response), method: 'delete', data: { confirm: "You sure about that?" } %>
 
   </div>
 </div>
