@@ -9,7 +9,6 @@ class UsersController < ApplicationController
 
 
   def show
-
   end
 
 
@@ -19,16 +18,17 @@ class UsersController < ApplicationController
 
 
   def create
-    @user = User.new(params[:user])
-    # raise @user.inspect
+    @user = User.new
+    @user.email = params[:email]
+    @user.password = params[:password]
+    @user.password_confirmation = params[:password_confirmation]
 
     if @user.save
-            redirect_to users_url
-          else
-      render 'new'
+      redirect_to users_url, :notice => "User created."
+    else
+      redirect_to new_user_url, :notice => "Username taken."
     end
   end
-
 
 
 
@@ -39,6 +39,15 @@ class UsersController < ApplicationController
 
   def update
 
+    @user.email = params[:email]
+
+    if @user.save
+      redirect_to users_url, :notice => "User updated."
+    else
+      redirect_to edit_user_url(@user.id), :notice => "Username taken."
+    end
+  end
+
   end
 
 
@@ -46,4 +55,3 @@ class UsersController < ApplicationController
 
   end
 
-end
