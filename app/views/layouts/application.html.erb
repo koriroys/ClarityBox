@@ -6,11 +6,32 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="//use.typekit.net/bmv8eic.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
 
-<%= yield %>
+
+
+
+  <div class = "container">
+
+    <%= notice %>
+
+    <%= yield %>
+
+
+  </div>
+
+
+
+<!-- FOOTER -->
+
+  <footer class = "top-space group ">
+      <ul class = "app">
+        <li><%= link_to 'See your weeks', weeks_url %></li>
+        <li><%= link_to 'Start over', responses_url %></li>
+      </ul>
+  </footer>
 
 </body>
 </html>

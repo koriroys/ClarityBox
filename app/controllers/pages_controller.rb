@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+
+  layout "headquarters"
+
   def index
   end
 

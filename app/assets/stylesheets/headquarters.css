@@ -1,0 +1,494 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/*
+  Resetting Defaults
+*/
+
+
+b, strong {
+  font-weight: bold;
+}
+i, em {
+  font-style: italic;
+}
+
+
+
+
+
+
+/*
+  Grid
+*/
+
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.smaller-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+/*
+  Clearfix
+*/
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+
+
+
+/*
+  Custom Styles
+*/
+
+
+body {
+  background: #FFF;
+/*  font-family: 'Georgia', Arial, Helvetica, sans-serif;
+*/
+  font-family: 'minion pro', 'Georgia', Arial, Helvetica, sans-serif;
+  color: #454545;
+}
+
+
+
+/*
+  Links
+*/
+
+
+a:link {
+  text-decoration:none;
+/*  color: #F37359;*/
+  color: #16C7C7;
+}
+
+
+a:visited {
+  text-decoration:none;
+  color: #16C7C7;
+}
+
+nav a:hover {
+  text-decoration:none;
+  color: #FFAD14;
+  color: #1ADBDB;
+
+}
+
+a:active {
+  text-decoration:none;
+}
+
+
+/*
+  Typography
+*/
+
+h1{
+  font-size: 80px;
+/*  font-family: Georgia;*/
+
+
+}
+
+h2{
+  font-size: 60px;
+
+}
+
+h3{
+  font-size: 46px;
+  padding: 40px 0;
+}
+
+h4{
+  font-size: 32px;
+}
+
+
+p {
+  line-height: 190%;
+  font-size: 24px;
+  margin: 35px 0;
+}
+
+
+/*  Styling*/
+
+.center{
+  text-align: center;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.top-space{
+  margin-top: 100px;
+}
+
+
+.large-top-space{
+  margin-top: 200px;
+}
+
+/*
+
+Buttons + Text Fields
+
+*/
+
+.text-field{
+  font-size: 24px;
+  padding: 27px;
+  border-radius: 5px;
+  border: none;
+  background-color: #E8E8E8;
+  font-family: 'minion pro', 'Georgia', Arial, Helvetica, sans-serif;
+}
+
+.button {
+  color: #fff;
+  font-size: 28px;
+  text-transform: uppercase;
+  background: #16C7C7;
+  padding: 24px;
+  border-radius: 5px;
+  border: none;
+  font-family: 'minion pro', 'Georgia', Arial, Helvetica, sans-serif;
+}
+
+.button:hover {
+  color: #fff;
+  background-color: #1ADBDB;
+}
+
+
+.no-hover a:hover{
+  color: #555;
+}
+
+
+
+/*
+  Homepage
+*/
+
+.primary-logo{
+  margin: 200px auto 0;
+}
+
+.primary-logo h4{
+  margin: 15px;
+}
+
+.coming-soon{
+  text-align: center;
+  text-transform: uppercase;
+  color: #C9C9C9;
+  margin-top: 100px;
+}
+
+.signup{
+  margin: 20px auto;
+  text-align: center;
+}
+
+
+.signup.button{
+  margin-left: 15px;
+}
+
+
+
+
+/*
+  Navigation
+*/
+
+header {
+  background: linear-gradient(white 70%, rgba(255, 255, 255, 0));
+  position:fixed;
+}
+
+.primary-nav{
+  height: 160px;
+  width: 100%;
+}
+
+.sticky{
+  height: 20px;
+  padding:80px 0;
+}
+
+.nav-logo{
+  float: left;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.nav-logo h2{
+  font-size: 18px;
+  color:  #BFBFBF;
+}
+
+.nav-elements{
+  float: right;
+}
+
+.nav-elements li{
+  float: left;
+  width: 120px;
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+
+}
+
+
+
+}
+/*
+  Primary Content
+*/
+
+.primary-content{
+  overflow: auto;
+  width: 800px;
+}
+
+.primary-content h2{
+  text-align: center;
+  line-height: 150%;
+  width: 800px;
+  margin: 250px auto 150px;
+}
+
+
+
+.primary-content ul{
+  margin: 30px 0;
+}
+
+.primary-content li{
+  line-height: 140%;
+  font-size: 24px;
+  margin: 18px 0 0 65px;
+  font-style: italic;
+}
+
+.contact h3{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.bottom-links {
+  text-align: center;
+}
+
+.bottom-links li {
+  float: left;
+}
+
+
+
+/*Footer*/
+
+footer{
+  width: 960px;
+  height: 200px;
+  margin: 0 auto;
+  border-top: 1px solid #D9D9D9;
+}
+
+footer ul{
+  width: 600px;
+  height: 20px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+
+footer li{
+  float: left;
+  width: 120px;
+  text-align: center;
+/*  text-transform: uppercase;*/
+  font-style: italic;
+  font-size: 18px;
+  margin: 0 10px 0;
+}
+
+
+footer a:link{
+  color: #B3B3B3;
+}
+
+footer a:visited{
+  color: #B3B3B3;
+}
+
+footer a:hover{
+  color: #D9D9D9;
+}
+
+
+
+/*
+  APP STYLING
+*/
+
+
+
+a.button{
+  color: #fff;
+
+}
+
+.margin-auto{
+  text-align: center;
+  width: 960px;
+  margin: 130px 0;
+}
+
+.primary-content.app{
+  border-top: 1px solid #BDBDBD;
+  margin: 50px auto 150px;
+}
+
+.all-questions h4 {
+  margin-bottom: 20px;
+
+  font-size: 32px;
+}
+
+.all-questions p {
+  text-align: center;
+  font-size: 46px;
+
+}
+
+.button.small {
+  font-size: 18px;
+  text-align: center;
+  background: #8ADBDB;
+  margin: 5px;
+  width: 40px;
+}
+
+.button.small:hover {
+  background: #4CCFCF;
+  }
+
+.button-set{
+  text-align: center;
+  margin: 40px 0 100px;
+
+
+}
+
+
+
+.text-field.small{
+  font-size: 16px;
+  padding: 13px 10px 10px 10px;
+  background: #F2F2F2;
+}
+
+
+time{
+  color: #A3A3A3;
+  padding: 3px;
+  font-size: 18px;
+
+}
+
+
+textarea {
+  resize: none;
+  width: 800px;
+  height: 80px;
+}
+
+
+footer .button.small {
+  background: #C9C9C9;
+
+
+}
+
+footer .button.small:hover {
+  background: #DEDEDE;
+  }
+
+
+ul.app {
+    width: 300px;
+  }
+
+
