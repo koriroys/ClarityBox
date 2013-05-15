@@ -13,6 +13,13 @@ ClarityBox::Application.routes.draw do
 
     #------------------------------
 
+  # Routes for Signin
+
+    get '/sessions/new' => 'sessions#new', as: 'new_session'
+    post '/sessions' => 'sessions#create', as: 'sessions'
+    delete '/sessions' => 'sessions#destroy', as: 'session'
+
+    #------------------------------
 
  # Routes for the Week resource:
   # CREATE

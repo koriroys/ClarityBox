@@ -4,7 +4,7 @@
         <%= form_tag(questions_url, method: 'post') do%>
 
             <p>This is Week #
-                <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :week_number) %>
+                <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :week_number, {:selected => @question.week_id}) %>
             </p>
 
             <p>What question do you want to ask?
