@@ -10,28 +10,47 @@
 </head>
 <body>
 
+<header class = "primary-nav">
+
+    <div class = "sticky container">
+
+      <h1 class = "nav-logo"><%= link_to 'ClarityBox', about_url%></h1>
 
 
+      <nav class = "nav-elements">
+        <ul>
+         <li><%= link_to 'Users', users_url %></li>
+        <li><%= link_to 'New user', new_session_url %></li>
+        <li><%= link_to 'Sign in', new_user_url %></li>
+        <li><%= link_to 'Sign out', session_url  %></li>
+        </ul>
+      </nav>
 
-  <div class = "container">
+  </div>
+
+</header>
+
+
+    <div class = "primary-content group">
 
     <%= notice %>
 
     <%= yield %>
 
 
-  </div>
-
-
-
 <!-- FOOTER -->
 
-  <footer class = "top-space group ">
-      <ul class = "app">
-        <li><%= link_to 'See your weeks', weeks_url %></li>
-        <li><%= link_to 'Start over', responses_url %></li>
-      </ul>
+
+  <footer class = "top-space group">
+
+    <ul>
+      <li><%= link_to 'See all the weeks', weeks_url %></li>
+      <li><%= link_to 'Ask a question', questions_url %></li>
+      <li><%= link_to 'Start over', responses_url %></li>
+    </ul>
+
   </footer>
+
 
 </body>
 </html>
