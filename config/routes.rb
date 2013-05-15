@@ -1,4 +1,4 @@
-ClarityBox::Application.routes.draw do
+  ClarityBox::Application.routes.draw do
 
 # -- Routes for Homepage
 
@@ -12,6 +12,12 @@ ClarityBox::Application.routes.draw do
 	get '/philosophy', :controller => 'Pages', :action => 'philosophy', :as => 'philosophy'
 
     #------------------------------
+
+
+    root to: 'Responses#index'
+
+    #------------------------------
+
 
   # Routes for Signin
 

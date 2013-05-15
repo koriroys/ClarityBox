@@ -410,15 +410,11 @@ a.button{
 
 }
 
-.margin-auto{
-	text-align: center;
-	width: 960px;
-	margin: 130px 0;
-}
+
 
 .primary-content.app{
 	border-top: 1px solid #BDBDBD;
-	margin: 50px auto 150px;
+	margin: 150px auto 150px;
 }
 
 .all-questions h4 {

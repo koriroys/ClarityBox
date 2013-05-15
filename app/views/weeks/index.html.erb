@@ -1,11 +1,17 @@
 
 
 
-    <h1 class = "top-space center">What week is it?</h1>
+    <h1 class = "large-top-space center">What week is it?</h1>
+
+    <% if session[:user_id].present? %>
+      <div class = "large-top-space">
+        <p> Welcome back,  <%= User.find(session[:user_id]).first_name %></p>
+        <p><%= notice %></p>
+      </div>
+    <% end %>
 
 
-
-    <div class = "primary-content app center">
+    <div class = "primary-content center">
 
         <% @weeks.each do |week| %>
 
@@ -34,11 +40,13 @@
 
         <% end %>
 
-   </div>
 
-    <div class = "margin-auto">
+
+    <div class = "top-space">
         <%= link_to 'Create a new week', new_week_url, :class => 'button small'%>
     </div>
+
+  </div>
 
 
 
