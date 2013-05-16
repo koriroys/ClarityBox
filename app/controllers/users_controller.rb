@@ -18,10 +18,11 @@ class UsersController < ApplicationController
 
 
   def create
-    @user = User.new
-    @user.email = params[:email]
-    @user.password = params[:password]
-    @user.password_confirmation = params[:password_confirmation]
+    # raise params[:user].inspect
+    @user = User.new(params[:user])
+    # @user.email = params[:user][:email]
+    # @user.password = params[:password]
+    # @user.password_confirmation = params[:password_confirmation]
 
     if @user.save
       redirect_to users_url, :notice => "User created."
@@ -33,12 +34,12 @@ class UsersController < ApplicationController
 
 
   def edit
-
+    @user = User.find_by_id(params[:id])
   end
 
 
   def update
-
+    @user = User.find_by_id(params[:id])
     @user.email = params[:email]
 
     if @user.save
