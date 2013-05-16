@@ -1,0 +1,17 @@
+ <h1 class = "large-top-space center">All the companies</h1>
+
+
+<div class = "primary-content app">
+
+  <% @companies.each do |company| %>
+
+    <p><%= company.name %></p>
+    <p><%= link_to 'Edit', edit_company_url(company) %> </p>
+    <p><%= link_to 'Delete', company_url(company), :method =>'delete', data: {confirm: "You sure?"}  %> </p>
+
+  <% end %>
+
+
+
+
+</div>

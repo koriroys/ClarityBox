@@ -31,7 +31,7 @@
 
      # Routes for the Company resource:
   # CREATE
-  get '/companies/new', controller: 'companies', action: 'new', as: 'new_week'
+  get '/companies/new', controller: 'companies', action: 'new', as: 'new_company'
   post '/companies', controller: 'Companies', action: 'create'
 
   # READ
