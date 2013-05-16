@@ -10,4 +10,10 @@
     <%= link_to 'Respond to a question', weeks_url, :class => 'button'%>
   </div>
 
-<p><%= notice %></p>
+     <div class = "large-top-space">
+    <p class = "center"><%= notice %></p>
+    <% if session[:user_id].present? %>
+     <p class = "center"> Welcome back,  <%= User.find(session[:user_id]).first_name %></p>
+
+   </div>
+    <% end %>
