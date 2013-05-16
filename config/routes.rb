@@ -27,6 +27,27 @@
 
     #------------------------------
 
+
+
+     # Routes for the Company resource:
+  # CREATE
+  get '/companies/new', controller: 'companies', action: 'new', as: 'new_week'
+  post '/companies', controller: 'Companies', action: 'create'
+
+  # READ
+  get '/companies', controller: 'Companies', action: 'index', as: 'companies'
+  get '/companies/:id', controller: 'Companies', action: 'show', as: 'company'
+
+  # UPDATE
+  get '/companies/:id/edit', controller: 'Companies', action: 'edit', as: 'edit_company'
+  put '/companies/:id', controller: 'Companies', action: 'update'
+
+  # DELETE
+  delete '/companies/:id', controller: 'Companies', action: 'destroy'
+
+
+    #------------------------------
+
  # Routes for the Week resource:
   # CREATE
   get '/weeks/new', controller: 'Weeks', action: 'new', as: 'new_week'

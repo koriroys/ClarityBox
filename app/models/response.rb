@@ -1,5 +1,5 @@
 class Response < ActiveRecord::Base
-  attr_accessible :question_id, :response_text, :user_name
+  attr_accessible :user_id, :response_text, :question_id
 
   belongs_to :question
   # belongs_to :week

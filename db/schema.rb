@@ -22,12 +22,17 @@ ActiveRecord::Schema.define(:version => 20130509161337) do
   create_table "questions", :force => true do |t|
     t.text     "question_text"
     t.integer  "week_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.integer  "user_id"
+    t.integer  "company_id"
+    t.datetime "ask_at"
+    t.datetime "remind_at"
+    t.datetime "send_roll_up_at"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "responses", :force => true do |t|
-    t.string   "user_name"
+    t.integer  "user_id"
     t.text     "response_text"
     t.integer  "question_id"
     t.datetime "created_at",    :null => false
@@ -46,12 +51,10 @@ ActiveRecord::Schema.define(:version => 20130509161337) do
   end
 
   create_table "weeks", :force => true do |t|
-    t.integer  "week_number"
-    t.string   "week_start"
-    t.string   "week_stop"
-    t.integer  "question_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.date     "start_date"
+    t.date     "end_date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
