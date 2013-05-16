@@ -3,8 +3,12 @@
 
         <%= form_tag(questions_url, method: 'post') do%>
 
-            <p>This is Week #
-                <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :week_number, {:selected => @question.week_id}) %>
+          <p>Company:
+                <%= select_tag :company_id, options_from_collection_for_select(Company.all, :id, :name) %>
+          </p>
+
+            <p>This question is for:
+                <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :end_date) %>
             </p>
 
             <p>What question do you want to ask?

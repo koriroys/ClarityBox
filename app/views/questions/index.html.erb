@@ -14,11 +14,19 @@
         <% @questions.each do |question| %>
 
             <h4 class = "top-space">
-              Week #<%= question.week.week_number %>
+
+            <h3><%= question.company.name %></h3>
+
               <time>
-                (<%= question.week.week_start %> - <%= question.week.week_stop %>)
+                (<%= question.week.start_date %> - <%= question.week.end_date %>)
               </time>
             </h4>
+
+            <p>Ask this on: <%= question.ask_at %></p>
+
+            <p>Send reminder on: <%= question.remind_at %></p>
+
+            <p>Send rollup on: <%= question.send_roll_up_at %></p>
 
 
             <h3 class = "center italic">
@@ -29,8 +37,7 @@
 
             <div class = "button-set">
 
-                <%= link_to 'Respond', question_url(question), :class => 'button small' %>
-                <%= link_to 'View', week_url(question.week_id), :class => 'button small'%>
+                <%= link_to 'View', question_url(question), :class => 'button small'%>
                 <%= link_to 'Edit', edit_question_url(question), :class => 'button small'%>
             </div>
 

@@ -3,13 +3,23 @@
 
         <%= form_tag(question_url(@question), method: 'put') do%>
 
-            <p>This is Week #
-                <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :week_number, @question.week_id)%>
+          <p>Company:
+                <%= select_tag :company_id, options_from_collection_for_select(Company.all, :id, :name, @question.company_id) %>
+          </p>
+
+            <p>This question is for:
+                <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :end_date, @question.week_id) %>
             </p>
 
             <p>What question do you want to ask?
                 <%= text_area_tag :question_text, @question.question_text %>
             </p>
+
+
+            <p>This question is for:
+                <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :end_date, @question.week_id) %>
+            </p>
+
 
 
 
