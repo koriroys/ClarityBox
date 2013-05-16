@@ -11,18 +11,27 @@
   </p>
 
   <p>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
+    <%= label_tag :first_name %>
+    <%= text_field_tag :first_name, @user.first_name %>
   </p>
 
-  <p>
-    <%= label_tag :password_confirmation %>
-    <%= password_field_tag :password_confirmation %>
+<p>
+    <%= label_tag :last_name %>
+    <%= text_field_tag :last_name, @user.last_name %>
   </p>
+
+   <p>User role:
+          <%= select_tag :user_role, options_from_collection_for_select(User.all, :user_role, :user_role, @user.user_role) %>
+    </p>
+
+
+   <p>Company:
+          <%= select_tag :company_id, options_from_collection_for_select(Company.all, :id, :name, @user.company_id) %>
+    </p>
 
 
   <div>
-    <%= submit_tag "Update User", :class => 'button' %>
+    <%= submit_tag 'Save', :class => 'button' %>
   </div>
 
 <% end %>

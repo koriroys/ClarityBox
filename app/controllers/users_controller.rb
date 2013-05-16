@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-
   end
 
 
@@ -41,18 +40,24 @@ class UsersController < ApplicationController
   def update
     @user = User.find_by_id(params[:id])
     @user.email = params[:email]
+    @user.first_name = params[:first_name]
+    @user.last_name = params[:last_name]
+    @user.company_id = params[:company_id]
+    @user.user_role = params[:user_role]
 
     if @user.save
       redirect_to users_url, :notice => "User updated."
     else
       redirect_to edit_user_url(@user.id), :notice => "Username taken."
     end
-  end
 
   end
 
 
   def destroy
-
+    @user = User.find_by_id(params[:id])
+    @user.destroy
+      redirect_to users_url
+    end
   end
 

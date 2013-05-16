@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
       if u.present? && u.authenticate(params[:password])
         session[:user_id] = u.id
-        redirect_to weeks_url, notice: 'Sign in successful.'
+        redirect_to responses_url, notice: 'Sign in successful.'
 
       else
         redirect_to new_session_url, notice: 'Nice try.'

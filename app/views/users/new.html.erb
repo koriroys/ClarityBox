@@ -24,11 +24,11 @@
 
         <p>
           <%= f.label :user_role, 'User role' %>
-          <%= f.select :user_role, ['admin', 'general'] %></p>
+          <%= f.select :user_role, ['Admin', 'General',] %></p>
 
 
         <p>
-          <%= f.label :company_id, 'Company name' %>
+          <%= f.label :company_id, 'Company' %>
           <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name) %></p>
         </p>
 
