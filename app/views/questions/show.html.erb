@@ -19,6 +19,8 @@
 
           <p><%= link_to 'Edit this question', edit_question_url(@question)%></p>
 
+          <p><%= link_to 'Respond to this question', new_response_url %></p>
+
           <p>Ask this question on:  <%= @question.ask_at %></p>
           <p>Send reminder on:  <%= @question.remind_at %></p>
           <p>Send rollup on:  <%= @question.send_roll_up_at %></p>

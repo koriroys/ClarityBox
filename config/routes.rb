@@ -16,8 +16,17 @@
 
     root to: 'Responses#index'
 
-    #------------------------------
 
+#------------------------------
+
+
+# Routes for App home page
+
+
+      get '/app', :controller => 'App', :action => 'index', :as => 'app_home'
+
+
+#------------------------------
 
   # Routes for Signin
 
@@ -31,7 +40,7 @@
 
      # Routes for the Company resource:
   # CREATE
-  get '/companies/new', controller: 'companies', action: 'new', as: 'new_company'
+  get '/companies/new', controller: 'Companies', action: 'new', as: 'new_company'
   post '/companies', controller: 'Companies', action: 'create'
 
   # READ

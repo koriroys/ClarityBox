@@ -5,22 +5,22 @@ class ResponsesController < ApplicationController
   end
 
   def show
-    @responses = Response.find_by_id(params[:id])
+    @response = Response.find_by_id(params[:id])
   end
 
   def new
     @response = Response.new
+    @response.question_id = params[:question_id]
+    @response.user_id = session[:user_id]
   end
 
   def create
     # raise params.inspect
-    @response = Response.new
-    @response.response_text = params[:response_text]
-    @response.user_name= params[:user_name]
-    @response.question_id = params[:question_id]
+    @response = Response.new(params[:response])
+
 
     if @response.save
-            redirect_to week_url(@response.question.week_id)
+            redirect_to response_url(@response)
           else
       render 'new'
     end
@@ -32,12 +32,9 @@ class ResponsesController < ApplicationController
 
   def update
     @response = Response.find_by_id(params[:id])
-    @response.response_text = params[:response_text]
-    @response.user_name= params[:user_name]
-    # @response.question_id = params[:question_id]
 
-    if @response.save
-            redirect_to week_url(@response.question.week_id)
+    if  @response.update_attributes(params[:response])
+            redirect_to response_url(@response)
           else
       render 'edit'
     end
@@ -46,6 +43,6 @@ class ResponsesController < ApplicationController
   def destroy
     @response = Response.find_by_id(params[:id])
     @response.destroy
-        redirect_to week_url(@response.question.week_id)
+        redirect_to responses_url
       end
 end

@@ -1,37 +1,21 @@
+<h1 class = "large-top-space center">Your response</h1>
 
-    <header class = "primary-logo">
+  <div class = "primary-content ">
 
-      <h1>Your response</h1>
+    <h3 class = "top-space center italic">
+      "<%= @response.question.question_text %>"
+    </h3>
 
-  </header>
+    <%= form_for @response do |f| %>
 
+      <p>
+        <%= f.label :response_text, 'Your thoughts' %>
+      </p>
+        <%= f.text_area :response_text %>
 
+        <%= f.submit 'Respond', :class => 'button' %>
 
-    <div class = "primary-content app">
+    <% end %>
 
-      <%= form_tag(responses_url, method: 'post') do %>
-
-
-
-            <p>Your name:
-              <%= text_field_tag :user_name %>
-            </p>
-
-
-            <p>Your thoughts:
-              <%= text_area_tag :response_text %>
-            </p>
-
-            <div class = "button-set">
-              <%= submit_tag 'Respond', :class => 'button' %>
-
-              <p>or <%= link_to 'Back to all questions', questions_url %></p>
-
-            </div>
-
-      <% end %>
-
-
-
-    </div>
+  </div>
 

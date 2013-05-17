@@ -4,34 +4,30 @@
 
     <div class = "primary-content app">
 
-
           <h3 class = "top-space center italic">
             "<%= @response.question.question_text %>"
           </h3>
 
 
+   <div class = "primary-content">
 
-         <%= form_tag(response_url(@response), method: 'put') do%>
+    <%= form_for @response do |f| %>
 
-            <%#= hidden_field_tag :question_id, params[:id] %>
+      <p>
+        <%= f.label :response_text, 'Your thoughts' %>
+      </p>
+        <%= f.text_area :response_text %>
 
-             <p>Your thoughts:</p>
-            <p>
-              <%= text_area_tag :response_text, @response.response_text %>
-            </p>
+    <div class = "center">
 
-
-            <p>Your name:
-              <%= text_field_tag :user_name, @response.user_name %>
-            </p>
-
-          <div class = "button-set">
-            <%= submit_tag "Save", :class => 'button' %>
+        <p><%= f.submit 'Edit', :class => 'button' %></p>
 
     <% end %>
 
-      <p>or <%= link_to 'Cancel', questions_url %></p>
+      <p>or <%= link_to 'Cancel', responses_url %></p>
 
         <em><%= link_to 'Delete', response_url(@response), method: 'delete', data: { confirm: "You sure about that?" } %></em>
 
-  </div>
+    </div>
+   </div>
+
