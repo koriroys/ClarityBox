@@ -1,38 +1,43 @@
 <h1 class = "large-top-space center">Editing User</h1>
 
+      <p><%= notice %></p>
 
-<%= form_tag(user_url(@user), method: 'put') do %>
+      <%= form_for @user, class: 'user-form' do |f| %>
 
-<p><%= notice %></p>
+        <p>
+          <%= f.label :first_name, 'First' %>
+          <%= f.text_field :first_name %>
+          <%= f.label :last_name, 'Last' %>
+          <%= f.text_field :last_name %>
+        </p>
 
-  <p>
-    <%= label_tag :email %>
-    <%= text_field_tag :email, @user.email %>
-  </p>
+        <p>
+          <%= f.label :email, 'Email' %>
+          <%= f.text_field :email %></p>
 
-  <p>
-    <%= label_tag :first_name %>
-    <%= text_field_tag :first_name, @user.first_name %>
-  </p>
-
-<p>
-    <%= label_tag :last_name %>
-    <%= text_field_tag :last_name, @user.last_name %>
-  </p>
-
-   <p>User role:
-          <%= select_tag :user_role, options_from_collection_for_select(User.all, :user_role, :user_role, @user.user_role) %>
-    </p>
+        <p>
+          <%= f.label :user_role, 'User role' %>
+          <%= f.select :user_role, ['Admin', 'General',] %></p>
 
 
-   <p>Company:
-          <%= select_tag :company_id, options_from_collection_for_select(Company.all, :id, :name, @user.company_id) %>
-    </p>
+        <p>
+          <%= f.label :company_id, 'Company' %>
+          <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name) %></p>
+        </p>
+
+      <p>
+        <%= f.label :password, 'New password' %>
+        <%= f.password_field :password %>
+        <%= f.label :password_confirmation, 'Confirm new password' %>
+        <%= f.password_field :password_confirmation %>
+      </p>
 
 
-  <div>
-    <%= submit_tag 'Save', :class => 'button' %>
-  </div>
 
-<% end %>
+      <%= f.submit :class => 'button center' %>
+
+
+
+      <% end %>
+
 

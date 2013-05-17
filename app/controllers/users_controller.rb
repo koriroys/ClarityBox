@@ -39,11 +39,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by_id(params[:id])
-    @user.email = params[:email]
-    @user.first_name = params[:first_name]
-    @user.last_name = params[:last_name]
-    @user.company_id = params[:company_id]
-    @user.user_role = params[:user_role]
+    @user.update_attributes(params[:user])
 
     if @user.save
       redirect_to users_url, :notice => "User updated."
