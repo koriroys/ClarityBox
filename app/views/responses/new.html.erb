@@ -2,18 +2,23 @@
 
   <div class = "primary-content ">
 
-    <h3 class = "top-space center italic">
-      "<%= @response.question.question_text %>"
+<!--     <h3 class = "top-space center italic">
+      "<%= @response.question_id %>"
     </h3>
-
+ -->
     <%= form_for @response do |f| %>
+
+<!--       <%= f.hidden_field ':user_id', :value => session[:user_id] %>
+      <%= f.hidden_field ':question_id', :value => params[:question_id] %> -->
 
       <p>
         <%= f.label :response_text, 'Your thoughts' %>
       </p>
         <%= f.text_area :response_text %>
 
+      <div class = "top-space center">
         <%= f.submit 'Respond', :class => 'button' %>
+     </div>
 
     <% end %>
 

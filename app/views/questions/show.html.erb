@@ -8,7 +8,7 @@
         <h4 class = "top-space">
 
           <time>
-            (<%= @question.week.start_date %> - <%= @question.week.end_date %>)
+            (<%= @question.week.start_date.strftime("%b %e, %Y")  %> - <%= @question.week.end_date.strftime("%b %e, %Y")  %>)
           </time>
         </h4>
 
@@ -21,9 +21,9 @@
 
           <p><%= link_to 'Respond to this question', new_response_url %></p>
 
-          <p>Ask this question on:  <%= @question.ask_at %></p>
-          <p>Send reminder on:  <%= @question.remind_at %></p>
-          <p>Send rollup on:  <%= @question.send_roll_up_at %></p>
+          <p>Ask this question on:  <%= @question.ask_at.strftime("%A, %b %e at %l:%M %p") %></p>
+          <p>Send reminder on:  <%= @question.remind_at.strftime("%A, %b %e at %l:%M %p") %></p>
+          <p>Send rollup on:  <%= @question.send_roll_up_at.strftime("%A, %b %e at %l:%M %p") %></p>
 
     </div>
 

@@ -1,12 +1,5 @@
-  <h1 = class = "large-top-space center">Edit a company.</h1>
+<h1 = class = "large-top-space center">Edit a company.</h1>
 
+  <%= render 'form' %>
 
-    <%= form_tag(company_url(@company), method: 'put') do %>
-
-        <p>Company's name:
-          <%= text_area_tag :name, @company.name %>
-        </p>
-
-      <%= submit_tag 'Save', :class => 'button' %>
-
-    <% end %>
+<p class = "center"><%= link_to 'Cancel', companies_url %></p>

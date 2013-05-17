@@ -10,9 +10,11 @@
 
         <% @weeks.each do |week| %>
 
-          <h4 class = "top-space"> Week
+          <h4 class = "top-space"> Week #<%= week.start_date.strftime("%V") %>
 
-            <p><%= week.start_date %> - <%= week.end_date %></p>
+            <p><%= week.start_date.strftime("%b %e, %Y")  %> - <%= week.end_date.strftime("%b %e, %Y") %></p>
+
+
 
           </h4>
 

@@ -5,13 +5,19 @@
 
   <% @companies.each do |company| %>
 
-    <p><%= company.name %></p>
-    <p><%= link_to 'Edit', edit_company_url(company) %> </p>
-    <p><%= link_to 'Delete', company_url(company), :method =>'delete', data: {confirm: "You sure?"}  %> </p>
+    <h1 class = "top-space center italic"><%= company.name %></h1>
+
+      <div class = "center">
+        <p><%= link_to 'View', company_url(company)%></p>
+        <p><%= link_to 'Edit', edit_company_url(company)%></p>
+        <p><%= link_to 'Delete', company_url(company), :method =>'delete', data: {confirm: "You sure?"}  %></p>
+      </div>
 
   <% end %>
 
-
+  <div class = "center top-space">
+    <%= link_to 'Create a new company', new_company_url, :class => "button" %>
+  </div>
 
 
 </div>

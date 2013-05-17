@@ -1,11 +1,5 @@
-  <h1 class = "large-top-space center">Create a new company</h1>
+<h1 class = "large-top-space center">Create a new company</h1>
 
-  <%= form_tag(companies_url, method: 'post') do %>
+  <%= render 'form' %>
 
-  <p>Company's name:
-    <%= text_field_tag :name %>
-  </p>
-
-  <%= submit_tag 'Create', :class => 'button' %>
-
-  <% end %>
+<p class = "center"><%= link_to 'Cancel', companies_url %></p>
