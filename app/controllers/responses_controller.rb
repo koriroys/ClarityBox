@@ -10,8 +10,8 @@ class ResponsesController < ApplicationController
 
   def new
     @response = Response.new
-    @response.question_id = params[:question_id]
-    @response.user_id = session[:user_id]
+    # @response.question_id = params[:question_id]
+    # @response.user_id = session[:user_id]
   end
 
   def create
