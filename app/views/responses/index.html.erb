@@ -6,4 +6,9 @@
               <%= response.response_text %>
 
             </p>
+
+
+            <p><%= link_to 'View', question_response_url(@question, response) %></p>
+            <p><%= link_to 'Delete', question_response_url(@question, response), method: 'delete' %></p>
+
         <% end %>

@@ -2,13 +2,13 @@
 
   <div class = "primary-content">
 
-<!--     <h3 class = "top-space center italic">
+<h3 class = "top-space center italic">
       "<%= @response.question.question_text %>"
     </h3>
- -->
-      <p>"<%= @response.response_text %>"</p>
+
+       <p><%= @response.user.first_name %>:  "<%= @response.response_text %>"</p>
 
  </div>
 
 
-<p><%= link_to 'Edit', response_url(@response) %></p>
+<p><%= link_to 'Edit', edit_question_response_url(@question, @response) %></p>

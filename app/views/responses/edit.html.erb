@@ -11,7 +11,7 @@
 
    <div class = "primary-content">
 
-    <%= form_for @response do |f| %>
+    <%= form_for [@question, @response] do |f| %>
 
       <p>
         <%= f.label :response_text, 'Your thoughts' %>
@@ -24,9 +24,9 @@
 
     <% end %>
 
-      <p>or <%= link_to 'Cancel', responses_url %></p>
+      <p>or <%= link_to 'Cancel', question_responses_url(@question) %></p>
 
-        <em><%= link_to 'Delete', response_url(@response), method: 'delete', data: { confirm: "You sure about that?" } %></em>
+        <em><%= link_to 'Delete', question_response_url(@question, @response), method: 'delete', data: { confirm: "You sure about that?" } %></em>
 
     </div>
    </div>

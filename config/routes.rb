@@ -66,42 +66,51 @@
 
   #------------------------------
 
+  # Nested resources:
+
+  resources :questions do
+    resources :responses
+  end
 
 
- # Routes for the Question resource:
-  # CREATE
-  get '/questions/new', controller: 'Questions', action: 'new', as: 'new_question'
-  post '/questions', controller: 'Questions', action: 'create'
 
-  # READ
-  get '/questions', controller: 'Questions', action: 'index', as: 'questions'
-  get '/questions/:id', controller: 'Questions', action: 'show', as: 'question'
-
-  # UPDATE
-  get '/questions/:id/edit', controller: 'Questions', action: 'edit', as: 'edit_question'
-  put '/questions/:id', controller: 'Questions', action: 'update'
-
-  # DELETE
-  delete '/questions/:id', controller: 'Questions', action: 'destroy'
   #------------------------------
 
 
+ # # Routes for the Question resource:
+ #  # CREATE
+ #  get '/questions/new', controller: 'Questions', action: 'new', as: 'new_question'
+ #  post '/questions', controller: 'Questions', action: 'create'
 
- # Routes for the Response resource:
-  # CREATE
-  get '/responses/new', controller: 'Responses', action: 'new', as: 'new_response'
-  post '/responses', controller: 'Responses', action: 'create'
+ #  # READ
+ #  get '/questions', controller: 'Questions', action: 'index', as: 'questions'
+ #  get '/questions/:id', controller: 'Questions', action: 'show', as: 'question'
 
-  # READ
-  get '/responses', controller: 'Responses', action: 'index', as: 'responses'
-  get '/responses/:id', controller: 'Responses', action: 'show', as: 'response'
+ #  # UPDATE
+ #  get '/questions/:id/edit', controller: 'Questions', action: 'edit', as: 'edit_question'
+ #  put '/questions/:id', controller: 'Questions', action: 'update'
 
-  # UPDATE
-  get '/responses/:id/edit', controller: 'Responses', action: 'edit', as: 'edit_response'
-  put '/responses/:id', controller: 'Responses', action: 'update'
+ #  # DELETE
+ #  delete '/questions/:id', controller: 'Questions', action: 'destroy'
+ #  #------------------------------
 
-  # DELETE
-  delete '/responses/:id', controller: 'Responses', action: 'destroy'
+
+
+ # # Routes for the Response resource:
+ #  # CREATE
+ #  get '/responses/new', controller: 'Responses', action: 'new', as: 'new_response'
+ #  post '/responses', controller: 'Responses', action: 'create'
+
+ #  # READ
+ #  get '/responses', controller: 'Responses', action: 'index', as: 'responses'
+ #  get '/responses/:id', controller: 'Responses', action: 'show', as: 'response'
+
+ #  # UPDATE
+ #  get '/responses/:id/edit', controller: 'Responses', action: 'edit', as: 'edit_response'
+ #  put '/responses/:id', controller: 'Responses', action: 'update'
+
+ #  # DELETE
+ #  delete '/responses/:id', controller: 'Responses', action: 'destroy'
   #------------------------------
 
 
