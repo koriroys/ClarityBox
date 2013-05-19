@@ -25,10 +25,9 @@ class QuestionsController < ApplicationController
     @question.send_roll_up_at = @week_datetime + 4.days + 8.hours
     @question.company_id = params[:company_id]
 
-
     if @question.save
-            redirect_to questions_url
-          else
+      redirect_to questions_url
+    else
       render 'new'
     end
   end
@@ -48,8 +47,8 @@ class QuestionsController < ApplicationController
     @question.send_roll_up_at = @week_datetime + 4.days + 8.hours
 
     if @question.save
-            redirect_to questions_url
-          else
+      redirect_to questions_url
+    else
       render 'edit'
     end
   end
@@ -57,6 +56,6 @@ class QuestionsController < ApplicationController
   def destroy
     @question = Question.find_by_id(params[:id])
     @question.destroy
-        redirect_to questions_url
-      end
+    redirect_to questions_url
+  end
 end
