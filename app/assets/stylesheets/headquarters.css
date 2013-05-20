@@ -76,7 +76,7 @@ i, em {
 }
 
 .smaller-container {
-  max-width: 800px;
+  max-width: 650px;
   margin: 0 auto;
 }
 
@@ -172,8 +172,8 @@ h4{
 
 
 p {
-  line-height: 190%;
-  font-size: 24px;
+  line-height: 170%;
+  font-size: 22px;
   margin: 35px 0;
 }
 
@@ -190,6 +190,10 @@ p {
 
 .top-space{
   margin-top: 100px;
+}
+
+.small-top-space{
+  margin-top: 40px;
 }
 
 
@@ -325,19 +329,21 @@ header {
 .primary-content h2{
   text-align: center;
   line-height: 150%;
-  width: 800px;
   margin: 250px auto 150px;
+  width: 800px;
 }
 
-
+.center {
+  text-align: center;
+}
 
 .primary-content ul{
   margin: 30px 0;
 }
 
 .primary-content li{
-  line-height: 140%;
-  font-size: 24px;
+  line-height: 120%;
+  font-size: 22px;
   margin: 18px 0 0 65px;
   font-style: italic;
 }
