@@ -9,20 +9,7 @@
           </h3>
 
 
-   <div class = "primary-content">
-
-    <%= form_for [@question, @response] do |f| %>
-
-      <p>
-        <%= f.label :response_text, 'Your thoughts' %>
-      </p>
-        <%= f.text_area :response_text %>
-
-    <div class = "center">
-
-        <p><%= f.submit 'Edit', :class => 'button' %></p>
-
-    <% end %>
+  <%= render 'form' %>
 
       <p>or <%= link_to 'Cancel', question_responses_url(@question) %></p>
 

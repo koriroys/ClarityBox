@@ -25,6 +25,7 @@ class ResponsesController < ApplicationController
   def create
     # raise params.inspect
     @response = @question.responses.new(params[:response])
+    @response.user_id = session[:user_id]
 
     if @response.save
             redirect_to question_response_url(@question, @response)

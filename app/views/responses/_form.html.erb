@@ -1,0 +1,12 @@
+  <%= form_for [@question, @response] do |f| %>
+
+  <p>
+  <%= f.label :response_text, 'Your thoughts' %>
+  </p>
+  <%= f.text_area :response_text %>
+
+  <div class = "center">
+
+  <p><%= f.submit :class => 'button' %></p>
+
+  <% end %>

@@ -3,7 +3,7 @@
 
         <% @responses.each do |response| %>
             <p>
-              <%= response.response_text %>
+              <%= response.user.first_name %>: <%= response.response_text %>
 
             </p>
 
