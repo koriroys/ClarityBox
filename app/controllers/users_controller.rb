@@ -1,11 +1,8 @@
 class UsersController < ApplicationController
 
-
   def index
     @users = User.all
   end
-
-
 
   def show
   end
@@ -26,7 +23,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to users_url, :notice => "User created."
     else
-      redirect_to new_user_url, :notice => "Username taken."
+      redirect_to new_user_url, :notice => "Email address taken."
     end
   end
 
@@ -44,7 +41,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to users_url, :notice => "User updated."
     else
-      redirect_to edit_user_url(@user.id), :notice => "Username taken."
+      redirect_to edit_user_url(@user.id), :notice => "Email address taken."
     end
 
   end
