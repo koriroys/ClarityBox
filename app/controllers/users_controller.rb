@@ -1,4 +1,20 @@
 class UsersController < ApplicationController
+  before_filter :authorize_any_user, only: [:show, :edit, :update, :destroy]
+  before_filter :require_signed_in_user, only: [:index]
+
+  def authorize_any_user
+    @user = User.find(params[:id])
+    if @user != current_user
+    redirect_to users_url, notice: 'Nice try'
+    end
+  end
+
+  def require_signed_in_user
+    unless signed_in?
+      redirect_to new_session_url, notice: 'Must be signed in for that'
+    end
+  end
+
 
   def index
     @users = User.all

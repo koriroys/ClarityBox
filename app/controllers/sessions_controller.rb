@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
         redirect_to app_home_url, notice: 'Sign in successful.'
 
       else
-        redirect_to new_session_url, notice: 'Nice try.'
+       render 'new'
       end
 
     end
