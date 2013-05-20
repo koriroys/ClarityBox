@@ -17,6 +17,7 @@ class QuestionsController < ApplicationController
     @question = Question.new
     # raise params.inspect
     @question.question_text = params[:question_text]
+    @question.user_id = session[:user_id]
     @question.week_id = params[:week_id]
     # raise Week.find_by_id(params[:week_id]).inspect
     @week_datetime = Week.find_by_id(params[:week_id]).end_date.to_datetime

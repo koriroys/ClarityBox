@@ -6,8 +6,11 @@ class Response < ActiveRecord::Base
 
   belongs_to :user
 
+  validates :user, presence: true
   validates :question, presence: true
-  validates :user, presence: true, uniqueness: { scope :question_id}
+  validates :response_text, presence: true
+
+  validates :user_id, uniqueness: { scope :question_id, message: "has already responded to this question" }
 
   validate :user_cannot_respond_to_question_more_than_once
 

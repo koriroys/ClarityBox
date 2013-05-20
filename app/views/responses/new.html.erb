@@ -7,19 +7,22 @@
     </h3>
  -->
 
-    <%= form_for [@question, @response] do |f| %>
+     <%= form_tag(questions_url, method: 'post') do%>
 
-      <%= f.hidden_field :user_id, :value => session[:user_id] %>
-<!--       <%= f.hidden_field :question_id, :value => params[:question_id] %> -->
+            <p>This is Week #
+                <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :week_number, {:selected => @question.week_id}) %>
+            </p>
 
-      <p>
-        <%= f.label :response_text, 'Your thoughts' %>
-      </p>
-        <%= f.text_area :response_text %>
+            <p>What question do you want to ask?
+                <%= text_area_tag :question_text %>
+            </p>
 
-      <div class = "top-space center">
-        <%= f.submit 'Respond', :class => 'button' %>
-     </div>
+
+
+          <div class = "button-set">
+            <%= submit_tag "Submit", :class => 'button' %>
+
+        <% end %>
 
     <% end %>
 

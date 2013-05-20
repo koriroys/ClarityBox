@@ -8,6 +8,7 @@ class Question < ActiveRecord::Base
 
   validates :company, presence: true
   validates :week, presence: true
+  validates :question_text, presence: true
   validates :user, presence: true
 
 end
