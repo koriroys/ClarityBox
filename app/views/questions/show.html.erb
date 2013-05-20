@@ -19,7 +19,7 @@
 
           <p><%= link_to 'Edit this question', edit_question_url(@question)%></p>
 
-          <p><%= link_to 'Respond to this question', new_response_url %></p>
+          <p><%= link_to 'Respond to this question', new_question_response_url(@question) %></p>
 
           <p>Ask this question on:  <%= @question.ask_at.strftime("%A, %b %e at %l:%M %p") %></p>
           <p>Send reminder on:  <%= @question.remind_at.strftime("%A, %b %e at %l:%M %p") %></p>
