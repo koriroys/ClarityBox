@@ -8,6 +8,14 @@ class User < ActiveRecord::Base
   has_many :responses
 
   validates :email, presence: true, uniqueness: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :company, presence: true
+  validates :user_role, presence: true
+  validates :password, presence: true
+  validates :password_confirmation, presence: true
+
+
 
 
 
