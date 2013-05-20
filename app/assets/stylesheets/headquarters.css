@@ -329,8 +329,12 @@ header {
 .primary-content h2{
   text-align: center;
   line-height: 150%;
-  margin: 250px auto 150px;
-  width: 800px;
+  margin: 250px auto 0;
+  width: 850px;
+}
+
+.primary-content h4{
+  line-height: 120%;
 }
 
 .center {

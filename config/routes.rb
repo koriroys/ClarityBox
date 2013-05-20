@@ -11,6 +11,11 @@
 	get '/story', :controller => 'Pages', :action => 'story', :as => 'story'
 	get '/philosophy', :controller => 'Pages', :action => 'philosophy', :as => 'philosophy'
 
+  get '/about/version1', :controller => 'Pages', :action => 'version1', :as => 'version1'
+  get '/about/version2', :controller => 'Pages', :action => 'version2', :as => 'version1'
+  get '/about/version3', :controller => 'Pages', :action => 'version3', :as => 'version1'
+
+
     #------------------------------
 
 
