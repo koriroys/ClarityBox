@@ -11,6 +11,7 @@
   <div class = "primary-content app ">
 
 
+
         <% @questions.each do |question| %>
 
             <h4 class = "top-space">
@@ -22,16 +23,16 @@
               </time>
             </h4>
 
-            <p>Ask this on:  <%= question.ask_at.strftime("%A, %b %e at %l:%M %p")  %></p>
-
-            <p>Send reminder on:  <%= question.remind_at.strftime("%A, %b %e at %l:%M %p") %></p>
-
-            <p>Send rollup on:  <%= question.send_roll_up_at.strftime("%A, %b %e at %l:%M %p") %></p>
-
-
             <h3 class = "center italic">
               "<%= question.question_text %>"
             </h3>
+
+
+        <% if question.send_question == true %>
+            <p>Yes, ask this question on <%= question.ask_at.strftime("%A, %b %e at %l:%M %p") %></p>
+            <% else %>
+            <p>No, do not ask this question.</p>
+        <% end %>
 
 
 
