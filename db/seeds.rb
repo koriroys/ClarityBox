@@ -75,8 +75,8 @@ question_hashes = [
     :ask_at => ask_at,
     :remind_at => remind_at,
     :send_roll_up_at => send_roll_up_at,
-    :send_question => 'true'
-    :send_reminder => 'true'
+    :send_question => 'true',
+    :send_reminder => 'true',
     :send_rollup => 'true'
      },
 
@@ -87,8 +87,8 @@ question_hashes = [
     :ask_at => ask_at + 1.week,
     :remind_at => remind_at + 1.week,
     :send_roll_up_at => send_roll_up_at + 1.week,
-    :send_question => 'true'
-    :send_reminder => 'true'
+    :send_question => 'true',
+    :send_reminder => 'true',
     :send_rollup => 'true'
     },
 
@@ -99,8 +99,8 @@ question_hashes = [
     :ask_at => ask_at + 2.weeks,
     :remind_at => remind_at + 2.weeks,
     :send_roll_up_at => send_roll_up_at + 2.weeks,
-        :send_question => 'true'
-    :send_reminder => 'true'
+        :send_question => 'true',
+    :send_reminder => 'true',
     :send_rollup => 'true'
     },
 

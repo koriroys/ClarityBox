@@ -24,7 +24,7 @@
           <p><%= link_to 'See all the responses', question_responses_url(@question) %></p>
 
 
-       <% if @ question.send_question == true %>
+       <% if @question.send_question == true %>
             <p>Yes, ask this question on <%= @question.ask_at.strftime("%A, %b %e at %l:%M %p") %></p>
             <% else %>
             <p>No, do not ask this question.</p>
@@ -38,7 +38,7 @@
       <% end %>
 
        <% if @question.send_rollup == true %>
-          <p>Yes, send this rollup on <%= @question.send_roll_up_at.strftime("%A, %b %e at %l:%M %p") %></p>
+          <p>Yes, send a rollup on <%= @question.send_roll_up_at.strftime("%A, %b %e at %l:%M %p") %></p>
           <% else %>
           <p>No, do not send a rollup for this week.</p>
       <% end %>

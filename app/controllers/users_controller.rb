@@ -32,7 +32,7 @@ class UsersController < ApplicationController
     # @user.password_confirmation = params[:password_confirmation]
 
     if @user.save
-      redirect_to users_url, :notice => "User created."
+      redirect_to company_url(@user.company), :notice => "User created."
     else
       redirect_to new_user_url, :notice => "Email address taken."
     end

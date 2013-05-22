@@ -1,5 +1,5 @@
 class Question < ActiveRecord::Base
-  attr_accessible :question_text, :week_id, :user_id, :company_id, :ask_at, :remind_at, :send_roll_up_at
+  attr_accessible :question_text, :week_id, :user_id, :company_id, :ask_at, :remind_at, :send_roll_up_at, :send_question, :send_reminder, :send_rollup
 
   belongs_to :week
   belongs_to :company
@@ -10,5 +10,7 @@ class Question < ActiveRecord::Base
   validates :week, presence: true
   validates :question_text, presence: true
   validates :user, presence: true
+
+
 
 end

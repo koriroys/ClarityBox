@@ -60,6 +60,7 @@ class QuestionsController < ApplicationController
     @question.send_reminder = params[:send_reminder]
     @question.send_rollup = params[:send_rollup]
 
+
     if @question.save
       redirect_to questions_url
     else
