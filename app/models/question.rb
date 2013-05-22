@@ -6,5 +6,9 @@ class Question < ActiveRecord::Base
   belongs_to :user
   has_many :responses
 
+  validates :company, presence: true
+  validates :week, presence: true
+  validates :question_text, presence: true
+  validates :user, presence: true
 
 end

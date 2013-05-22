@@ -1,11 +1,19 @@
 class UsersController < ApplicationController
+  before_filter :authorize_any_user, only: [:show, :edit, :update, :destroy]
+
+
+  def authorize_any_user
+    @user = User.find(params[:id])
+    if @user != current_user
+    redirect_to users_url, notice: 'Nice try'
+    end
+  end
+
 
 
   def index
     @users = User.all
   end
-
-
 
   def show
   end
@@ -26,7 +34,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to users_url, :notice => "User created."
     else
-      redirect_to new_user_url, :notice => "Username taken."
+      redirect_to new_user_url, :notice => "Email address taken."
     end
   end
 
@@ -44,7 +52,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to users_url, :notice => "User updated."
     else
-      redirect_to edit_user_url(@user.id), :notice => "Username taken."
+      redirect_to edit_user_url(@user.id), :notice => "Email address taken."
     end
 
   end

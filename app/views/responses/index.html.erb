@@ -1,9 +1,14 @@
 
     <h1 class = "large-top-space center">All the responses</h1>
+    <p class = "center italic">
+        (<%= @response.question.week.start_date.strftime("%B %e") %> - <%= @response.question.week.end_date.strftime("%B %e") %>)
+    </p>
+
+    <h2 class = "top-space center italic">"<%= @response.question.question_text %>"</h2>
 
         <% @responses.each do |response| %>
             <p>
-              <%= response.response_text %>
+              <%= response.user.first_name %>: <%= response.response_text %>
 
             </p>
 
@@ -12,3 +17,5 @@
             <p><%= link_to 'Delete', question_response_url(@question, response), method: 'delete' %></p>
 
         <% end %>
+
+          <p><%= link_to 'Back to the question', question_url(@question), :class => 'button center' %></p>

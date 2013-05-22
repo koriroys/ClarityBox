@@ -1,7 +1,9 @@
 <div class = "primary-content group top-space">
   <h1 class = "large top-space center">Ask a new question.</h1>
 
-        <%= form_tag(questions_url, method: 'post') do%>
+     <%= form_tag(questions_url, method: 'post') do%>
+
+     <%= hidden_field_tag :user_id %>
 
           <p>Company:
                 <%= select_tag :company_id, options_from_collection_for_select(Company.all, :id, :name) %>
@@ -21,6 +23,8 @@
             <%= submit_tag "Submit", :class => 'button' %>
 
         <% end %>
+
+
 
     <p>or <%= link_to 'Cancel', questions_url %></p>
 
