@@ -1,5 +1,5 @@
 class Response < ActiveRecord::Base
-  attr_accessible :user_id, :response_text, :question_id
+  attr_accessible :user_id, :response_text, :question_id, :yes_response, :public_response
 
   belongs_to :question
   # belongs_to :week
@@ -11,6 +11,7 @@ class Response < ActiveRecord::Base
   validates :response_text, presence: true
 
   validates :user_id, uniqueness: { scope: :question_id, message: "has already responded to this question" }
+
 
   # validate :user_cannot_respond_to_question_more_than_once
 

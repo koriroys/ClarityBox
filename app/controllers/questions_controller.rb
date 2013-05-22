@@ -36,7 +36,7 @@ class QuestionsController < ApplicationController
     @question.send_rollup = params[:send_rollup]
 
     if @question.save
-      redirect_to questions_url
+      redirect_to question_url(@question)
     else
       render 'new'
     end

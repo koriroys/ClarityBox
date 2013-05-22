@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130522172503) do
+ActiveRecord::Schema.define(:version => 20130522191429) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -38,8 +38,10 @@ ActiveRecord::Schema.define(:version => 20130522172503) do
     t.integer  "user_id"
     t.text     "response_text"
     t.integer  "question_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.boolean  "yes_response"
+    t.boolean  "public_response", :default => true
   end
 
   create_table "users", :force => true do |t|

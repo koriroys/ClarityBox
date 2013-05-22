@@ -17,12 +17,9 @@
             "<%= @question.question_text %>"
           </h3>
 
-          <p><%= link_to 'Edit this question', edit_question_url(@question)%></p>
+          <p class = "center"><%= link_to 'Respond to this question', new_question_response_url(@question), :class => 'button' %></p>
 
-          <p><%= link_to 'Respond to this question', new_question_response_url(@question) %></p>
-
-          <p><%= link_to 'See all the responses', question_responses_url(@question) %></p>
-
+          <p class = "center"><%= link_to 'View the rollup', question_responses_url(@question), :class => 'small button'%></p>
 
        <% if @question.send_question == true %>
             <p>Yes, ask this question on <%= @question.ask_at.strftime("%A, %b %e at %l:%M %p") %></p>
@@ -42,6 +39,9 @@
           <% else %>
           <p>No, do not send a rollup for this week.</p>
       <% end %>
+
+
+           <p><%= link_to 'Edit this question', edit_question_url(@question)%></p>
 
 
             <p><%= link_to 'Back to all the questions', questions_url %></p>

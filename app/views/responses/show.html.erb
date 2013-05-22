@@ -3,13 +3,39 @@
   <div class = "primary-content">
 
 <h3 class = "top-space center italic">
-      "<%= @response.question.question_text %>"
-    </h3>
+  "<%= @response.question.question_text %>"
+</h3>
 
-       <p><%= @response.user.first_name %>:  "<%= @response.response_text %>"</p>
+  <p class = "center"><%= @yes_responses.count %> people said "Yes".</p>
+  <p class = "center"><%= @no_responses.count %> people said "No".</p>
 
- </div>
 
 
-<p><%= link_to 'Edit', edit_question_response_url(@question, @response) %></p>
-<p><%= link_to 'See all the responses', question_response_url(@question, @response) %></p>
+   <% @responses.each do |response| %>
+
+    <% if response.public_response == true %>
+
+      <p><%= response.user.first_name %>:  "<%= response.response_text %>"</p>
+
+      <p><%= link_to 'Edit', edit_question_response_url(@question, @response) %></p>
+
+      <% else %>
+
+      <% if current_user == response.user %>
+
+      <p class = "italic app">(Your response not shared with the rest of the team:  "<%= response.response_text %>")</p>
+
+      <p><%= link_to 'Edit', edit_question_response_url(@question, @response) %></p>
+
+      <% end %>
+
+    <% end %>
+
+   <% end %>
+
+
+</div>
+
+
+
+<p><%= link_to 'Go back to all the questions', questions_url %></p>

@@ -2,6 +2,7 @@ class ResponsesController < ApplicationController
   before_filter :require_signed_in_user
   before_filter :get_question
 
+
   def require_signed_in_user
     unless signed_in?
       redirect_to new_session_url, notice: 'Must be signed in for that'
@@ -11,18 +12,24 @@ class ResponsesController < ApplicationController
   def index
     # @responses = Response.all
     # @responses = Response.find_all_by_question_id(params[:question])
-    @responses = Response.where(:question_id => params[:question_id])
+
     @response = Response.find_by_question_id(params[:question_id])
+    @responses = Response.where(:question_id => params[:question_id])
+    @yes_responses = Response.where(:yes_response => true)
+    @no_responses = Response.where(:yes_response => false)
 
 
   end
 
   def show
     @response = Response.find_by_id(params[:id])
+    @responses = Response.where(:question_id => params[:question_id])
+    @yes_responses = Response.where(:yes_response => true)
+    @no_responses = Response.where(:yes_response => false)
   end
 
   def new
-    @r = Response.find_by_question_id(params[:question_id])
+    @question = Question.find(params[:question_id])
     @response = Response.new
     # @response.question_id = 1
     # @response.user_id = session[:user_id]
