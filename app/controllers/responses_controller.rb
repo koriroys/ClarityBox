@@ -1,11 +1,20 @@
 class ResponsesController < ApplicationController
   before_filter :require_signed_in_user
   before_filter :get_question
+  before_filter :authorize_user, only: [:show, :edit, :update, :destroy]
 
 
   def require_signed_in_user
     unless signed_in?
       redirect_to new_session_url, notice: 'Must be signed in for that'
+    end
+  end
+
+   def authorize_user
+    @response = Response.find(params[:id])
+
+    if @response.user != current_user
+      redirect_to questions_url, notice: "Nice try. You're not allowed to edit someone else's response"
     end
   end
 
@@ -19,13 +28,13 @@ class ResponsesController < ApplicationController
     @no_responses = Response.where(:yes_response => false)
 
 
+
   end
 
   def show
     @response = Response.find_by_id(params[:id])
-    @responses = Response.where(:question_id => params[:question_id])
-    @yes_responses = Response.where(:yes_response => true)
-    @no_responses = Response.where(:yes_response => false)
+
+
   end
 
   def new

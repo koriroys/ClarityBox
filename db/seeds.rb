@@ -68,7 +68,7 @@ remind_at = week.end_date.to_datetime + 2.days + 20.hours
 send_roll_up_at = week.end_date.to_datetime + 4.days + 8.hours
 
 question_hashes = [
-  { :question_text => "What are you most proud of?",
+  { :question_text => "Are you happy here?",
     :week_id => week.id,
     :user_id => User.find_by_email('clew23@gmail.com').id,
     :company_id => Company.find_by_name('Starter League').id,
@@ -80,7 +80,7 @@ question_hashes = [
     :send_rollup => 'true'
      },
 
-  { :question_text => "What's your vision for the company?",
+  { :question_text => "Is there anything unspoken in the company?",
     :week_id => Week.find_by_end_date(week.end_date + 1.week).id,
     :user_id => User.find_by_email('clew23@gmail.com').id,
     :company_id => Company.find_by_name('Starter League').id,
@@ -92,7 +92,7 @@ question_hashes = [
     :send_rollup => 'true'
     },
 
-  { :question_text => "What frustrates you?",
+  { :question_text => "Do you feel frustrated by anything?",
      :week_id => Week.find_by_end_date(week.end_date + 2.weeks).id,
     :user_id => User.find_by_email('clew23@gmail.com').id,
     :company_id => Company.find_by_name('Starter League').id,

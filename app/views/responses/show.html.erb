@@ -6,36 +6,20 @@
   "<%= @response.question.question_text %>"
 </h3>
 
-  <p class = "center"><%= @yes_responses.count %> people said "Yes".</p>
-  <p class = "center"><%= @no_responses.count %> people said "No".</p>
 
+  <p><%= @response.user.first_name %>:  "<%= @response.response_text %>"</p>
 
-
-   <% @responses.each do |response| %>
-
-    <% if response.public_response == true %>
-
-      <p><%= response.user.first_name %>:  "<%= response.response_text %>"</p>
-
-      <p><%= link_to 'Edit', edit_question_response_url(@question, @response) %></p>
-
-      <% else %>
-
-      <% if current_user == response.user %>
-
-      <p class = "italic app">(Your response not shared with the rest of the team:  "<%= response.response_text %>")</p>
-
-      <p><%= link_to 'Edit', edit_question_response_url(@question, @response) %></p>
-
-      <% end %>
-
+    <% if @response.public_response == false %>
+      <p class = "italic">Your response was not shared with the rest of the team.</p>
+    <% else %>
+      <p class = "italic">Your response was shared with the rest of the team.</p>
     <% end %>
-
-   <% end %>
-
 
 </div>
 
+<p class = "center top-space"><%= link_to 'View the rollup', question_responses_url(@question), :class => 'button' %></p>
+
+<p><%= link_to 'Edit your response', edit_question_response_url(@question, @response) %></p>
 
 
 <p><%= link_to 'Go back to all the questions', questions_url %></p>

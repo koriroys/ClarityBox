@@ -4,10 +4,6 @@ class ApplicationController < ActionController::Base
   helper_method :signed_in?
   helper_method :current_user
 
-  helper_method :super_admin_user
-  helper_method :admin_user
-  helper_method :general_user
-
 
   def signed_in?
     return session[:user_id].present?
