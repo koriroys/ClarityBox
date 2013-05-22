@@ -8,6 +8,10 @@
         <p><%= user.first_name %> <%= user.last_name %>
           <em>(<%= user.user_role %>)</em></p>
 
+          <%= link_to 'View', user_url(user) %>
+          <%= link_to 'Edit', edit_user_url(user) %>
+
+
       <% end %>
 
   <p class = "center"><%= link_to 'Add a user', new_user_url, :class => 'button' %></p>

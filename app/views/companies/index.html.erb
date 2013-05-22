@@ -1,21 +1,17 @@
  <h1 class = "large-top-space center">All the companies</h1>
 
 
-<div class = "primary-content app">
+<div class = "primary-content">
 
   <% @companies.each do |company| %>
 
-    <h1 class = "top-space center italic"><%= company.name %></h1>
+    <h3 class = "top-space center italic"><%= company.name %></h3>
 
-      <div class = "center">
-        <p><%= link_to 'View', company_url(company)%></p>
-        <p><%= link_to 'Edit', edit_company_url(company)%></p>
-        <p><%= link_to 'Delete', company_url(company), :method =>'delete', data: {confirm: "You sure?"}  %></p>
-      </div>
+        <p class = "center"><%= link_to 'View', company_url(company), :class => 'button small' %><%= link_to 'Edit', edit_company_url(company), :class => 'button small'%></p>
 
   <% end %>
 
-  <div class = "center top-space">
+  <div class = "center large-top-space">
     <%= link_to 'Create a new company', new_company_url, :class => "button" %>
   </div>
 
