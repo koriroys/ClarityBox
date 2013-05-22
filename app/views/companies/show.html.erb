@@ -4,7 +4,8 @@
 
       <% @company.users.each do |user| %>
 
-        <p><%= user.first_name %> <%= user.last_name %></p>
+        <p><%= user.first_name %> <%= user.last_name %>
+          <em>(<%= user.user_role %>)</em></p>
 
       <% end %>
 

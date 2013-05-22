@@ -12,12 +12,12 @@ class Response < ActiveRecord::Base
 
   validates :user_id, uniqueness: { scope: :question_id, message: "has already responded to this question" }
 
-  validate :user_cannot_respond_to_question_more_than_once
+  # validate :user_cannot_respond_to_question_more_than_once
 
-  def user_cannot_respond_to_question_more_than_once
-    if self.user.responses.count >= 1
-      errors.add(:user_id, "you can only respond once")
-    end
-  end
+  # def user_cannot_respond_to_question_more_than_once
+  #   if self.user.responses.count >= 1
+  #     errors.add(:user_id, "you can only respond once")
+  #   end
+  # end
 
 end

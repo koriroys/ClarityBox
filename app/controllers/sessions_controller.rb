@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
         redirect_to app_home_url, notice: 'Sign in successful.'
 
       else
-       render 'new'
+       redirect_to new_session_url, notice: 'Nice try.'
       end
 
     end
@@ -19,6 +19,6 @@ class SessionsController < ApplicationController
 
   def destroy
     reset_session
-    redirect_to app_home_url, notice: 'Sign out successful'
+    redirect_to app_home_url, notice: 'Sign out successful.'
   end
 end

@@ -1,10 +1,14 @@
 
-  <h1 class = "large-top-space center">Welcome to your ClarityBox.</h1>
+  <h1 class = "large-top-space center">Welcome to ClarityBox.</h1>
 
 
 
 
   <div class = "primary-content center top-space">
-    <%= link_to 'Respond to a question', weeks_url, :class => 'button'%>
+    <% if signed_in? %>
+      <%= link_to 'Respond to a question', questions_url, :class => 'button'%>
+     <% else %>
+      <%= link_to 'Create an account', new_user_url, :class => 'button'%>
+    <% end %>
   </div>
 

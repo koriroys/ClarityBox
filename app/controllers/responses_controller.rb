@@ -9,7 +9,12 @@ class ResponsesController < ApplicationController
   end
 
   def index
-    @responses = Response.all
+    # @responses = Response.all
+    # @responses = Response.find_all_by_question_id(params[:question])
+    @responses = Response.where(:question_id => params[:question_id])
+    @response = Response.find_by_question_id(params[:question_id])
+
+
   end
 
   def show
@@ -17,6 +22,7 @@ class ResponsesController < ApplicationController
   end
 
   def new
+    @r = Response.find_by_question_id(params[:question_id])
     @response = Response.new
     # @response.question_id = 1
     # @response.user_id = session[:user_id]
