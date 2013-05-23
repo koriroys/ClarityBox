@@ -15,21 +15,14 @@
 
         <p><%= response.user.first_name %>: <%= response.response_text %>
 
-         <% if response.user == current_user %>
+    <% end %>
 
-        <%= link_to '(view)', question_response_url(@question, response) %>
-        </p>
-
-
-
-        <% end %>
-
-        <% else %>
+    <% if response.public_response == true && response.user_id == current_user %>
 
         <p class = "italic">You didn't share your response with your team this week. View your response <%= link_to 'here.', question_response_url(@question, response) %></p>
 
-    <% end %>
 
+    <% end %>
 <% end %>
 
 
