@@ -17,7 +17,7 @@
 
     <% end %>
 
-    <% if response.public_response == true && response.user_id == current_user %>
+    <% if response.public_response == false && response.user == current_user %>
 
         <p class = "italic">You didn't share your response with your team this week. View your response <%= link_to 'here.', question_response_url(@question, response) %></p>
 

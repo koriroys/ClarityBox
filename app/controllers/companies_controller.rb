@@ -1,9 +1,27 @@
 class CompaniesController < ApplicationController
   before_filter :require_signed_in_user
+  before_filter :require_super_admin, only: [:index, :create, :new, :destroy]
+  before_filter :permit_only_company_user, only: [:show]
+  before_filter :require_company_admin, only: [:edit, :update]
+
+
 
   def require_signed_in_user
     unless signed_in?
       redirect_to new_session_url, notice: 'Must be signed in for that'
+    end
+  end
+
+
+  def permit_only_company_user
+    unless (current_user.company_id.to_s == params[:id]) || super_admin?
+      redirect_to company_url(current_user.company), notice: 'That was not your company'
+    end
+  end
+
+  def require_company_admin
+    unless (admin? && (current_user.company_id.to_s == params[:id])) || super_admin?
+      redirect_to root_url, notice: "That's not your company"
     end
   end
 
@@ -13,7 +31,7 @@ class CompaniesController < ApplicationController
   end
 
   def show
-    @company = Company.find_by_id(params[:id])
+      @company = Company.find_by_id(params[:id])
   end
 
   def new

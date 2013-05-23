@@ -2,7 +2,7 @@
 
 # -- Routes for Homepage
 
-	get '/', :controller => 'Pages', :action => 'index', :as => 'home'
+	# get '/', :controller => 'Pages', :action => 'index', :as => 'home'
   #------------------------------
 
 # -- Routes for About pages
@@ -19,7 +19,7 @@
     #------------------------------
 
 
-    root to: 'Responses#index'
+    root to: 'App#index'
 
 
 #------------------------------
@@ -76,6 +76,10 @@
   resources :questions do
     resources :responses
   end
+
+  # resources :companies do
+    # resources :questions
+  # end
 
 
 
