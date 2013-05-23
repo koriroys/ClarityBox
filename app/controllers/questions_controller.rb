@@ -1,16 +1,32 @@
 class QuestionsController < ApplicationController
   before_filter :require_signed_in_user
+  before_filter :require_super_admin_or_admin, except: [:show]
+  # before_filter :permit_only_company_user, only: [:show]
+  # before_filter :require_company_admin, only: [:edit, :update]
 
-  def require_signed_in_user
-    unless signed_in?
-      redirect_to new_session_url, notice: 'Must be signed in for that'
+
+  def require_super_admin_or_admin
+    unless admin? || super_admin?
+      redirect_to root_url, notice: "You're not an admin."
     end
   end
 
+  # def permit_only_company_user
+  #   unless current_user.company_id.to_s == params[:company_id] || super_admin?
+  #     redirect_to questions_url, notice: "This is not your company!"
+  #     end
+  #   end
+
+  #   def require_company_admin
+  #   unless (admin? && (current_user.company_id.to_s == params[:company_id])) || super_admin?
+  #     redirect_to questions_url, notice: "That's not your company."
+  #   end
+  # end
 
 
   def index
     @questions = Question.all
+
   end
 
   def show

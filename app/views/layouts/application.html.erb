@@ -19,8 +19,8 @@
 
   <% if signed_in? %>
      <div class = "center notice">
+        Hey, <%= User.find(session[:user_id]).first_name %>.
         <%= notice %>
-        Welcome back,  <%= User.find(session[:user_id]).first_name %>
     </div>
   <% end %>
 

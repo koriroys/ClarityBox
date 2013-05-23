@@ -6,22 +6,15 @@ class CompaniesController < ApplicationController
 
 
 
-  def require_signed_in_user
-    unless signed_in?
-      redirect_to new_session_url, notice: 'Must be signed in for that'
-    end
-  end
-
-
   def permit_only_company_user
     unless (current_user.company_id.to_s == params[:id]) || super_admin?
-      redirect_to company_url(current_user.company), notice: 'That was not your company'
+      redirect_to company_url(current_user.company), notice: 'That was not your company.'
     end
   end
 
   def require_company_admin
     unless (admin? && (current_user.company_id.to_s == params[:id])) || super_admin?
-      redirect_to root_url, notice: "That's not your company"
+      redirect_to root_url, notice: "That's not your company."
     end
   end
 

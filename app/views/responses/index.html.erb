@@ -9,6 +9,8 @@
     <p class = "center"><%= @yes_responses.count %> people said "Yes".</p>
     <p class = "center"><%= @no_responses.count %> people said "No".</p>
 
+     <p class = "italic center">(<%= @responses.count %> / <%=@users.count %> people responded this week)</p>
+
 <% @responses.each do |response| %>
 
     <% if response.public_response == true %>

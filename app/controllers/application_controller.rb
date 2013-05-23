@@ -24,9 +24,18 @@ class ApplicationController < ActionController::Base
     current_user.user_role == 'Admin'
   end
 
+
+
+  def require_signed_in_user
+    unless signed_in?
+      redirect_to new_session_url, notice: 'Must be signed in for that.'
+    end
+  end
+
+
   def require_super_admin
     unless super_admin?
-      redirect_to root_url, notice: "You're not a super admin and authorized to view this"
+      redirect_to root_url, notice: "You're not a super admin."
     end
   end
 

@@ -11,7 +11,9 @@
 
 
 
-        <% @questions.each do |question| %>
+      <% @questions.each do |question| %>
+
+          <% if question.company_id == current_user.company_id || super_admin? %>
 
             <h4 class = "top-space">
 
@@ -27,10 +29,12 @@
             </h3>
 
 
+
+
         <% if question.send_question == true %>
-            <p>Active question</p>
-            <% else %>
-            <p>Inactive question</p>
+            <p class = "center">Active question</p>
+        <% else %>
+            <p class = "center">Inactive question</p>
         <% end %>
 
 
@@ -40,10 +44,11 @@
                 <%= link_to 'View', question_url(question), :class => 'button small'%>
                 <%= link_to 'Edit', edit_question_url(question), :class => 'button small'%>
 
-
             </div>
 
-        <% end %>
+          <% end %>
+
+      <% end %>
 
     </div>
 

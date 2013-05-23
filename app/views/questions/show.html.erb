@@ -17,9 +17,15 @@
             "<%= @question.question_text %>"
           </h3>
 
+
+
           <p class = "center"><%= link_to 'Respond to this question', new_question_response_url(@question), :class => 'button' %></p>
 
+        <% if @question.responses.present? %>
+
           <p class = "center"><%= link_to 'View the rollup', question_responses_url(@question), :class => 'small button'%></p>
+
+        <% end %>
 
        <% if @question.send_question == true %>
             <p>Ask this question on <%= @question.ask_at.strftime("%A, %b %e at %l:%M %p") %></p>
@@ -45,7 +51,6 @@
             <p><%= link_to 'Back to all the questions', questions_url %></p>
 
     </div>
-
 
 
 
