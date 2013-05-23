@@ -7,7 +7,6 @@
   </div>
 
 
-
   <div class = "primary-content app ">
 
 
@@ -29,9 +28,9 @@
 
 
         <% if question.send_question == true %>
-            <p>Yes, ask this question on <%= question.ask_at.strftime("%A, %b %e at %l:%M %p") %></p>
+            <p>Active question</p>
             <% else %>
-            <p>No, do not ask this question.</p>
+            <p>Inactive question</p>
         <% end %>
 
 

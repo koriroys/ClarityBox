@@ -22,22 +22,20 @@
           <p class = "center"><%= link_to 'View the rollup', question_responses_url(@question), :class => 'small button'%></p>
 
        <% if @question.send_question == true %>
-            <p>Yes, ask this question on <%= @question.ask_at.strftime("%A, %b %e at %l:%M %p") %></p>
+            <p>Ask this question on <%= @question.ask_at.strftime("%A, %b %e at %l:%M %p") %></p>
             <% else %>
-            <p>No, do not ask this question.</p>
+            <p>Inactive question</p>
         <% end %>
 
 
         <% if @question.send_reminder == true %>
           <p>Yes, send a reminder on <%= @question.remind_at.strftime("%A, %b %e at %l:%M %p") %></p>
-          <% else %>
-          <p>No, do not send a reminder for this week.</p>
+
       <% end %>
 
        <% if @question.send_rollup == true %>
           <p>Yes, send a rollup on <%= @question.send_roll_up_at.strftime("%A, %b %e at %l:%M %p") %></p>
-          <% else %>
-          <p>No, do not send a rollup for this week.</p>
+
       <% end %>
 
 

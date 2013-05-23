@@ -5,10 +5,20 @@
 
      <%= hidden_field_tag :user_id %>
 
+
+     <% if super_admin? %>
+
           <p>
             <%= label_tag :company_id, 'Company:' %>
             <%= select_tag :company_id, options_from_collection_for_select(Company.all, :id, :name) %>
           </p>
+
+    <% else %>
+
+      <%= hidden_field_tag :company_id, current_user.company_id %>
+
+    <% end %>
+
 
             <p>
               <%= label_tag :week_id, 'This question is for:' %>

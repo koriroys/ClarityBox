@@ -8,6 +8,7 @@ class QuestionsController < ApplicationController
   end
 
 
+
   def index
     @questions = Question.all
   end
@@ -60,9 +61,8 @@ class QuestionsController < ApplicationController
     @question.send_reminder = params[:send_reminder]
     @question.send_rollup = params[:send_rollup]
 
-
     if @question.save
-      redirect_to questions_url
+      redirect_to question_url(@question)
     else
       render 'edit'
     end
