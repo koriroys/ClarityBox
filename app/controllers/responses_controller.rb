@@ -21,8 +21,8 @@ class ResponsesController < ApplicationController
 
     @response = Response.find_by_question_id(params[:question_id])
     @responses = Response.where(:question_id => params[:question_id])
-    @yes_responses = Response.where(:yes_response => true)
-    @no_responses = Response.where(:yes_response => false)
+    @yes_responses = @responses.where(:yes_response => true)
+    @no_responses = @responses.where(:yes_response => false)
     @users = User.where(:company_id => current_user.company_id)
 
 
