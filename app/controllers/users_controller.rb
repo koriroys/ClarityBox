@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @responses = Response.where(:user_id => params[:id])
   end
 
 

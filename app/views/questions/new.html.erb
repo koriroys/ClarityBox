@@ -21,8 +21,8 @@
 
 
             <p>
-              <%= label_tag :week_id, 'This question is for:' %>
-              <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :end_date) %>
+              <%= label_tag :week_id, 'This question is for the Week of:' %>
+              <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :start_date) %>
             </p>
 
             <p>

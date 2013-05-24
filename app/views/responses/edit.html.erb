@@ -13,9 +13,9 @@
 
   <%= render 'form' %>
 
-      <p>or <%= link_to 'Cancel', question_responses_url(@question) %></p>
+      <p class = "center">or <%= link_to 'Cancel', question_responses_url(@question) %></p>
 
-        <em><%= link_to 'Delete', question_response_url(@question, @response), method: 'delete', data: { confirm: "You sure about that?" } %></em>
+       <p class = "center"> <em><%= link_to 'Delete', question_response_url(@question, @response), method: 'delete', data: { confirm: "You sure about that?" } %></em></p>
 
     </div>
    </div>

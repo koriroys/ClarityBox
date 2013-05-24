@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :super_admin?
   helper_method :admin?
+  helper_method :general_user?
 
 
 
@@ -24,6 +25,9 @@ class ApplicationController < ActionController::Base
     current_user.user_role == 'Admin'
   end
 
+  def general_user?
+    current_user.user_role == 'General'
+  end
 
 
   def require_signed_in_user

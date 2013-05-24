@@ -2,24 +2,29 @@
 
   <div class = "primary-content">
 
-<h3 class = "top-space center italic">
-  "<%= @response.question.question_text %>"
-</h3>
+    <h3 class = "top-space center italic">
+      "<%= @response.question.question_text %>"
+    </h3>
 
 
-  <p><%= @response.user.first_name %>:  "<%= @response.response_text %>"</p>
+      <p><%= @response.user.first_name %>:  "<%= @response.response_text %>"</p>
 
-    <% if @response.public_response == false %>
-      <p class = "italic">Your response was not shared with the rest of the team.</p>
-    <% else %>
-      <p class = "italic">Your response was shared with the rest of the team.</p>
-    <% end %>
+        <% if @response.public_response == false %>
+
+          <p class = "italic">Your response was not shared with the rest of the team.</p>
+
+        <% else %>
+
+          <p class = "italic">Your response was shared with the rest of the team.</p>
+
+        <% end %>
 
 </div>
 
-<p class = "center top-space"><%= link_to 'View the rollup', question_responses_url(@question), :class => 'button' %></p>
+  <p class = "center top-space"><%= link_to 'View the rollup', question_responses_url(@question), :class => 'button' %></p>
 
-<p><%= link_to 'Edit your response', edit_question_response_url(@question, @response) %></p>
+  <p class = "center"><%= link_to 'Edit your response', edit_question_response_url(@question, @response) %></p>
 
-
-<p><%= link_to 'Go back to all the questions', questions_url %></p>
+<% if admin? || super_admin? %>
+  <p class = "center"><%= link_to 'Go back to all the questions', questions_url %></p>
+<% end %>

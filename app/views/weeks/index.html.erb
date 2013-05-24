@@ -1,16 +1,25 @@
 
 
 
-    <h1 class = "large-top-space center">All the weeks</h1>
+    <h1 class = "large-top-space center">What week is it?</h1>
 
 
     <div class = "primary-content center">
+
+
+      <select name="week">
+<!--
+  <%= @weeks.each do |week| %>
+    <option value="" selected>Week #<%= week.start_date.strftime("%V") %>: <%= week.start_date.strftime("%b %e, %Y")  %> - <%= week.end_date.strftime("%b %e, %Y") %> </option>
+  <% end %>
+</select> -->
 
         <% @weeks.each do |week| %>
 
           <h4 class = "top-space"> Week #<%= week.start_date.strftime("%V") %>
 
             <p><%= week.start_date.strftime("%b %e, %Y")  %> - <%= week.end_date.strftime("%b %e, %Y") %></p>
+
 
 
 

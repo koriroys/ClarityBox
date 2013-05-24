@@ -4,13 +4,16 @@ class ResponsesController < ApplicationController
   before_filter :authorize_user, only: [:show, :edit, :update, :destroy]
 
 
+
+
    def authorize_user
     @response = Response.find(params[:id])
 
     if @response.user != current_user
-      redirect_to questions_url, notice: "Nice try. You're not allowed to edit someone else's response."
+      redirect_to questions_url, notice: "Nice try. You're not allowed to touch someone else's response."
     end
   end
+
 
   def index
     # @responses = Response.all

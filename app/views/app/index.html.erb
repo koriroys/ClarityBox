@@ -8,21 +8,36 @@
 
       <h1 class =  "center">Welcome to ClarityBox.</h1>
 
-    <% if signed_in? %>
 
-      <div class = "top-space">
 
-      <%= link_to 'Respond to a question', questions_url, :class => 'button'%>
+  <% if signed_in? %>
 
+        <% if super_admin? %>
+          <div class = "top-space">
+            <%= link_to 'View the companies', companies_url, :class => 'button'%>
+          </div>
+        <% end %>
+
+        <% if admin? %>
+          <div class = "top-space">
+            <%= link_to 'See your company clearly', questions_url, :class => 'button'%>
+          </div>
+        <% end %>
+
+        <% if general_user?  %>
+          <div class = "top-space">
+            <%= link_to 'Enter', user_url(current_user), :class => 'button'%>
+          </div>
+        <% end %>
+
+      <% else %>
+
+
+       <div class = "top-space">
+          <%= link_to 'Create an account', new_user_url, :class => 'button'%>
         </div>
+  <% end %>
 
-     <% else %>
 
-     <div class = "top-space">
-
-      <%= link_to 'Create an account', new_user_url, :class => 'button'%>
-    <% end %>
-
-  </div>
 </div>
 

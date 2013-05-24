@@ -1,54 +1,41 @@
+<h1 class = "large-top-space center">This week's question</h1>
 
+  <p class = "center italic">
+      (<%= @question.week.start_date.strftime("%B %e")  %> - <%= @question.week.end_date.strftime("%B %e")  %>)
+  </p>
 
-    <h1 class = "large-top-space center">This week's question</h1>
+  <h2 class = "top-space center italic">
+    "<%= @question.question_text %>"
+  </h2>
 
+    <p class = "top-space center"><%= link_to 'Respond', new_question_response_url(@question), :class => 'button' %></p>
 
-  <div class = "primary-content app">
+      <% if @question.responses.present? %>
+        <p class = "italic center"><%= link_to 'View the rollup', question_responses_url(@question) %></p>
+      <% end %>
 
-        <h4 class = "top-space">
+  <% if admin? || super_admin? %>
 
-          <time>
-            (<%= @question.week.start_date.strftime("%b %e, %Y")  %> - <%= @question.week.end_date.strftime("%b %e, %Y")  %>)
-          </time>
-        </h4>
-
-
-          <h3 class = "center italic">
-            "<%= @question.question_text %>"
-          </h3>
-
-
-
-          <p class = "center"><%= link_to 'Respond to this question', new_question_response_url(@question), :class => 'button' %></p>
-
-        <% if @question.responses.present? %>
-
-          <p class = "center"><%= link_to 'View the rollup', question_responses_url(@question), :class => 'small button'%></p>
-
-        <% end %>
-
-       <% if @question.send_question == true %>
-            <p>Ask this question on <%= @question.ask_at.strftime("%A, %b %e at %l:%M %p") %></p>
-            <% else %>
-            <p>Inactive question</p>
-        <% end %>
+      <% if @question.send_question == true %>
+          <p class = "top-space center">Ask this question on <%= @question.ask_at.strftime("%A, %b %e at %l:%M %p") %></p>
+      <% else %>
+          <p class = "center">Inactive question</p>
+      <% end %>
 
 
         <% if @question.send_reminder == true %>
-          <p>Yes, send a reminder on <%= @question.remind_at.strftime("%A, %b %e at %l:%M %p") %></p>
-
-      <% end %>
+          <p class = "center">Send a reminder on <%= @question.remind_at.strftime("%A, %b %e at %l:%M %p") %></p>
+        <% end %>
 
        <% if @question.send_rollup == true %>
-          <p>Yes, send a rollup on <%= @question.send_roll_up_at.strftime("%A, %b %e at %l:%M %p") %></p>
-
+          <p class = "center">Send a rollup on <%= @question.send_roll_up_at.strftime("%A, %b %e at %l:%M %p") %></p>
       <% end %>
+           <p class = "center"><%= link_to 'Edit this question', edit_question_url(@question)%></p>
+    <% end %>
 
-
-           <p><%= link_to 'Edit this question', edit_question_url(@question)%></p>
-
-
-            <p><%= link_to 'Back to all the questions', questions_url %></p>
+    <% if admin? || super_admin? %>
+            <p class = "center"><%= link_to 'Back to all the questions', questions_url %></p>
+      <% end %>
 
     </div>
 
