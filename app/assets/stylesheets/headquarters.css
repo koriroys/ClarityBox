@@ -433,6 +433,10 @@ header {
   padding-bottom: 100px;
 }
 
+.section p.small {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
 
 /*Problem*/
 
