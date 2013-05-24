@@ -108,9 +108,7 @@ i, em {
 
 body {
   background: #FFF;
-/*  font-family: 'Georgia', Arial, Helvetica, sans-serif;
-*/
-  font-family: 'minion pro', 'Georgia', Arial, Helvetica, sans-serif;
+  font-family: 'proxima-nova', 'Georgia', Arial, Helvetica, sans-serif;
   color: #454545;
 }
 
@@ -124,19 +122,18 @@ body {
 a:link {
   text-decoration:none;
 /*  color: #F37359;*/
-  color: #16C7C7;
+/*  color: #BABABA;*/
 }
 
 
 a:visited {
   text-decoration:none;
-  color: #16C7C7;
+ /* color: #BABABA;*/
 }
 
 nav a:hover {
   text-decoration:none;
-  color: #FFAD14;
-  color: #1ADBDB;
+/*  color: #BABABA;*/
 
 }
 
@@ -157,13 +154,17 @@ h1{
 }
 
 h2{
-  font-size: 60px;
+  font-size: 80px;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 600;
+
 
 }
 
 h3{
-  font-size: 46px;
-  padding: 40px 0;
+  font-size: 40px;
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 100;
 }
 
 h4{
@@ -173,7 +174,7 @@ h4{
 
 p {
   line-height: 170%;
-  font-size: 22px;
+  font-size: 24px;
   margin: 35px 0;
 }
 
@@ -276,47 +277,58 @@ Buttons + Text Fields
 */
 
 header {
-  background: linear-gradient(white 70%, rgba(255, 255, 255, 0));
+  background: #fff;
   position:fixed;
 }
 
 .primary-nav{
-  height: 160px;
+  height: 120px;
   width: 100%;
+
 }
 
 .sticky{
   height: 20px;
-  padding:80px 0;
+  padding:50px 0;
 }
 
 .nav-logo{
   float: left;
   font-size: 24px;
   padding-bottom: 10px;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #A1A1A1;
+  letter-spacing: 1px;
+
 }
 
-.nav-logo h2{
-  font-size: 18px;
-  color:  #BFBFBF;
-}
 
 .nav-elements{
   float: right;
+  margin-top: 5px;
+}
+
+.primary-nav a{
+   color: #BABABA;
 }
 
 .nav-elements li{
   float: left;
   width: 120px;
   text-align: center;
-  font-style: italic;
-  font-size: 18px;
-
+/*  font-style: italic;
+*/  font-size: 14px;
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 
 
-}
+
 /*
   Primary Content
 */
@@ -331,6 +343,7 @@ header {
   line-height: 150%;
   margin: 250px auto 0;
   width: 850px;
+
 }
 
 .primary-content h4{
@@ -352,10 +365,6 @@ header {
   font-style: italic;
 }
 
-.contact h3{
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
 
 .bottom-links {
   text-align: center;
@@ -367,13 +376,142 @@ header {
 
 
 
+/*Main Callout*/
+
+.main-callout{
+  background: #DE6A4E;
+  width: 100%;
+  height: 700px;
+}
+
+.main-callout h2{
+  padding-top: 350px;
+  text-align: center;
+  color: #fff;
+
+}
+
+.main-callout h3{
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+
+/*Section*/
+
+.section {
+  color: #fff;
+}
+
+.section h3 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 35px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.section h4  {
+  text-align: center;
+  line-height: 120%;
+  font-size: 40px;
+  font-weight: 600;
+  padding: 20px;
+}
+
+
+.section h5 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 25px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    font-weight: 100px;
+}
+.section p.last {
+  padding-bottom: 100px;
+}
+
+
+/*Problem*/
+
+.problem {
+  background: #E8B002;
+}
+
+
+
+
+.problem p{
+  padding-top: 30px ;
+  padding-bottom: 100px;
+}
+
+
+
+/*Solution*/
+
+.solution {
+  background: #488EC7;
+}
+
+
+
+.solution li {
+  font-size: 24px;
+  font-weight: 100px;
+  font-style: italic;
+  text-align: center;
+  line-height: 250%;
+}
+
+/*Process*/
+
+.process {
+  background: #189E77;
+}
+
+.process li {
+  font-size: 24px;
+  font-weight: 100px;
+  font-style: italic;
+  margin-left: 50px;
+  line-height: 250%;
+}
+
+/*Who I Am*/
+
+.who {
+  background: #AD3772;
+}
+
+/*Testimonials*/
+
+.testimonials {
+  background: #7B4CB5;
+}
+
+/*Contact*/
+
+.contact {
+  background: #61C2AA;
+}
+
+/*Why the name ClarityBox?*/
+
+.why-name{
+  background: #005AA3;
+}
+
+
+
 /*Footer*/
 
 footer{
   width: 960px;
   height: 200px;
   margin: 0 auto;
-  border-top: 1px solid #D9D9D9;
 }
 
 footer ul{
@@ -388,10 +526,11 @@ footer li{
   float: left;
   width: 120px;
   text-align: center;
-/*  text-transform: uppercase;*/
-  font-style: italic;
+  text-transform: uppercase;
   font-size: 18px;
   margin: 0 10px 0;
+  letter-spacing: 1px;
+  font-weight: 100;
 }
 
 
