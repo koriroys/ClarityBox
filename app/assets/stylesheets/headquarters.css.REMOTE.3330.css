@@ -76,7 +76,7 @@ i, em {
 }
 
 .smaller-container {
-  max-width: 750px;
+  max-width: 650px;
   margin: 0 auto;
 }
 
@@ -204,93 +204,6 @@ p {
 
 /*
 
-<<<<<<< HEAD
-Buttons + Text Fields
-
-*/
-
-.text-field{
-  font-size: 24px;
-  padding: 27px;
-  border-radius: 5px;
-  border: none;
-  background-color: #E8E8E8;
-  font-family: 'minion pro', 'Georgia', Arial, Helvetica, sans-serif;
-  width: 200px;
-  color: #9C9C9C;
-
-}
-
-.text-field-long{
-  font-size: 24px;
-  padding: 27px;
-  border-radius: 5px;
-  border: none;
-  background-color: #E8E8E8;
-  font-family: 'minion pro', 'Georgia', Arial, Helvetica, sans-serif;
-  width: 350px;
-  color: #9C9C9C;
-
-}
-
-.button {
-  color: #fff;
-  font-size: 28px;
-  text-transform: uppercase;
-  background: #16C7C7;
-  padding: 24px;
-  border-radius: 5px;
-  border: none;
-  font-family: 'minion pro', 'Georgia', Arial, Helvetica, sans-serif;
-}
-
-.button:hover {
-  color: #fff;
-  background-color: #1ADBDB;
-}
-
-
-.no-hover a:hover{
-  color: #555;
-}
-
-.label {
-  font-size: 24px;
-  margin-right: 20px;
-}
-
-
-
-/*
-  Homepage
-*/
-
-.primary-logo{
-  margin: 200px auto 0;
-}
-
-.primary-logo h4{
-  margin: 15px;
-}
-
-.coming-soon{
-  text-align: center;
-  text-transform: uppercase;
-  color: #C9C9C9;
-  margin-top: 100px;
-}
-
-.signup{
-  margin: 20px auto;
-  text-align: center;
-}
-
-
-.signup.button{
-  margin-left: 15px;
-}
-=======
->>>>>>> redesign_site
 
 
 
@@ -305,11 +218,7 @@ header {
 }
 
 .primary-nav{
-<<<<<<< HEAD
-  height: 240px;
-=======
   height: 120px;
->>>>>>> redesign_site
   width: 100%;
   box-shadow: 0px 1px 2px #D6D6D6;
   border-bottom: 1px solid #D6D6D6;
@@ -645,7 +554,6 @@ footer ul{
 }
 
 
-
 footer li{
   float: left;
   width: 120px;
@@ -673,9 +581,4 @@ footer a:hover{
 
 
 
-
-footer li.app{
-
-  width: 180px;
-  }
 

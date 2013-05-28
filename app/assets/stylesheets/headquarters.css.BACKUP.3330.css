@@ -644,7 +644,12 @@ footer ul{
   padding-top: 100px;
 }
 
-
+<<<<<<< HEAD
+textarea {
+  resize: none;
+  width: 600px;
+  height: 80px;
+=======
 
 footer li{
   float: left;
@@ -655,6 +660,7 @@ footer li{
   margin: 0 10px 0;
   letter-spacing: 1px;
   font-weight: 100;
+>>>>>>> redesign_site
 }
 
 
