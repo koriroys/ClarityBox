@@ -1,27 +1,25 @@
-<h1 class = "large-top-space center">Your response</h1>
+<div class = "non-color-page">
+
+<h2>Your response</h2>
   <p class = "center italic">(<%= @question.week.start_date.strftime("%B %e")%> - <%= @question.week.end_date.strftime("%B %e")%>)</p>
     <h3 class = "center italic">"<%= @question.question_text %> "</h3>
 
 
 
-   <div class = "primary-content">
 
-      <%= render 'form' %>
+    <%= render 'form' %>
 
     <p class = "center">or <%= link_to 'Cancel', question_responses_url(@question) %></p>
 
 
-
-    <% if @response.errors.any? %>
-  <ul>
-    <% @response.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
-<% end %>
-
+  <% if @response.errors.any? %>
+    <ul>
+      <% @response.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
 
 
-  </div>
 
-
+</div>

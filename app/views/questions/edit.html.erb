@@ -1,5 +1,7 @@
-<div class = "container primary-content group">
-  <h1 = class = "large-top-space center">Edit a  question.</h1>
+<div class = "non-color-page">
+  <h2>Edit a  question.</h2>
+
+  <div class = "form center">
 
         <%= form_tag(question_url(@question), method: 'put') do%>
 
@@ -14,7 +16,7 @@
             </p>
 
             <p>What question do you want to ask?
-                <%= text_area_tag :question_text, @question.question_text %>
+                <%= text_area_tag :question_text, @question.question_text, :class => 'field large' %>
             </p>
 
             <p>Ask this question?
@@ -38,13 +40,13 @@
               <%= label_tag :send_rollup_false, 'No' %>
             </p>
 
+  </div>
 
 
 
 
-
-          <div class = "button-set">
-            <%= submit_tag "Save", :class => 'button' %>
+          <div class = "center">
+            <%= submit_tag "Save", :class => 'button blue' %>
 
         <% end %>
 

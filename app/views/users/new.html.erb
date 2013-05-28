@@ -1,50 +1,42 @@
+<div class = "color-page">
 
+<div class = "container">
 
-   <h1 class = "large-top-space center">New User</h1>
-
-      <div class = "primary-content top-space">
-
+   <h2>Create an Account</h2>
 
         <p><%= notice %></p>
 
+        <div class = "form">
 
-<%= form_for @user, class: 'user-form' do |f| %>
-
-        <p class = "center">
-<!--           <%= f.label :first_name, 'First' %>
- -->          <%= f.text_field :first_name, { :value => 'First Name', :class => 'text-field'} %>
-
-<!--           <%= f.label :last_name, 'Last' %> -->
-          <%= f.text_field :last_name,  { :value => 'Last Name', :class => 'text-field'}  %>
-        </p>
-
-        <p class = "center">
-<!--           <%= f.label :email, 'Email' %> -->
-          <%= f.text_field :email,  { :value => 'Email', :class => 'text-field-long'}  %></p>
-
-        <p class = "center">
-          <%= f.label :user_role, 'User role' %>
-          <%= f.select :user_role, ['Super Admin', 'Admin', 'General',] %></p>
+          <%= form_for @user do |f| %>
 
 
-        <p class = "center">
-          <%= f.label :company_id, 'Company' %>
-          <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name) %></p>
-        </p>
+            <%= f.text_field :first_name, { :value => 'First Name', :class => 'field'} %>
 
-      <p class = "center">
-        <%= f.label :password, 'Password' %>
-        <%= f.password_field :password,  {:class => 'text-field'}  %>
-        <%= f.label :password_confirmation, 'Confirm password' %>
-        <%= f.password_field :password_confirmation,  {:class => 'text-field'}  %>
-      </p>
+            <%= f.text_field :last_name,  { :value => 'Last Name', :class => 'field inline'}  %>
+
+            <%= f.text_field :email,  { :value => 'Email', :class => 'field longer'}  %>
+
+            <%= f.label :user_role, 'User role',  {:class => 'block label'} %>
+            <%= f.select :user_role, ['Super Admin', 'Admin', 'General',], {:class => 'inline'} %>
 
 
-
-      <p class = "center"><%= f.submit :class => 'button' %></p>
-
-
-
-      <% end %>
+            <%= f.label :company_id, 'Company',  {:class => 'block label'} %>
+            <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name), {:class => 'block'} %>
 
 
+            <%= f.label :password, 'Password',  {:class => 'block label'} %>
+            <%= f.password_field :password,  {:class => 'field block'}  %>
+            <%= f.label :password_confirmation, 'Confirm password',  {:class => 'block label'}%>
+            <%= f.password_field :password_confirmation,  {:class => 'field block'} %>
+
+            <%= f.submit :value => 'Create', :class => 'button' %>
+
+
+            <% end %>
+
+          </div>
+
+      </div>
+
+  </div>

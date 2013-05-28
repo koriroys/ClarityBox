@@ -1,38 +1,38 @@
-<h1 class = "large-top-space center">Editing User</h1>
+<div class = "non-color-page">
 
-      <p><%= notice %></p>
+<h2>Editing User</h2>
+
+<div class = "form">
+
 
       <%= form_for @user, class: 'user-form' do |f| %>
 
         <p>
-          <%= f.label :first_name, 'First' %>
-          <%= f.text_field :first_name %>
-          <%= f.label :last_name, 'Last' %>
-          <%= f.text_field :last_name %>
+          <%= f.label :first_name, 'First', :class => 'block' %>
+          <%= f.text_field :first_name, :class => 'field block' %>
+          <%= f.label :last_name, 'Last',:class => 'block' %>
+          <%= f.text_field :last_name, :class => 'field block' %>
         </p>
 
         <p>
           <%= f.label :email, 'Email' %>
-          <%= f.text_field :email %></p>
+          <%= f.text_field :email, :class => 'field longer'%> </p>
 
+<% if super_admin? %>
         <p>
           <%= f.label :user_role, 'User role' %>
           <%= f.select :user_role, ['Super Admin', 'Admin', 'General',] %></p>
-
 
         <p>
           <%= f.label :company_id, 'Company' %>
           <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name) %></p>
         </p>
+<% end %>
 
-
-
-
-
-      <%= f.submit :class => 'button center' %>
-
-
-
+          <div class = "center">
+              <%= f.submit :class => 'button blue' %>
+          </div>
       <% end %>
+  </div>
 
-
+</div>

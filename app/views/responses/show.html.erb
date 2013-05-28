@@ -1,6 +1,8 @@
-<h1 class = "large-top-space center">Your response</h1>
+<div class = "non-color-page">
 
-  <div class = "primary-content">
+
+<h2>Your response</h2>
+
 
     <h3 class = "top-space center italic">
       "<%= @response.question.question_text %>"
@@ -9,11 +11,11 @@
 
   <% if @response.yes_response == true %>
 
-    <h3 class = "center" >You responded, "Yes."</h3>
+    <h4 class = "top-space center" >You responded, "Yes."</h4>
 
     <% else %>
 
-    <h3 class = "center" >You responded, "No."</h3>
+    <h4 class = "top-space center" >You responded, "No."</h4>
 
   <% end %>
 
@@ -22,20 +24,22 @@
 
     <% if @response.public_response == true %>
 
-      <p class = "italic center">(Public)</p>
+      <p class = "center">(Public)</p>
 
     <% else %>
 
-      <p class = "italic center">(Private)</p>
+      <p class = "center">(Private)</p>
 
     <% end %>
 
-</div>
 
-  <p class = "center top-space"><%= link_to 'View the rollup', question_responses_url(@question), :class => 'button' %></p>
+
+  <p class = "center top-space"><%= link_to 'View the rollup', question_responses_url(@question), :class => 'button blue' %></p>
 
   <p class = "center"><%= link_to 'Edit your response', edit_question_response_url(@question, @response) %></p>
 
 <% if admin? || super_admin? %>
   <p class = "center"><%= link_to 'Go back to all the questions', questions_url %></p>
 <% end %>
+
+</div>

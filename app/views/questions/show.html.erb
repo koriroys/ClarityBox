@@ -1,17 +1,18 @@
-<h1 class = "large-top-space center">This week's question</h1>
+<div class = "non-color-page">
+<h2> This week's question</h2>
 
   <p class = "center italic">
       (<%= @question.week.start_date.strftime("%B %e")  %> - <%= @question.week.end_date.strftime("%B %e")  %>)
   </p>
 
-  <h2 class = "top-space center italic">
+  <h3 class = "top-space center italic">
     "<%= @question.question_text %>"
-  </h2>
+  </h3>
 
-    <p class = "top-space center"><%= link_to 'Respond', new_question_response_url(@question), :class => 'button' %></p>
+    <p class = "top-space center"><%= link_to 'Respond', new_question_response_url(@question), :class => 'button blue' %></p>
 
       <% if @question.responses.present? %>
-        <p class = "italic center"><%= link_to 'View the rollup', question_responses_url(@question) %></p>
+        <p class = "top-space center"><%= link_to 'View the rollup', question_responses_url(@question), :class => 'button gray' %></p>
       <% end %>
 
   <% if admin? || super_admin? %>
@@ -19,7 +20,7 @@
       <% if @question.send_question == true %>
           <p class = "top-space center">Ask this question on <%= @question.ask_at.strftime("%A, %b %e at %l:%M %p") %></p>
       <% else %>
-          <p class = "center">Inactive question</p>
+          <p class = "top-space center">Inactive question</p>
       <% end %>
 
 
@@ -39,6 +40,7 @@
 
     </div>
 
+</div>
 
 
 

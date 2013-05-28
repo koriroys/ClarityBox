@@ -1,5 +1,5 @@
-<div class = "primary-content group top-space">
-  <h1 class = "large top-space center">Ask a new question.</h1>
+<div class = "non-color-page">
+  <h2>Ask a new question.</h2>
 
      <%= form_tag(questions_url, method: 'post') do%>
 
@@ -27,7 +27,7 @@
 
             <p class = "center">
     <!--           <%= label_tag :question_text, 'What question do you want to ask?' %> -->
-              <%= text_area_tag :question_text, 'What question do you want to ask?', :class => 'text-field' %>
+              <%= text_area_tag :question_text, 'What question do you want to ask?', :class => 'field large' %>
             </p>
 
             <p class = "center">Ask this question?
@@ -52,8 +52,8 @@
             </p>
 
 
-          <div class = "button-set">
-            <%= submit_tag "Submit", :class => 'button' %>
+          <div class = "center">
+            <%= submit_tag "Submit", :class => 'button blue' %>
 
         <% end %>
 

@@ -1,19 +1,20 @@
   <%= form_for [@question, @response] do |f| %>
 
-
-<h3 class = "center">
-<%= f.radio_button :yes_response, true %>
-<%= f.label :yes_response, 'Yes' %>
-
-<%= f.radio_button :yes_response, false %>
-<%= f.label :yes_response, 'No' %>
-</h3>
+<div class = "form">
 
 
-<p>
-  <%= f.label :response_text, 'Your thoughts' %>
-</p>
-  <%= f.text_area :response_text %>
+<h4 class = "top-space center">
+  <%= f.radio_button :yes_response, true %>
+  <%= f.label :yes_response, 'Yes' %>
+
+  <%= f.radio_button :yes_response, false %>
+  <%= f.label :yes_response, 'No' %>
+</h4>
+
+
+<div class = "small-top-space">
+  <%= f.text_area :response_text, { :value => 'What are your thoughts?', :class => 'field longer tall'} %>
+</div>
 
 <p class = "center">
   <%= f.radio_button :public_response, true %>
@@ -22,6 +23,8 @@
   <%= f.label :public_response, 'Keep private for now' %>
 </p>
 
-<p class = "top-space center"><%= f.submit :class => 'button' %></p>
+<p class = "center"><%= f.submit :class => 'button blue' %></p>
+
 
   <% end %>
+</div>

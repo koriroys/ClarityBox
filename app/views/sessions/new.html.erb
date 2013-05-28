@@ -1,27 +1,26 @@
 
+<div class = "app-home-page">
 
-<h1 class = "large-top-space center">Sign In</h1>
+  <div class = "container">
+
+    <h2>Sign In</h2>
+
+       <div class = "form-small">
 
 
+        <%= form_tag sessions_url do %>
 
-  <div class = "smallest-container">
+          <%= label_tag :email, 'Email',  {:class => 'block label'} %>
+          <%= email_field_tag :email, 'Email', :class => 'field'  %>
 
-    <%= form_tag sessions_url do %>
+          <%= label_tag :password, 'Password',  {:class => 'block label'} %>
+          <%= password_field_tag :password, '', :class => 'field  block' %>
 
-      <p class = "center top-space">
-<!--         <%= label_tag :email, 'Email', :class =>'label' %>
- -->        <%= email_field_tag :email, 'Email', :class => 'text-field'  %>
-      </p>
+          <%= submit_tag 'Sign in', :class => 'button matched' %></p>
 
-      <p class = "center">
-<!--         <%= label_tag :password, 'Password', :class =>'label' %>
- -->        <%= password_field_tag :password, 'Password', :class => 'text-field' %>
-      </p>
+        <% end %>
 
-     <p class = "center">   <%= submit_tag 'Sign in', :class => 'button' %></p>
+    </div>
 
-    <% end %>
-
-  </div>
-
-<p> <%= notice %></p>
+    </div>
+   </div>

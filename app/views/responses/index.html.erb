@@ -1,33 +1,38 @@
-<h1 class = "large-top-space center">This week's rollup</h1>
+<div class = "non-color-page">
 
- <p class = "center italic">
-    (<%= @response.question.week.start_date.strftime("%B %e") %> - <%= @response.question.week.end_date.strftime("%B %e") %>)
-</p>
+    <div class = "smaller-container">
+        <h2>This week's rollup</h2>
 
-<h2 class = "top-space center italic">"<%= @response.question.question_text %>"</h2>
+         <p class = "center italic">
+            (<%= @response.question.week.start_date.strftime("%B %e") %> - <%= @response.question.week.end_date.strftime("%B %e") %>)
+        </p>
 
-    <p class = "center"><%= @yes_responses.count %> people said "Yes".</p>
-    <p class = "center"><%= @no_responses.count %> people said "No".</p>
+    <h3 class = "center italic">"<%= @response.question.question_text %>"</h3>
 
-     <p class = "italic center">(<%= @responses.count %> / <%=@users.count %> people responded this week)</p>
+        <h4 class = "small-top-space center"><%= @yes_responses.count %> people said "Yes".</h4>
 
-<% @responses.each do |response| %>
+        <h4 class = "small-top-space center"><%= @no_responses.count %> people said "No".</h4>
 
-    <% if response.public_response == true %>
+        <p class = "italic center">(<%= @responses.count %> / <%=@users.count %> people responded this week)</p>
 
-        <p><%= response.user.first_name %>: <%= response.response_text %>
+        <% @responses.each do |response| %>
 
-    <% end %>
+            <% if response.public_response == true %>
 
-    <% if response.public_response == false && response.user == current_user %>
+                <h4 class = "top-space"><%= response.user.first_name %>: <%= response.response_text %></h4>
 
-        <p class = "italic">You didn't share your response with your team this week. View your response <%= link_to 'here.', question_response_url(@question, response) %></p>
+            <% end %>
 
+             <h4 class = "top-space"><% if response.public_response == false && response.user == current_user %></h4>
 
-    <% end %>
-<% end %>
-
-
+                <p class = "italic">You didn't share your response with your team this week. View your response <%= link_to 'here.', question_response_url(@question, response) %></p>
 
 
-    <p class = "center"><%= link_to 'Back to the question', question_url(@question) %></p>
+                <% end %>
+            <% end %>
+
+        <p class = "center"><%= link_to 'Back to the question', question_url(@question) %></p>
+
+    </div>
+
+</div>

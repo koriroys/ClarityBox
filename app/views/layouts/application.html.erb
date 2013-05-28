@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>ClarityBox</title>
-  <%= stylesheet_link_tag    "style" %>
+  <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="//use.typekit.net/bmv8eic.js"></script>
@@ -13,21 +13,25 @@
 
   <!-- NAVIGATION -->
 
-<header class = "primary-nav">
 
 
-
-  <% if signed_in? %>
-     <div class = "center notice">
-        Hey, <%= User.find(session[:user_id]).first_name %>.
-        <%= notice %>
-    </div>
-  <% end %>
+  <header class = "primary-nav">
 
 
     <div class = "sticky container">
 
-      <h1 class = "nav-logo"><%= link_to 'ClarityBox', app_home_url%></h1>
+      <div class = "nav-logo"><%= link_to '', app_home_url%>
+      </div>
+
+
+
+     <div class = "notice">
+        <% if signed_in? %>
+        Hey, <%= User.find(session[:user_id]).first_name %>.
+          <% end %>
+        <%= notice %>
+    </div>
+
 
       <nav class = "nav-elements">
         <ul>
@@ -46,44 +50,35 @@
 </header>
 
 
-
-
-
-
-   <div class = "container group">
-
-
       <%= yield %>
-
-  </div>
-
-
 
 
 <!-- FOOTER -->
 
 
-  <footer class = "top-space group">
+  <footer>
 
     <ul>
       <% if signed_in? %>
 
           <% if super_admin? %>
 
-            <li class = "app"><%= link_to 'View the companies', companies_url %></li>
+            <li class = "app"><%= link_to 'All companies', companies_url %></li>
 
-             <li class = "app"><%= link_to 'Ask a question', new_question_url %></li>
+             <li class = "app"><%= link_to 'All questions', questions_url %></li>
 
-          <li class = "app"><%= link_to 'See all the questions', questions_url %></li>
+          <li class = "app"><%= link_to 'All rollups', questions_url %></li>
 
           <% else %>
 
+
+
           <li class = "app"><%= link_to current_user.company.name, company_url(current_user.company) %></li>
 
-            <li class = "app"><%= link_to 'Ask a question', new_question_url %></li>
+            <li class = "app"><%= link_to 'All questions', questions_url %></li>
 
 
-          <li class = "app"><%= link_to 'Respond to a question', questions_url %></li>
+          <li class = "app"><%= link_to 'All rollups', questions_url %></li>
 
           <% end %>
 

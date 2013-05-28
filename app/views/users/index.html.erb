@@ -1,9 +1,9 @@
 
+ <div class= "non-color-page">
 
-<h1 class = "large-top-space center">All the users</h1>
+<h2>All the users</h2>
 
-  <p class = "center"><%= notice %></p>
-
+      <div class = "smaller-container">
 
     <% @users.each do |user| %>
 
@@ -16,10 +16,10 @@
 
     <% end %>
 
+</div>
 
 
-
-  <p class = "center"> <%= link_to 'Add a user', new_user_url, :class => 'button' %></p>
+  <p class = "center"> <%= link_to 'Add a user', new_user_url, :class => 'button gray' %></p>
 
 
 </div>
