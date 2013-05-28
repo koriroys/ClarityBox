@@ -33,7 +33,7 @@
 
 #------------------------------
 
-  # Routes for Signin
+  # Routes for Signin for App
 
     get '/sessions/new' => 'sessions#new', as: 'new_session'
     post '/sessions' => 'sessions#create', as: 'sessions'
