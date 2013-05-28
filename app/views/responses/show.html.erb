@@ -7,17 +7,28 @@
     </h3>
 
 
-      <p><%= @response.user.first_name %>:  "<%= @response.response_text %>"</p>
+  <% if @response.yes_response == true %>
 
-        <% if @response.public_response == false %>
+    <h3 class = "center" >You responded, "Yes."</h3>
 
-          <p class = "italic">Your response was not shared with the rest of the team.</p>
+    <% else %>
 
-        <% else %>
+    <h3 class = "center" >You responded, "No."</h3>
 
-          <p class = "italic">Your response was shared with the rest of the team.</p>
+  <% end %>
 
-        <% end %>
+
+  <h4 class = "small-top-space center" >Your thoughts:  "<%= @response.response_text %>"</h4>
+
+    <% if @response.public_response == true %>
+
+      <p class = "italic center">(Public)</p>
+
+    <% else %>
+
+      <p class = "italic center">(Private)</p>
+
+    <% end %>
 
 </div>
 

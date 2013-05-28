@@ -8,7 +8,7 @@
 
      <% if super_admin? %>
 
-          <p>
+          <p class = "center top-space">
             <%= label_tag :company_id, 'Company:' %>
             <%= select_tag :company_id, options_from_collection_for_select(Company.all, :id, :name) %>
           </p>
@@ -20,31 +20,31 @@
     <% end %>
 
 
-            <p>
+            <p class = "center">
               <%= label_tag :week_id, 'This question is for the Week of:' %>
               <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :start_date) %>
             </p>
 
-            <p>
-              <%= label_tag :question_text, 'What question do you want to ask?' %>
-              <%= text_area_tag :question_text %>
+            <p class = "center">
+    <!--           <%= label_tag :question_text, 'What question do you want to ask?' %> -->
+              <%= text_area_tag :question_text, 'What question do you want to ask?', :class => 'text-field' %>
             </p>
 
-            <p>Ask this question?
+            <p class = "center">Ask this question?
               <%= radio_button_tag :send_question, true, checked = true %>
               <%= label_tag :send_question_true, 'Yes' %>
               <%= radio_button_tag :send_question, false %>
               <%= label_tag :send_question_false, 'No' %>
             </p>
 
-            <p>Send a reminder?
+            <p class = "center">Send a reminder?
               <%= radio_button_tag :send_reminder, true, checked = true %>
               <%= label_tag :send_reminder_true, 'Yes' %>
               <%= radio_button_tag :send_reminder, false %>
               <%= label_tag :send_reminder_false, 'No' %>
             </p>
 
-            <p>Send the rollup?
+            <p class = "center">Send the rollup?
               <%= radio_button_tag :send_rollup, true, checked = true %>
               <%= label_tag :send_rollup_true, 'Yes' %>
               <%= radio_button_tag :send_rollup, false %>

@@ -1,23 +1,27 @@
 
 
+<h1 class = "large-top-space center">Sign In</h1>
 
-  <h1 class = "large-top-space center">Sign In</h1>
 
 
-  <%= form_tag sessions_url do %>
+  <div class = "smallest-container">
 
-    <p>
-      <%= label_tag :email %>
-      <%= email_field_tag :email %>
-    </p>
+    <%= form_tag sessions_url do %>
 
-    <p>
-      <%= label_tag :password %>
-      <%= password_field_tag :password %>
-    </p>
+      <p class = "center top-space">
+<!--         <%= label_tag :email, 'Email', :class =>'label' %>
+ -->        <%= email_field_tag :email, 'Email', :class => 'text-field'  %>
+      </p>
 
-    <%= submit_tag 'Sign in', :class => 'button' %>
+      <p class = "center">
+<!--         <%= label_tag :password, 'Password', :class =>'label' %>
+ -->        <%= password_field_tag :password, 'Password', :class => 'text-field' %>
+      </p>
 
-  <% end %>
+     <p class = "center">   <%= submit_tag 'Sign in', :class => 'button' %></p>
 
-<p>  <%= notice %></p>
+    <% end %>
+
+  </div>
+
+<p> <%= notice %></p>

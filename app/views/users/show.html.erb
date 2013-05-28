@@ -6,9 +6,21 @@
 
 <% @responses.each do |response| %>
 
-  <h4 class = "small-top-space center">Week of <%= response.question.week.start_date.strftime("%B %e") %>: <em>"<%= response.question.question_text %>"</em></h4>
+  <h4 class = "top-space center">Week of <%= response.question.week.start_date.strftime("%B %e") %>: <em>"<%= response.question.question_text %>"</em></h4>
 
-    <p class = "small-top-space center">
+    <% if response.yes_response == true %>
+        <p class = "center">
+          You responded, "Yes."
+        </p>
+    <% end %>
+
+    <% if response.yes_response == false %>
+        <p class = "center">
+          You responded, "No."
+        </p>
+    <% end %>
+
+    <p class = "top-space center">
       <%= link_to 'View your response', question_response_url(response.question, response), :class => 'button small' %>
     </p>
     <p class = "center">

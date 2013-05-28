@@ -76,7 +76,7 @@ i, em {
 }
 
 .smaller-container {
-  max-width: 650px;
+  max-width: 750px;
   margin: 0 auto;
 }
 
@@ -214,6 +214,21 @@ Buttons + Text Fields
   border: none;
   background-color: #E8E8E8;
   font-family: 'minion pro', 'Georgia', Arial, Helvetica, sans-serif;
+  width: 200px;
+  color: #9C9C9C;
+
+}
+
+.text-field-long{
+  font-size: 24px;
+  padding: 27px;
+  border-radius: 5px;
+  border: none;
+  background-color: #E8E8E8;
+  font-family: 'minion pro', 'Georgia', Arial, Helvetica, sans-serif;
+  width: 350px;
+  color: #9C9C9C;
+
 }
 
 .button {
@@ -235,6 +250,11 @@ Buttons + Text Fields
 
 .no-hover a:hover{
   color: #555;
+}
+
+.label {
+  font-size: 24px;
+  margin-right: 20px;
 }
 
 
@@ -281,7 +301,7 @@ header {
 }
 
 .primary-nav{
-  height: 160px;
+  height: 240px;
   width: 100%;
 }
 
@@ -481,7 +501,7 @@ time{
 
 textarea {
   resize: none;
-  width: 800px;
+  width: 600px;
   height: 80px;
 }
 
@@ -501,4 +521,9 @@ ul.app {
     width: 300px;
   }
 
+
+footer li.app{
+
+  width: 180px;
+  }
 

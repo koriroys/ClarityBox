@@ -8,35 +8,35 @@
         <p><%= notice %></p>
 
 
+<%= form_for @user, class: 'user-form' do |f| %>
 
-      <%= form_for @user, class: 'user-form' do |f| %>
+        <p class = "center">
+<!--           <%= f.label :first_name, 'First' %>
+ -->          <%= f.text_field :first_name, { :value => 'First Name', :class => 'text-field'} %>
 
-        <p>
-          <%= f.label :first_name, 'First' %>
-          <%= f.text_field :first_name %>
-          <%= f.label :last_name, 'Last' %>
-          <%= f.text_field :last_name %>
+<!--           <%= f.label :last_name, 'Last' %> -->
+          <%= f.text_field :last_name,  { :value => 'Last Name', :class => 'text-field'}  %>
         </p>
 
-        <p>
-          <%= f.label :email, 'Email' %>
-          <%= f.text_field :email %></p>
+        <p class = "center">
+<!--           <%= f.label :email, 'Email' %> -->
+          <%= f.text_field :email,  { :value => 'Email', :class => 'text-field-long'}  %></p>
 
-        <p>
+        <p class = "center">
           <%= f.label :user_role, 'User role' %>
           <%= f.select :user_role, ['Super Admin', 'Admin', 'General',] %></p>
 
 
-        <p>
+        <p class = "center">
           <%= f.label :company_id, 'Company' %>
           <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name) %></p>
         </p>
 
-      <p>
+      <p class = "center">
         <%= f.label :password, 'Password' %>
-        <%= f.password_field :password %>
+        <%= f.password_field :password,  {:class => 'text-field'}  %>
         <%= f.label :password_confirmation, 'Confirm password' %>
-        <%= f.password_field :password_confirmation %>
+        <%= f.password_field :password_confirmation,  {:class => 'text-field'}  %>
       </p>
 
 
