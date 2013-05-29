@@ -1,65 +1,9 @@
 <div class = "non-color-page">
   <h2>Ask a new question.</h2>
 
-     <%= form_tag(questions_url, method: 'post') do%>
+      <%= render 'form' %>
 
-     <%= hidden_field_tag :user_id %>
-
-
-     <% if super_admin? %>
-
-          <p class = "center top-space">
-            <%= label_tag :company_id, 'Company:' %>
-            <%= select_tag :company_id, options_from_collection_for_select(Company.all, :id, :name) %>
-          </p>
-
-    <% else %>
-
-      <%= hidden_field_tag :company_id, current_user.company_id %>
-
-    <% end %>
-
-
-            <p class = "center">
-              <%= label_tag :week_id, 'This question is for the Week of:' %>
-              <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :start_date) %>
-            </p>
-
-            <p class = "center">
-    <!--           <%= label_tag :question_text, 'What question do you want to ask?' %> -->
-              <%= text_area_tag :question_text, 'What question do you want to ask?', :class => 'field large' %>
-            </p>
-
-            <p class = "center">Ask this question?
-              <%= radio_button_tag :send_question, true, checked = true %>
-              <%= label_tag :send_question_true, 'Yes' %>
-              <%= radio_button_tag :send_question, false %>
-              <%= label_tag :send_question_false, 'No' %>
-            </p>
-
-            <p class = "center">Send a reminder?
-              <%= radio_button_tag :send_reminder, true, checked = true %>
-              <%= label_tag :send_reminder_true, 'Yes' %>
-              <%= radio_button_tag :send_reminder, false %>
-              <%= label_tag :send_reminder_false, 'No' %>
-            </p>
-
-            <p class = "center">Send the rollup?
-              <%= radio_button_tag :send_rollup, true, checked = true %>
-              <%= label_tag :send_rollup_true, 'Yes' %>
-              <%= radio_button_tag :send_rollup, false %>
-              <%= label_tag :send_rollup_false, 'No' %>
-            </p>
-
-
-          <div class = "center">
-            <%= submit_tag "Submit", :class => 'button blue' %>
-
-        <% end %>
-
-
-
-    <p>or <%= link_to 'Cancel', questions_url %></p>
+    <p class = "center">or <%= link_to 'Cancel', questions_url %></p>
 
 
   </div>

@@ -1,0 +1,34 @@
+
+<div class = "form">
+
+  <%= form_for @user do |f| %>
+
+    <%= f.label :first_name, 'First Name', {:class => 'block label-gray'} %>
+    <%= f.text_field :first_name, { :class => 'field'} %>
+
+   <div class = "group">
+    <%= f.label :last_name, 'Last Name', {:class => 'block label-gray'} %>
+    <%= f.text_field :last_name,  { :class => 'field'}  %>
+  </div>
+
+    <%= f.label :email, 'Email', {:class => 'block label-gray'} %>
+    <%= f.text_field :email,  { :class => 'field longer'}  %>
+
+    <%= f.label :user_role, 'User role',  {:class => 'block label-gray'} %>
+    <%= f.select :user_role, ['Super Admin', 'Admin', 'General',], {:class => 'inline'} %>
+
+    <%= f.label :company_id, 'Company',  {:class => 'block label-gray'} %>
+    <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name), {:class => 'block'} %>
+
+    <%= f.label :password, 'Password',  {:class => 'block label-gray'} %>
+    <%= f.password_field :password,  {:class => 'field block'}  %>
+    <%= f.label :password_confirmation, 'Confirm password',  {:class => 'block label-gray'}%>
+    <%= f.password_field :password_confirmation,  {:class => 'field block'} %>
+
+
+    <%= f.submit :class => 'button blue longer' %>
+
+
+    <% end %>
+
+  </div>

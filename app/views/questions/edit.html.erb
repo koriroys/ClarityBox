@@ -1,59 +1,13 @@
 <div class = "non-color-page">
   <h2>Edit a  question.</h2>
 
-  <div class = "form center">
+    <%= render 'form' %>
 
-        <%= form_tag(question_url(@question), method: 'put') do%>
+      <div class = "center">
 
-         <%= hidden_field_tag :user_id %>
+        <p>or <%= link_to 'Cancel', questions_url %></p>
 
-          <p>Company:
-                <%= select_tag :company_id, options_from_collection_for_select(Company.all, :id, :name, @question.company_id) %>
-          </p>
-
-            <p>This question is for the week of:
-                <%= select_tag :week_id, options_from_collection_for_select(Week.all, :id, :start_date, @question.week_id) %>
-            </p>
-
-            <p>What question do you want to ask?
-                <%= text_area_tag :question_text, @question.question_text, :class => 'field large' %>
-            </p>
-
-            <p>Ask this question?
-              <%= radio_button_tag :send_question, true, checked = true %>
-              <%= label_tag :send_question_true, 'Yes' %>
-              <%= radio_button_tag :send_question, false %>
-              <%= label_tag :send_question_false, 'No' %>
-            </p>
-
-            <p>Send a reminder?
-              <%= radio_button_tag :send_reminder, true, checked = true %>
-              <%= label_tag :send_reminder_true, 'Yes' %>
-              <%= radio_button_tag :send_reminder, false %>
-              <%= label_tag :send_reminder_false, 'No' %>
-            </p>
-
-            <p>Send the rollup?
-              <%= radio_button_tag :send_rollup, true, checked = true %>
-              <%= label_tag :send_rollup_true, 'Yes' %>
-              <%= radio_button_tag :send_rollup, false %>
-              <%= label_tag :send_rollup_false, 'No' %>
-            </p>
-
-  </div>
-
-
-
-
-          <div class = "center">
-            <%= submit_tag "Save", :class => 'button blue' %>
-
-        <% end %>
-
-    <p>or <%= link_to 'Cancel', questions_url %></p>
-
-        <%= link_to 'Delete', question_url(@question), method: 'delete', data: { confirm: "You sure about that?" } %>
-
-
+            <%= link_to 'Delete', question_url(@question), method: 'delete', data: { confirm: "You sure about that?" } %>
+    </div>
   </div>
 </div>

@@ -2,37 +2,12 @@
 
 <h2>Editing User</h2>
 
-<div class = "form">
+  <%= render 'form' %>
 
 
-      <%= form_for @user, class: 'user-form' do |f| %>
+  <div class = "center">
+    <p><%= link_to 'Cancel', company_url(@user.company_id) %></p>
 
-        <p>
-          <%= f.label :first_name, 'First', :class => 'block' %>
-          <%= f.text_field :first_name, :class => 'field block' %>
-          <%= f.label :last_name, 'Last',:class => 'block' %>
-          <%= f.text_field :last_name, :class => 'field block' %>
-        </p>
-
-        <p>
-          <%= f.label :email, 'Email' %>
-          <%= f.text_field :email, :class => 'field longer'%> </p>
-
-<% if super_admin? %>
-        <p>
-          <%= f.label :user_role, 'User role' %>
-          <%= f.select :user_role, ['Super Admin', 'Admin', 'General',] %></p>
-
-        <p>
-          <%= f.label :company_id, 'Company' %>
-          <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name) %></p>
-        </p>
-<% end %>
-
-          <div class = "center">
-              <%= f.submit :class => 'button blue' %>
-          </div>
-      <% end %>
+    <%= link_to 'Delete', user_url(@user), method: 'delete', data: { confirm: 'You sure about that?'} %>
   </div>
-
 </div>

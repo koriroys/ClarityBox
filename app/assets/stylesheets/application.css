@@ -421,6 +421,8 @@ header {
   border-radius: 3px;
   margin: 10px 0;
   width: 277px;
+  box-shadow: 0px 1px 2px #D6D6D6;
+  color: #616161;
 }
 
 .longer {
@@ -449,6 +451,16 @@ header {
 
 .label{
   color: #fff;
+  font-size: 20px;
+  padding: 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 100;
+  margin-top: 20px;
+}
+
+.label-gray{
+  color: #616161;
   font-size: 20px;
   padding: 5px 0;
   text-transform: uppercase;

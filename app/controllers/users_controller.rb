@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_filter :authorize_any_user, only: [:show, :edit, :update, :destroy]
+  before_filter :authorize_any_user, only: [:show]
+  before_filter :require_super_admin, only: [:edit, :update, :destroy]
 
 
   def authorize_any_user
@@ -13,10 +14,12 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+
   end
 
   def show
     @responses = Response.where(:user_id => params[:id])
+    @user = User.find_by_id(params[:id])
   end
 
 
@@ -53,7 +56,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to users_url, :notice => "User updated."
     else
-      redirect_to edit_user_url(@user.id), :notice => "Email address taken."
+      redirect_to edit_user_url(@user.id), :notice => "Your changes were not saved."
     end
 
   end

@@ -25,8 +25,12 @@
 </div>
 
 
-  <% if super_admin? || admin? %>
-      <p class = "center"><%= link_to 'Add a user', new_user_url, :class => 'button gray' %></p>
+  <% if super_admin? %>
+      <p class = "top-space center"><%= link_to 'Add a user', new_user_url, :class => 'button gray' %></p>
+  <% end %>
+
+  <% if admin? %>
+        <p class = "top-space center"><a href = "#" class = "button gray">Invite users<a></p>
   <% end %>
 
   <% if super_admin? %>

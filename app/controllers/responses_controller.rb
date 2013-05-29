@@ -5,7 +5,6 @@ class ResponsesController < ApplicationController
 
 
 
-
    def authorize_user
     @response = Response.find(params[:id])
 

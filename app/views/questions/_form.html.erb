@@ -1,0 +1,59 @@
+<div class = "form">
+
+<%= form_for @question do |f| %>
+
+<% f.hidden_field :user_id %>
+
+
+<div class = "center">
+<% if super_admin? %>
+
+    <%= f.label :company_id, 'Company', :class => 'label-gray block' %>
+    <%= f.collection_select :company_id, Company.all, :id, :name %>
+
+  <% else %>
+
+    <%= f.hidden_field :company_id, current_user.company_id %>
+
+<% end %>
+
+
+<%= f.label :week_id, "Week of", :class => 'label-gray block' %>
+<%= f.collection_select :week_id, Week.all, :id, :start_date %>
+
+</div>
+
+<div class = "small-top-space">
+  <%= f.label :question_text, 'What question would you like to ask?', :class => 'label-gray block center' %>
+  <%= f.text_area :question_text, :class => 'field longer tall' %>
+</div>
+
+<div class = "small-top-space label-gray center">
+   Ask this question?
+  <%= f.radio_button :send_question, true %>
+  <%= f.label :send_question_true, 'Yes' %>
+  <%= f.radio_button :send_question, false%>
+  <%= f.label :send_question_false, 'No' %>
+</div>
+
+<div class = "small-top-space label-gray center">
+  Send reminder?
+  <%= f.radio_button :send_reminder, true %>
+  <%= f.label :send_reminder_true, 'Yes' %>
+  <%= f.radio_button :send_reminder, false%>
+  <%= f.label :send_reminder_false, 'No' %>
+</div>
+
+<div class = "small-top-space label-gray center">
+  Send rollup?
+    <%= f.radio_button :send_rollup, true %>
+    <%= f.label :send_rollup, 'Yes' %>
+    <%= f.radio_button :send_rollup, false%>
+    <%= f.label :send_rollup_false, 'No' %>
+</div>
+
+<p class = "center"><%= f.submit :class => 'button blue' %></p>
+
+<% end %>
+
+</div>
