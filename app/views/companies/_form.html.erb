@@ -1,8 +1,9 @@
+<div class = "form-small">
 <%= form_for @company do |f| %>
 
   <p = class = "center top-space">
-    <%= f.label :name, 'Company name' %>
-    <%= f.text_field :name %>
+    <%= f.label :name, 'Company name', :class => 'label block' %>
+    <%= f.text_field :name, :class => 'field' %>
   </p>
 
   <div class = "center top-space">
@@ -10,3 +11,5 @@
   </div>
 
 <% end %>
+
+</div>

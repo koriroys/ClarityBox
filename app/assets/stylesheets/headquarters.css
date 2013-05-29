@@ -53,14 +53,17 @@ table {
 */
 
 
-b, strong {
-  font-weight: bold;
-}
 i, em {
   font-style: italic;
 }
 
 
+b, strong {
+  font-style: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
 
 
 
@@ -176,6 +179,7 @@ p {
   line-height: 170%;
   font-size: 24px;
   margin: 35px 0;
+  font-weight: 100;
 }
 
 
@@ -278,7 +282,7 @@ header {
 
 
 .nav-elements a:hover{
-  color: #787878;
+  color: #D9D9D9;
 }
 
 
@@ -292,52 +296,6 @@ header {
 }
 
 
-/*
-  Primary Content
-*/
-
-.primary-content{
-  overflow: auto;
-  width: 800px;
-}
-
-.primary-content h2{
-  text-align: center;
-  line-height: 150%;
-  margin: 250px auto 0;
-  width: 850px;
-
-}
-
-.primary-content h4{
-  line-height: 120%;
-}
-
-.center {
-  text-align: center;
-}
-
-.primary-content ul{
-  margin: 30px 0;
-}
-
-.primary-content li{
-  line-height: 120%;
-  font-size: 22px;
-  margin: 18px 0 0 65px;
-  font-style: italic;
-}
-
-
-.bottom-links {
-  text-align: center;
-}
-
-.bottom-links li {
-  float: left;
-}
-
-
 
 /*Main Callout*/
 
@@ -345,12 +303,14 @@ header {
   background: #DE6A4E;
   width: 100%;
   height: 700px;
+
 }
 
 .main-callout h2{
   padding-top: 350px;
   text-align: center;
   color: #fff;
+  letter-spacing: 4px;
 
 }
 
@@ -364,6 +324,7 @@ header {
 
 .section {
   color: #fff;
+  padding-bottom:100px;
 }
 
 .section h3 {
@@ -396,19 +357,21 @@ header {
 
 .section p{
   letter-spacing: .05em;
+  font-weight: 100;
 }
 
 .section li{
   letter-spacing: .05em;
 }
-
+/*
 .section p.last {
   padding-bottom: 100px;
-}
+}*/
 
 .section p.small {
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 1px;
+  font-weight: 100;
 }
 
 
@@ -418,7 +381,7 @@ header {
 }
 
 .section a:visited{
-  color: #fff;
+  color: #DEDEDE;
 }
 
 .section a:hover{
@@ -433,6 +396,7 @@ header {
 
 .problem {
   background: #E8B002;
+
 }
 
 
@@ -455,7 +419,7 @@ header {
 
 .solution li {
   font-size: 24px;
-  font-weight: 100px;
+  font-weight: 100;
   font-style: italic;
   text-align: center;
   line-height: 250%;
@@ -469,7 +433,7 @@ header {
 
 .process li {
   font-size: 24px;
-  font-weight: 100px;
+  font-weight: 100;
   font-style: italic;
   margin-left: 50px;
   line-height: 250%;
@@ -487,6 +451,14 @@ header {
   background: #7B4CB5;
 }
 
+.testimonials li {
+  font-size: 24px;
+  font-weight: 100;
+  font-style: italic;
+  margin-left: 50px;
+  line-height: 250%;
+}
+
 /*Contact*/
 
 .contact {
@@ -499,6 +471,25 @@ header {
   background: #005AA3;
 }
 
+
+/* Philosophy */
+
+.philosophy {
+  background: #189E77;
+}
+
+.philosophy li {
+  font-size: 24px;
+  font-weight: 100;
+  margin-left: 50px;
+  line-height: 250%;
+}
+
+/*Story*/
+
+.story {
+  background: #AD3772;
+}
 
 /*Forms
 */
@@ -576,7 +567,7 @@ footer ul{
   width: 600px;
   height: 20px;
   margin: 0 auto;
-  padding-top: 100px;
+  padding: 100px 0 10px;
 }
 
 
@@ -607,7 +598,13 @@ footer a:hover{
 
 
 
-
+footer p{
+  text-align: center;
+/*  text-transform: uppercase;
+*/  font-size: 14px;
+  color: #999999;
+  padding: 20px;
+}
 
 
 
