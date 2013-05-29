@@ -530,6 +530,13 @@ header {
   border: 5px solid #DEDEDE;
 }
 
+/*Drop-down select*/
+
+select {
+  font-size: 20px;
+  margin-top: 2px;
+}
+
 /*link*/
 
 
