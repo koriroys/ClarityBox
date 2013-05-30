@@ -49,7 +49,7 @@ class CompaniesController < ApplicationController
     @company.send_rollup_time = '8:00PM'
 
     if @company.save
-      redirect_to company_url(@company)
+      redirect_to company_settings_url(@company)
     else
       render 'new'
     end
@@ -64,7 +64,7 @@ class CompaniesController < ApplicationController
     @company = Company.find_by_id(params[:id])
 
     if @company.update_attributes(params[:company])
-      redirect_to company_url(@company)
+      redirect_to company_settings_url(@company)
     else
       render 'edit'
     end

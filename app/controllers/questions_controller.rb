@@ -20,6 +20,7 @@ class QuestionsController < ApplicationController
     unless (current_user.company_id == @question.company_id) || super_admin?
     redirect_to company_url(current_user.company_id), notice: "That's not your company's question."
     end
+
   end
 
   def new
