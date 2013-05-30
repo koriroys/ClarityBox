@@ -1,7 +1,6 @@
 class QuestionsController < ApplicationController
   before_filter :require_signed_in_user
   before_filter :require_super_admin_or_admin, except: [:show]
-  before_filter :permit_only_company_user_or_super_admin, only: [:show, :edit]
 
 
   def require_super_admin_or_admin
@@ -11,10 +10,6 @@ class QuestionsController < ApplicationController
   end
 
 
-
-
-
-
   def index
     @questions = Question.all
 
@@ -22,6 +17,9 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find_by_id(params[:id])
+    unless (current_user.company_id == @question.company_id) || super_admin?
+    redirect_to company_url(current_user.company_id), notice: "That's not your company's question."
+    end
   end
 
   def new
@@ -52,6 +50,9 @@ class QuestionsController < ApplicationController
 
   def edit
     @question = Question.find_by_id(params[:id])
+    unless (current_user.company_id == @question.company_id) || super_admin?
+    redirect_to company_url(current_user.company_id), notice: "That's not your company's question."
+    end
   end
 
   def update

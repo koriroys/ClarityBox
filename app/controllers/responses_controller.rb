@@ -2,7 +2,7 @@ class ResponsesController < ApplicationController
   before_filter :require_signed_in_user
   before_filter :get_question
   before_filter :authorize_user, only: [:show, :edit, :update, :destroy]
-  before_filter :permit_only_company_user_or_super_admin, only: [:index]
+
 
 
 
@@ -21,6 +21,9 @@ class ResponsesController < ApplicationController
 
     # @response = Response.find_by_question_id(params[:question_id])
     @question = Question.find_by_id(params[:question_id])
+    unless (current_user.company_id == @question.company_id) || super_admin?
+    redirect_to company_url(current_user.company_id), notice: "That's not your company's rollup."
+    end
     @responses = Response.where(:question_id => params[:question_id])
 
 
