@@ -52,6 +52,9 @@
   get '/companies', controller: 'Companies', action: 'index', as: 'companies'
   get '/companies/:id', controller: 'Companies', action: 'show', as: 'company'
 
+   get '/companies/:id/rollups', controller: 'Companies', action: 'rollups', as: 'company_rollups'
+
+
   # UPDATE
   get '/companies/:id/edit', controller: 'Companies', action: 'edit', as: 'edit_company'
   put '/companies/:id', controller: 'Companies', action: 'update'

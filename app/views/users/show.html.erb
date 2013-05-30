@@ -2,7 +2,11 @@
 
 <h2><%= @user.first_name %>'s ClarityBox</h2>
 
-<h3 class = "center italic">Your responses</h3>
+<div class = "smallest-container">
+  <%= link_to "This week's question", question_url(@question), :class => 'button-extra-large blue block center '%>
+
+
+<h3 class = "top-space center italic">Your responses</h3>
 
 <% @responses.each do |response| %>
 
@@ -32,6 +36,7 @@
 <% end %>
 
 
+</div>
 
 </div>
 </div>

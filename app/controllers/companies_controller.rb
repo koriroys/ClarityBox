@@ -27,6 +27,12 @@ class CompaniesController < ApplicationController
       @company = Company.find_by_id(params[:id])
   end
 
+  def rollups
+    @company = Company.find_by_id(params[:id])
+
+
+  end
+
   def new
     @company = Company.new
   end

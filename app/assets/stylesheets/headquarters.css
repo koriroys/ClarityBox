@@ -236,7 +236,7 @@ header {
 .nav-logo{
   float: left;
   font-size: 24px;
-  padding: 10px;
+  padding: 20px 0 22px 60px;
   font-family: "proxima-nova", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -245,16 +245,17 @@ header {
   background-repeat: no-repeat;
   background-size: 40px;
   background-position: 0 50%;
-  margin-top: -9px;
+  margin-top: -22px;
+  color: #E08D79;
 
 }
 
-.nav-logo a{
+/*.nav-logo a{
   margin-left: 50px;
   color: #E08D79;
 }
-
-.nav-logo a:hover{
+*/
+.nav-logo:hover{
   color: #FF8142;
 }
 

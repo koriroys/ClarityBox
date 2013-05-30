@@ -2,39 +2,12 @@
 
   <h2><%= @company.name %></h2>
 
+    <div class = "smallest-container">
+      <%= link_to "Users", users_url, :class => 'button-extra-large blue block center '%>
 
-<h3 class = "center italic">All users</h3>
+      <%= link_to "Questions", questions_url, :class => 'button-extra-large blue block center '%>
 
-<div class = "smaller-container">
-      <% @company.users.each do |user| %>
-
-            <p><%= user.first_name %> <%= user.last_name %>
-
-            <% if super_admin? || admin? %>
-              <em>(<%= user.user_role %>)</em>
-
-
-            </p>
-            <% end %>
-
-            <% if super_admin? %>
-              <%= link_to 'View', user_url(user) %>
-              <%= link_to 'Edit', edit_user_url(user) %>
-            <% end %>
-      <% end %>
+      <%= link_to "Rollups", company_rollups_url(@company), :class => 'button-extra-large blue block center '%>
+    </div>
 </div>
 
-
-  <% if super_admin? %>
-      <p class = "top-space center"><%= link_to 'Add a user', new_user_url, :class => 'button gray' %></p>
-  <% end %>
-
-  <% if admin? %>
-        <p class = "top-space center"><a href = "#" class = "button gray">Invite users<a></p>
-  <% end %>
-
-  <% if super_admin? %>
-      <p class = "center link"><%= link_to 'Back to all the companies', companies_url %></p>
-  <% end %>
-
-</div>

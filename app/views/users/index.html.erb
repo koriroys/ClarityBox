@@ -1,25 +1,47 @@
 
- <div class= "non-color-page">
+<div class= "non-color-page">
 
-<h2>All the users for </h2>
+  <% if super_admin? %>
 
-      <div class = "smaller-container">
+    <h2>All the users for all companies </h2>
 
-    <% @users.each do |user| %>
+       <div class = "smaller-container">
 
-      <p><%= user.first_name %> <%= user.last_name %>, <em><%= user.company.name %></em> (<%= user.user_role %>)</p>
+        <% @users.each do |user| %>
 
-      <p> <%= link_to 'View', user_url(user) %></p>
-      <p> <%= link_to 'Edit', edit_user_url(user) %></p>
-      <p> <%= link_to 'Delete', user_url(user), method: 'delete', data: {confirm: "You sure about that?"} %></p>
+          <p><%= user.first_name %> <%= user.last_name %>, <em><%= user.company.name %></em> (<%= user.user_role %>)</p>
 
+          <p> <%= link_to 'Edit', edit_user_url(user) %></p>
+          <p> <%= link_to 'Delete', user_url(user), method: 'delete', data: {confirm: "You sure about that?"} %></p>
 
+        <% end %>
+
+      <p class = "top-space center"> <%= link_to 'Add a user', new_user_url, :class => 'button gray' %></p>
+
+  <% else %>
+
+  <h2>All the users for <%= current_user.company.name %> </h2>
+
+    <div class = "smaller-container">
+
+    <% @company.users.each do |user| %>
+
+            <p><%= user.first_name %> <%= user.last_name %>
+
+            <% if admin? %>
+              <em>(<%= user.user_role %>)</em>
+            </p>
+            <% end %>
+     <% end %>
+
+    <% if admin? %>
+        <p class = "top-space center"><a href = "#" class = "button gray">Invite users<a></p>
     <% end %>
 
+  <% end %>
+
+
 </div>
-
-
-  <p class = "top-space center"> <%= link_to 'Add a user', new_user_url, :class => 'button gray' %></p>
 
 
 </div>

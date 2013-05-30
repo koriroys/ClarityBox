@@ -22,7 +22,7 @@
 
         <% if admin? %>
           <div class = "top-space center">
-            <%= link_to 'See your company clearly', questions_url, :class => 'button'%>
+            <%= link_to 'See your company clearly', company_url(current_user.company), :class => 'button'%>
           </div>
         <% end %>
 

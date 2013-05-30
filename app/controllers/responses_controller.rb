@@ -23,7 +23,8 @@ class ResponsesController < ApplicationController
     @yes_responses = @responses.where(:yes_response => true)
     @no_responses = @responses.where(:yes_response => false)
     @users = User.where(:company_id => current_user.company_id)
-
+    @yes_percentage = ((@yes_responses.count.to_f / @responses.count.to_f)*100).round
+     @no_percentage = ((@no_responses.count.to_f / @responses.count.to_f)*100).round
 
 
   end

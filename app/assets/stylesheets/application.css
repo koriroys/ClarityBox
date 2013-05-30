@@ -237,7 +237,7 @@ header {
 .nav-logo{
   float: left;
   font-size: 24px;
-  padding: 10px;
+  padding: 20px;
   font-family: "proxima-nova", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -302,6 +302,7 @@ header {
   font-size: 18px;
   margin-top: 27px;
   width: 500px;
+  padding-left: 20px;
 
 }
 
@@ -452,7 +453,7 @@ header {
 .label{
   color: #fff;
   font-size: 20px;
-  padding: 5px 0;
+  padding: 5px 0 2px 0;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 100;
@@ -462,7 +463,7 @@ header {
 .label-gray{
   color: #616161;
   font-size: 20px;
-  padding: 5px 0;
+  padding: 5px 0 2px 0;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 100;
@@ -516,6 +517,7 @@ header {
   letter-spacing: 3px;
   margin: 50px 0 15px ;
   text-align: center;
+  line-height: 120%;
 }
 .gray {
   color: #A8A8A8;
@@ -537,6 +539,11 @@ header {
   border: 5px solid #00F5E8;
 }
 
+.button-extra-large:hover{
+  color: #00F5E8;
+  border: 5px solid #00F5E8;
+  }
+
 .button.gray:hover {
   color: #DEDEDE;
   border: 5px solid #DEDEDE;
@@ -546,7 +553,8 @@ header {
 
 select {
   font-size: 20px;
-  margin-top: 2px;
+  margin: 10px 0 5px;
+  width: 316px;
 }
 
 /*link*/
@@ -555,6 +563,40 @@ select {
 a{
   color: #A8A8A8;
 }
+
+
+/*Progress Bar*/
+
+.progress-bar {
+  background-color: #F77E60;
+  height: 50px;
+  width: 500px;
+  margin: 100px auto 50px;
+ /* border-radius: 10px;*/
+}
+
+.progress-bar-yes{
+  background-color: #00CFC4;
+  height: 50px;
+/*  width: 40%;
+*//*  border-radius: 10px;*/
+
+}
+
+.non-color-page h5.white-yes{
+  color: #fff;
+  float: left;
+  margin-top: 17px;
+  margin-left: 15px;
+}
+
+.non-color-page h5.white-no{
+  color: #fff;
+  float: right;
+  margin-top: 17px;
+  margin-right: 15px;
+}
+
 
 /*Footer*/
 

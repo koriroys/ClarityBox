@@ -14,12 +14,14 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @company = current_user.company
 
   end
 
   def show
     @responses = Response.where(:user_id => params[:id])
     @user = User.find_by_id(params[:id])
+    @question = Question.find_by_id(30)
   end
 
 
@@ -36,7 +38,7 @@ class UsersController < ApplicationController
     # @user.password_confirmation = params[:password_confirmation]
 
     if @user.save
-      redirect_to company_url(@user.company), :notice => "User created."
+      redirect_to app_home_url, :notice => "User created."
     else
       redirect_to new_user_url, :notice => "Email address taken."
     end

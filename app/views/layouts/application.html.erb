@@ -20,9 +20,7 @@
 
     <div class = "sticky container">
 
-      <div class = "nav-logo"><%= link_to '', app_home_url%>
-      </div>
-
+      <%= link_to '', app_home_url, :class => 'nav-logo' %>
 
 
      <div class = "notice">
@@ -67,7 +65,7 @@
 
              <li class = "app"><%= link_to 'All questions', questions_url %></li>
 
-          <li class = "app"><%= link_to 'All rollups', questions_url %></li>
+          <li class = "app"><%= link_to 'All rollups', company_rollups_url(current_user.company) %></li>
 
           <% else %>
 
@@ -78,7 +76,7 @@
             <li class = "app"><%= link_to 'All questions', questions_url %></li>
 
 
-          <li class = "app"><%= link_to 'All rollups', questions_url %></li>
+          <li class = "app"><%= link_to 'All rollups', company_rollups_url(current_user.company) %></li>
 
           <% end %>
 

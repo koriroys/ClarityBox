@@ -3,17 +3,36 @@
     <div class = "smaller-container">
         <h2>This week's rollup</h2>
 
-         <p class = "center italic">
+         <p class = "center">
             (<%= @response.question.week.start_date.strftime("%B %e") %> - <%= @response.question.week.end_date.strftime("%B %e") %>)
         </p>
 
-    <h3 class = "center italic">"<%= @response.question.question_text %>"</h3>
+        <h3 class = "center">"<%= @response.question.question_text %>"</h3>
 
-        <h4 class = "small-top-space center"><%= @yes_responses.count %> people said "Yes".</h4>
+<!-- Progress Bar -->
 
-        <h4 class = "small-top-space center"><%= @no_responses.count %> people said "No".</h4>
+    <div class = "center progress-bar group">
 
-        <p class = "italic center">(<%= @responses.count %> / <%=@users.count %> people responded this week)</p>
+        <% if @yes_percentage != 0 %>
+
+           <h5 class = "white-yes small-top-space center">Yes (<%= @yes_percentage %>%)</h4>
+
+        <% end %>
+
+            <% if @no_percentage != 0 %>
+
+            <h5 class = "white-no small-top-space center">No (<%= @no_percentage %>%)</h4>
+
+            <% end %>
+
+        <div class = "progress-bar-yes" style = "width: <%=@yes_percentage %>%">
+
+        </div>
+    </div>
+
+<!-- Responses -->
+
+        <p class = "center">(<%= @responses.count %> / <%=@users.count %> people responded this week)</p>
 
         <% @responses.each do |response| %>
 
@@ -23,9 +42,12 @@
 
             <% end %>
 
-             <h4 class = "top-space"><% if response.public_response == false && response.user == current_user %></h4>
+             <h4 class = "top-space">
 
-                <p class = "italic">You didn't share your response with your team this week. View your response <%= link_to 'here.', question_response_url(@question, response) %></p>
+                <% if response.public_response == false && response.user == current_user %>
+            </h4>
+
+                <p class = "center">You didn't share your response with your team this week. View your response <%= link_to 'here.', question_response_url(@question, response) %></p>
 
 
                 <% end %>

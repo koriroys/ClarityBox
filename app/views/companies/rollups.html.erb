@@ -1,0 +1,49 @@
+<div class= "non-color-page">
+
+    <h2>All rollups for <%= @company.name %> </h2>
+
+
+<div class = "smaller-container">
+
+    <% @company.questions.each do |question| %>
+
+        <h5 class = "top-space">Week of <%= question.week.start_date.strftime("%B %e")%></h5>
+
+      <h4 class = "small-top-space center">"<%= question.question_text %>"</h4>
+
+      <% @yes_percentage = ((question.responses.where(:yes_response => true).count.to_f / question.responses.count.to_f)*100).round %>
+
+      <% @no_percentage = ((question.responses.where(:yes_response => false).count.to_f / question.responses.count.to_f)*100).round %>
+
+<!-- Progress Bar -->
+
+
+    <div class = "center progress-bar group">
+
+        <% if @yes_percentage != 0 %>
+
+           <h5 class = "white-yes small-top-space center">Yes (<%= @yes_percentage %>%)</h4>
+
+        <% end %>
+
+            <% if @no_percentage != 0 %>
+
+            <h5 class = "white-no small-top-space center">No (<%= @no_percentage %>%)</h4>
+
+            <% end %>
+
+        <div class = "progress-bar-yes" style = "width: <%=@yes_percentage %>%">
+
+        </div>
+    </div>
+
+<!-- Link to rollup -->
+
+  <p class = "center"><%= link_to '(View)', question_responses_url(question) %></p>
+
+
+    <% end %>
+
+</div>
+
+</div>
