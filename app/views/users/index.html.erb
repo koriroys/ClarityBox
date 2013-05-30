@@ -12,7 +12,7 @@
           <p><%= user.first_name %> <%= user.last_name %>, <em><%= user.company.name %></em> (<%= user.user_role %>)</p>
 
           <p> <%= link_to 'Edit', edit_user_url(user) %></p>
-          <p> <%= link_to 'Delete', user_url(user), method: 'delete', data: {confirm: "You sure about that?"} %></p>
+
 
         <% end %>
 

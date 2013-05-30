@@ -5,7 +5,7 @@
       (<%= @question.week.start_date.strftime("%B %e")  %> - <%= @question.week.end_date.strftime("%B %e")  %>)
   </p>
 
-  <h3 class = "top-space center italic">
+  <h3 class = "top-space center">
     "<%= @question.question_text %>"
   </h3>
 
@@ -18,9 +18,11 @@
   <% if admin? || super_admin? %>
 
       <% if @question.send_question == true %>
-          <p class = "top-space center">Ask this question on <%= @question.ask_at.strftime("%A, %b %e at %l:%M %p") %></p>
+
+           <p class = "top-space center"><b>Active</b></p>
+          <p class = "small-top-space center">Ask this question on <%= @question.ask_at.strftime("%A, %b %e at %l:%M %p") %></p>
       <% else %>
-          <p class = "top-space center">Inactive question</p>
+          <p class = "top-space center"><b>Inactive</b></p>
       <% end %>
 
 

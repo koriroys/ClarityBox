@@ -6,6 +6,8 @@ class WeeksController < ApplicationController
 
   def index
     @weeks = Week.all
+    @companies = Company.all
+    @questions = Question.all
   end
 
   def show

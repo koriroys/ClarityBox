@@ -2,7 +2,7 @@
 
 <%= form_for @question do |f| %>
 
-<% f.hidden_field :user_id %>
+<%= f.hidden_field :user_id, value: current_user.id %>
 
 
 <div class = "center">
@@ -12,8 +12,8 @@
     <%= f.collection_select :company_id, Company.all, :id, :name %>
 
   <% else %>
-
-    <%= f.hidden_field :company_id, current_user.company_id %>
+<%#= current_user.company_id %>
+    <%= f.hidden_field :company_id, value: current_user.company_id %>
 
 <% end %>
 

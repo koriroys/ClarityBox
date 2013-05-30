@@ -6,11 +6,21 @@ class Question < ActiveRecord::Base
   belongs_to :user
   has_many :responses
 
+  after_save :set_question_settings
+
   validates :company, presence: true
   validates :week, presence: true
   validates :question_text, presence: true
   validates :user, presence: true
 
 
+  private
+
+  def set_question_settings
+    if self.send_question == false
+      self.send_reminder = false
+      self.send_rollup = false
+    end
+  end
 
 end

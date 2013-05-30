@@ -39,18 +39,19 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.new
-    @question.question_text = params[:question_text]
-    @question.user_id = session[:user_id]
-    @question.week_id = params[:week_id]
-    @week_datetime = Week.find_by_id(params[:week_id]).end_date.to_datetime
+    # raise params.inspect
+    @question = Question.new(params[:question])
+    # @question.question_text = params[:question][:question_text]
+    # @question.user_id = session[:question][:user_id]
+    # @question.week_id = params[:question][:week_id]
+    @week_datetime = Week.find_by_id(params[:question][:week_id]).end_date.to_datetime
     @question.ask_at = @week_datetime  + 8.hours
     @question.remind_at = @week_datetime + 2.days + 20.hours
     @question.send_roll_up_at = @week_datetime + 4.days + 8.hours
-    @question.company_id = params[:company_id]
-    @question.send_question = params[:send_question]
-    @question.send_reminder = params[:send_reminder]
-    @question.send_rollup = params[:send_rollup]
+    # @question.company_id = params[:question][:company_id]
+    # @question.send_question = params[:question][:send_question]
+    # @question.send_reminder = params[:question][:send_reminder]
+    # @question.send_rollup = params[:question][:send_rollup]
 
     if @question.save
       redirect_to question_url(@question)
@@ -65,21 +66,23 @@ class QuestionsController < ApplicationController
 
   def update
     @question = Question.find_by_id(params[:id])
-    @question.question_text = params[:question_text]
+    @question.question_text = params[:question][:question_text]
     @question.user_id = session[:user_id]
-    @question.week_id = params[:week_id]
-    @question.company_id = params[:company_id]
-    @week_datetime = Week.find_by_id(params[:week_id]).end_date.to_datetime
+    @question.week_id = params[:question][:week_id]
+    @question.company_id = params[:question][:company_id]
+    @week_datetime = Week.find_by_id(params[:question][:week_id]).end_date.to_datetime
     @question.ask_at = @week_datetime  + 8.hours
     @question.remind_at = @week_datetime + 2.days + 20.hours
     @question.send_roll_up_at = @week_datetime + 4.days + 8.hours
-    @question.send_question = params[:send_question]
-    @question.send_reminder = params[:send_reminder]
-    @question.send_rollup = params[:send_rollup]
+    @question.send_question = params[:question][:send_question]
+    @question.send_reminder = params[:question][:send_reminder]
+    @question.send_rollup = params[:question][:send_rollup]
 
+    # raise @question.user.present?.inspect
     if @question.save
       redirect_to question_url(@question)
     else
+      # raise @question.valid?.inspect
       render 'edit'
     end
   end

@@ -1,36 +1,54 @@
 
+<div class = "non-color-page">
 
-
-    <h1 class = "large-top-space center">What week is it?</h1>
-
-
-    <div class = "primary-content center">
-
-
-      <select name="week">
-<!--
-  <%= @weeks.each do |week| %>
-    <option value="" selected>Week #<%= week.start_date.strftime("%V") %>: <%= week.start_date.strftime("%b %e, %Y")  %> - <%= week.end_date.strftime("%b %e, %Y") %> </option>
-  <% end %>
-</select> -->
-
-        <% @weeks.each do |week| %>
-
-          <h4 class = "top-space"> Week #<%= week.start_date.strftime("%V") %>
-
-            <p><%= week.start_date.strftime("%b %e, %Y")  %> - <%= week.end_date.strftime("%b %e, %Y") %></p>
+  <h2>Set email preferences</h2>
 
 
 
+    <div class = "smaller-container">
 
-          </h4>
+     <div class = "form">
 
-        <% end %>
+        <form>
+
+          <label class = "label-gray">Send questions every</label>
+          <select class = "block">
+            <option>Friday</option>
+            <option>Saturday</option>
+            <option>Sunday</option>
+          </select>
+
+          <label class = "label-gray">at</label>
+          <select class = "block">
+            <option>7:00 AM</option>
+            <option>7:00 AM</option>
+            <option>7:00 AM</option>
+          </select>
 
 
 
+          <label class = "label-gray">Send questions every</label>
+          <select class = "block">
+            <option>Friday</option>
+            <option>Saturday</option>
+            <option>Sunday</option>
+          </select>
 
-  </div>
+          <label class = "label-gray">at</label>
+          <select class = "block">
+            <option>7:00 AM</option>
+            <option>7:00 AM</option>
+            <option>7:00 AM</option>
+          </select>
+
+
+
+        </form>
+
+      </div>
+
+    </div>
+</div>
 
 
 

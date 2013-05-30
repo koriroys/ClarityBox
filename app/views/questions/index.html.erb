@@ -35,9 +35,9 @@
 
 
         <% if question.send_question == true %>
-            <p class = "center">Active question</p>
+            <p class = "center"><b>Active</b></p>
         <% else %>
-            <p class = "center">Inactive question</p>
+            <p class = "center"><b>Inactive</b></p>
         <% end %>
 
 
@@ -58,7 +58,7 @@
    Want to know more?
   </h2>
    <p class = "center small-top-space">
-    <%= link_to 'Ask a question', new_question_url, :class => 'button gray'%>
+    <%= link_to 'Ask a question', new_question_url, :class => 'button blue'%>
   </p>
   </div>
 
