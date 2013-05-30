@@ -55,6 +55,8 @@ table {
 
 b, strong {
   font-weight: bold;
+  color: #F77E60;
+}
 }
 i, em {
   font-style: italic;
@@ -557,7 +559,7 @@ select {
   width: 316px;
 }
 
-/*link*/
+/*Link*/
 
 
 a{
@@ -565,11 +567,13 @@ a{
 }
 
 
+
+
 /*Progress Bar*/
 
 .progress-bar {
   background-color: #F77E60;
-  height: 50px;
+  height: 70px;
   width: 500px;
   margin: 100px auto 50px;
  /* border-radius: 10px;*/
@@ -577,7 +581,7 @@ a{
 
 .progress-bar-yes{
   background-color: #00CFC4;
-  height: 50px;
+  height: 70px;
 /*  width: 40%;
 *//*  border-radius: 10px;*/
 
@@ -586,15 +590,15 @@ a{
 .non-color-page h5.white-yes{
   color: #fff;
   float: left;
-  margin-top: 17px;
-  margin-left: 15px;
+  margin-top: 29px;
+  margin-left: 20px;
 }
 
 .non-color-page h5.white-no{
   color: #fff;
   float: right;
-  margin-top: 17px;
-  margin-right: 15px;
+  margin-top: 29px;
+  margin-right: 20px;
 }
 
 

@@ -37,21 +37,28 @@
         <% @responses.each do |response| %>
 
             <% if response.public_response == true %>
-
                 <h4 class = "top-space"><%= response.user.first_name %>: <%= response.response_text %></h4>
-
             <% end %>
 
-             <h4 class = "top-space">
-
-                <% if response.public_response == false && response.user == current_user %>
-            </h4>
-
-                <p class = "center">You didn't share your response with your team this week. View your response <%= link_to 'here.', question_response_url(@question, response) %></p>
 
 
-                <% end %>
-            <% end %>
+        <% end %>
+
+
+         <p class = "center top-space">
+
+        <% if @user_response.public_response == true %>
+            Your response is <b>public.</b>
+        <% end %>
+
+        <% if @user_response.public_response == false %>
+            Your response is <b>private.</b>
+        <% end %>
+
+                View your response <%= link_to 'here.', question_response_url(@response.question, @user_response) %>
+
+    </p>
+
 
         <p class = "center"><%= link_to 'Back to the question', question_url(@question) %></p>
 

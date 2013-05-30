@@ -20,6 +20,7 @@ class ResponsesController < ApplicationController
 
     @response = Response.find_by_question_id(params[:question_id])
     @responses = Response.where(:question_id => params[:question_id])
+    @user_response = @responses.find_by_user_id(current_user)
     @yes_responses = @responses.where(:yes_response => true)
     @no_responses = @responses.where(:yes_response => false)
     @users = User.where(:company_id => current_user.company_id)
