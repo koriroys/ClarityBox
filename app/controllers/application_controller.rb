@@ -45,4 +45,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+
+  def permit_only_company_user_or_super_admin
+      unless (current_user.company_id == params[:company_id]) || super_admin?
+      redirect_to company_url(current_user.company_id), notice: "That's not your company."
+    end
+  end
+
+
 end

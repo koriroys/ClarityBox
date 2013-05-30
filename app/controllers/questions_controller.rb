@@ -1,8 +1,7 @@
 class QuestionsController < ApplicationController
   before_filter :require_signed_in_user
   before_filter :require_super_admin_or_admin, except: [:show]
-  # before_filter :permit_only_company_user, only: [:show]
-  # before_filter :require_company_admin, only: [:edit, :update]
+  before_filter :permit_only_company_user_or_super_admin, only: [:show, :edit]
 
 
   def require_super_admin_or_admin
@@ -11,17 +10,9 @@ class QuestionsController < ApplicationController
     end
   end
 
-  # def permit_only_company_user
-  #   unless current_user.company_id.to_s == params[:company_id] || super_admin?
-  #     redirect_to questions_url, notice: "This is not your company!"
-  #     end
-  #   end
 
-  #   def require_company_admin
-  #   unless (admin? && (current_user.company_id.to_s == params[:company_id])) || super_admin?
-  #     redirect_to questions_url, notice: "That's not your company."
-  #   end
-  # end
+
+
 
 
   def index
@@ -31,7 +22,6 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find_by_id(params[:id])
-
   end
 
   def new

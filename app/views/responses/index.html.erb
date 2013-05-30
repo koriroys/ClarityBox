@@ -3,29 +3,33 @@
     <div class = "smaller-container">
         <h2>This week's rollup</h2>
 
+<% if @responses.any? %>
          <p class = "center">
-            (<%= @response.question.week.start_date.strftime("%B %e") %> - <%= @response.question.week.end_date.strftime("%B %e") %>)
+            (<%= @question.week.start_date.strftime("%B %e") %> - <%= @question.week.end_date.strftime("%B %e") %>)
         </p>
 
-        <h3 class = "center">"<%= @response.question.question_text %>"</h3>
+        <h3 class = "center">"<%= @question.question_text %>"</h3>
 
 <!-- Progress Bar -->
 
     <div class = "center progress-bar group">
 
-        <% if @yes_percentage != 0 %>
+        <% yes_percentage = calculate_percentage(@yes_count, @responses.count) %>
+        <% no_percentage = calculate_percentage(@no_count, @responses.count) %>
 
-           <h5 class = "white-yes small-top-space center">Yes (<%= @yes_percentage %>%)</h4>
+        <% if yes_percentage != 0 %>
+
+           <h5 class = "white-yes small-top-space center">Yes (<%= yes_percentage %>%)</h4>
 
         <% end %>
 
-            <% if @no_percentage != 0 %>
+            <% if no_percentage != 0 %>
 
-            <h5 class = "white-no small-top-space center">No (<%= @no_percentage %>%)</h4>
+            <h5 class = "white-no small-top-space center">No (<%= no_percentage %>%)</h4>
 
             <% end %>
 
-        <div class = "progress-bar-yes" style = "width: <%=@yes_percentage %>%">
+        <div class = "progress-bar-yes" style = "width: <%=yes_percentage %>%">
 
         </div>
     </div>
@@ -55,13 +59,17 @@
             Your response is <b>private.</b>
         <% end %>
 
-                View your response <%= link_to 'here.', question_response_url(@response.question, @user_response) %>
+                View your response <%= link_to 'here.', question_response_url(@question, @user_response) %>
 
     </p>
 
 
         <p class = "center"><%= link_to 'Back to the question', question_url(@question) %></p>
 
+<% else %>
+
+    <p>No Responses Yet</p>
+<% end %>
     </div>
 
 </div>

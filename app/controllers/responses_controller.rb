@@ -2,6 +2,7 @@ class ResponsesController < ApplicationController
   before_filter :require_signed_in_user
   before_filter :get_question
   before_filter :authorize_user, only: [:show, :edit, :update, :destroy]
+  before_filter :permit_only_company_user_or_super_admin, only: [:index]
 
 
 
@@ -18,15 +19,17 @@ class ResponsesController < ApplicationController
     # @responses = Response.all
     # @responses = Response.find_all_by_question_id(params[:question])
 
-    @response = Response.find_by_question_id(params[:question_id])
+    # @response = Response.find_by_question_id(params[:question_id])
+    @question = Question.find_by_id(params[:question_id])
     @responses = Response.where(:question_id => params[:question_id])
-    @user_response = @responses.find_by_user_id(current_user)
-    @yes_responses = @responses.where(:yes_response => true)
-    @no_responses = @responses.where(:yes_response => false)
-    @users = User.where(:company_id => current_user.company_id)
-    @yes_percentage = ((@yes_responses.count.to_f / @responses.count.to_f)*100).round
-     @no_percentage = ((@no_responses.count.to_f / @responses.count.to_f)*100).round
 
+
+    if @responses.any?
+      @user_response = @responses.find_by_user_id(current_user)
+      @yes_count = @responses.where(:yes_response => true).count
+      @no_count = @responses.where(:yes_response => false).count
+      @users = User.where(:company_id => current_user.company_id)
+    end
 
   end
 
@@ -57,6 +60,7 @@ class ResponsesController < ApplicationController
 
   def edit
     @response = Response.find_by_id(params[:id])
+
   end
 
   def update

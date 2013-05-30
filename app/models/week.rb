@@ -17,4 +17,10 @@ class Week < ActiveRecord::Base
     d1 = Date.today.beginning_of_year
   end
 
+  # Class Method
+def self.get_this_week
+  monday = Date.today.beginning_of_week
+  find_by_start_date(monday)
+end
+
 end

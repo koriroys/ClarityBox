@@ -13,6 +13,10 @@ class Question < ActiveRecord::Base
   validates :question_text, presence: true
   validates :user, presence: true
 
+  def self.get_this_week_and_company(company_id)
+    week = Week.get_this_week
+    find_by_week_id_and_company_id(week.id, company_id)
+  end
 
   private
 

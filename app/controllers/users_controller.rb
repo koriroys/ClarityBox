@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   def show
     @responses = Response.where(:user_id => params[:id])
     @user = User.find_by_id(params[:id])
-    @question = Question.find_by_id(30)
+    @question_for_this_week = Question.get_this_week_and_company(current_user.company_id)
   end
 
 
