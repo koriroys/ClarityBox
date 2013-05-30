@@ -41,6 +41,8 @@
         <% end %>
 
 
+        <p class = "center"> (<%= Response.where(:question_id => question.id).count %> total responses)</p>
+
 
             <div class = "top-space center">
 
@@ -49,9 +51,9 @@
 
             </div>
 
-          <% end %>
-
       <% end %>
+
+  <% end %>
 
 
   <h2 class = "center">

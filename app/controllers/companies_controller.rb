@@ -29,8 +29,10 @@ class CompaniesController < ApplicationController
 
   def rollups
     @company = Company.find_by_id(params[:id])
+  end
 
-
+  def settings
+    @company = Company.find_by_id(params[:id])
   end
 
   def new
@@ -39,6 +41,12 @@ class CompaniesController < ApplicationController
 
   def create
     @company = Company.new(params[:company])
+    @company.send_question_date = 'Friday'
+    @company.send_question_time = '6:00AM'
+    @company.send_reminder_date = 'Sunday'
+    @company.send_reminder_time = '7:00PM'
+    @company.send_rollup_date = 'Tuesday'
+    @company.send_rollup_time = '8:00PM'
 
     if @company.save
       redirect_to company_url(@company)

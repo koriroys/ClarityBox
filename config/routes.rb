@@ -54,6 +54,8 @@
 
    get '/companies/:id/rollups', controller: 'Companies', action: 'rollups', as: 'company_rollups'
 
+   get '/companies/:id/settings', controller: 'Companies', action: 'settings', as: 'company_settings'
+
 
   # UPDATE
   get '/companies/:id/edit', controller: 'Companies', action: 'edit', as: 'edit_company'

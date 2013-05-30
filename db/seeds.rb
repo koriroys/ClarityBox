@@ -7,7 +7,14 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 company_hashes = [
-  {name: 'Starter League'},
+      { name: 'Starter League',
+        send_question_date: 'Friday',
+        send_question_time: '5:00AM',
+        send_reminder_date: 'Sunday',
+        send_reminder_time: '7:00PM',
+        send_rollup_date: 'Tuesday',
+        send_rollup_time: '5:00AM',
+      },
 ]
 
 Company.destroy_all

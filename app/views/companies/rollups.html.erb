@@ -5,11 +5,15 @@
 
 <div class = "smaller-container">
 
-    <% @company.questions.each do |question| %>
+  <% @company.questions.each do |question| %>
+
+
 
         <h5 class = "top-space">Week of <%= question.week.start_date.strftime("%B %e")%></h5>
 
       <h4 class = "small-top-space center">"<%= question.question_text %>"</h4>
+
+      <% if question.responses.any? %>
 
       <% @yes_percentage = ((question.responses.where(:yes_response => true).count.to_f / question.responses.count.to_f)*100).round %>
 
@@ -40,6 +44,16 @@
 <!-- Link to rollup -->
 
   <p class = "center"><%= link_to '(View)', question_responses_url(question) %></p>
+
+      <% else %>
+
+        <p class = "center">No responses for this week yet.</p>
+
+      <div class = "top-space">
+        <p class = "center"><%= link_to 'Respond', new_question_response_url(question), :class => 'button gray' %></p>
+      </div>
+
+      <% end %>
 
 
     <% end %>

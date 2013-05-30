@@ -8,6 +8,12 @@
       <%= link_to "Questions", questions_url, :class => 'button-extra-large blue block center '%>
 
       <%= link_to "Rollups", company_rollups_url(@company), :class => 'button-extra-large blue block center '%>
+
+      <% if super_admin? || admin? %>
+
+        <%= link_to "Settings", company_settings_url(@company), :class => 'button-extra-large blue block center '%>
+
+      <% end %>
     </div>
 </div>
 
