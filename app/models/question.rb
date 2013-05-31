@@ -6,7 +6,8 @@ class Question < ActiveRecord::Base
   belongs_to :user
   has_many :responses
 
-  after_save :set_question_settings
+  # after_save :set_question_settings
+  before_save :assign_question_settings
 
   validates :company, presence: true
   validates :week, presence: true
@@ -20,11 +21,19 @@ class Question < ActiveRecord::Base
 
   private
 
-  def set_question_settings
-    if self.send_question == false
-      self.send_reminder = false
-      self.send_rollup = false
-    end
+  # def set_question_settings
+  #   if self.send_question == false
+  #     self.send_reminder = false
+  #     self.send_rollup = false
+  #   end
+  # end
+
+def assign_question_settings
+  if self.send_question == false
+    self.send_reminder = false
+    self.send_rollup = false
   end
+  true
+end
 
 end

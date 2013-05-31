@@ -440,6 +440,15 @@ header {
   margin: 40px auto;
 }
 
+/*.left {
+  float: left;
+
+}*/
+
+.right {
+  float: right;
+  margin-top: -136px;
+}
 
 
 /* Text Fields
@@ -460,8 +469,9 @@ header {
 }
 
 .longer {
-  width: 609px;
+  width: 100%;
 }
+
 
 .inline {
   display: inline;
@@ -501,6 +511,10 @@ header {
   letter-spacing: 1px;
   font-weight: 100;
   margin-top: 20px;
+}
+
+.label-gray.weird {
+  margin-top: 68px;
 }
 
 /*Buttons*/
@@ -682,7 +696,7 @@ p.footer {
   text-align: center;
   font-size: 14px;
   padding-bottom: 10px;
-  color: #cdcdcd;
+  color: #A6A6A6;
 
 }
 

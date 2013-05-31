@@ -1,10 +1,10 @@
 <div class = "non-color-page">
 
+  <div class = "smaller-container">
+
 <h2>Your response</h2>
-  <p class = "center italic">(<%= @question.week.start_date.strftime("%B %e")%> - <%= @question.week.end_date.strftime("%B %e")%>)</p>
-    <h3 class = "center italic">"<%= @question.question_text %> "</h3>
-
-
+  <h5 class = "center small-top-space"> Week of <%= @question.week.start_date.strftime("%B %e")%></h5>
+    <h3 class = "center small-top-space">"<%= @question.question_text %> "</h3>
 
 
     <%= render 'form' %>
@@ -20,6 +20,7 @@
     </ul>
   <% end %>
 
+</div>
 
 
 </div>

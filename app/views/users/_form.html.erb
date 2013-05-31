@@ -3,27 +3,45 @@
 
   <%= form_for @user do |f| %>
 
+  <div class = "group left">
+
     <%= f.label :first_name, 'First Name', {:class => 'block label-gray'} %>
     <%= f.text_field :first_name, { :class => 'field'} %>
+</div>
 
-   <div class = "group">
-    <%= f.label :last_name, 'Last Name', {:class => 'block label-gray'} %>
+   <div class = "group right">
+    <%= f.label :last_name, 'Last Name', {:clasa => 'block label-gray'} %>
     <%= f.text_field :last_name,  { :class => 'field'}  %>
   </div>
 
+  <div class = "group">
+
     <%= f.label :email, 'Email', {:class => 'block label-gray'} %>
     <%= f.text_field :email,  { :class => 'field longer'}  %>
+   </div>
+
+   <div class = "left">
 
     <%= f.label :user_role, 'User role',  {:class => 'block label-gray'} %>
     <%= f.select :user_role, ['Super Admin', 'Admin', 'General',], {:class => 'inline'} %>
+    </div>
 
-    <%= f.label :company_id, 'Company',  {:class => 'block label-gray'} %>
+    <div class = "group right">
+
+    <%= f.label :company_id, 'Company',  {:class => 'block label-gray weird'} %>
     <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name), {:class => 'block'} %>
+</div>
 
+<div class = "group">
     <%= f.label :password, 'Password',  {:class => 'block label-gray'} %>
     <%= f.password_field :password,  {:class => 'field block'}  %>
+</div>
+
+<div class = "group right">
     <%= f.label :password_confirmation, 'Confirm password',  {:class => 'block label-gray'}%>
     <%= f.password_field :password_confirmation,  {:class => 'field block'} %>
+
+</div>
 
 
     <%= f.submit :class => 'button blue longer' %>
