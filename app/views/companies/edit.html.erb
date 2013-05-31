@@ -1,11 +1,15 @@
 <div class = "non-color-page">
 
-<h2>Edit a company.</h2>
+<h2>Edit settings</h2>
+<h5 class = "center">for <%=@company.name %></h5>
 
   <%= render 'form' %>
 
 
-<p class = "center"><%= link_to 'Cancel', companies_url %></p>
-<p class = "center"><%= link_to 'Delete', company_url(@company), :method =>'delete', data: {confirm: "You sure?"} %></p>
+<p class = "center"><%= link_to 'Cancel', company_url(@company) %></p>
+
+<% if super_admin? %>
+  <p class = "center"><%= link_to 'Delete', company_url(@company), :method =>'delete', data: {confirm: "You sure?"} %></p>
+<% end %>
 
 </div>

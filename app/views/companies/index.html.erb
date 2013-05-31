@@ -8,14 +8,14 @@
 
             <%= link_to company.name, company_url(company), :class => 'button-extra-large blue block' %>
 
-            <p class = "center link"><%= link_to 'Edit', edit_company_url(company) %></p>
+
 
            <% end %>
 
 
-      <div class = "top-space center">
-        <%= link_to 'Create a new company', new_company_url, :class => 'button gray'%>
-      </div>
+      <p class = "top-space center">
+        <%= link_to 'Create', new_company_url, :class => 'button gray'%>
+      </p>
 
 
     </div>

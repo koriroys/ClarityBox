@@ -41,7 +41,7 @@
         <% @responses.each do |response| %>
 
             <% if response.public_response == true %>
-                <h4 class = "top-space"><%= response.user.first_name %>: <%= response.response_text %></h4>
+                <h4 class = "small-top-space"><em>"<%= response.response_text %>"</em>  - <%= response.user.first_name %></h4>
             <% end %>
 
 
@@ -50,6 +50,9 @@
 
 
          <p class = "center top-space">
+
+
+<% if @user_response.present? %>
 
         <% if @user_response.public_response == true %>
             Your response is <b>public.</b>
@@ -61,15 +64,27 @@
 
                 View your response <%= link_to 'here.', question_response_url(@question, @user_response) %>
 
+    <% else %>
+
+    <p class = "center">You did not respond to this question. Respond
+        <%= link_to 'here', new_question_response_url(@question) %>.
+    </p>
+
+<% end %>
+
     </p>
 
 
         <p class = "center"><%= link_to 'Back to the question', question_url(@question) %></p>
+
+
 
 <% else %>
 
     <p>No Responses Yet</p>
 <% end %>
     </div>
+
+     <p class = "center"><%= link_to 'Back to all rollups', company_rollups_url(current_user.company_id) %></p>
 
 </div>

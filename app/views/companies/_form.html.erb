@@ -1,10 +1,13 @@
 <div class = "form-small">
 <%= form_for @company do |f| %>
 
+<% if super_admin? %>
   <p class = "center top-space">
     <%= f.label :name, 'Company name', :class => 'label-gray block' %>
     <%= f.text_field :name, :class => 'field' %>
   </p>
+
+<% end %>
 
   <p class = "center top-space">
     <%= f.label :send_question_date, 'Send question every', :class => 'label-gray block' %>
