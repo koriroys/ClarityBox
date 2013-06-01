@@ -23,7 +23,7 @@
 
           <div class = "title">
             <% if signed_in?  %>
-                  <%= link_to "#{current_user.first_name}'s ClarityBox", user_url(session[:user_id]) %></h2>
+                  <%= link_to "#{current_user.first_name}'s ClarityBox", user_url(current_user) %></h2>
             <% end %>
           </div>
 

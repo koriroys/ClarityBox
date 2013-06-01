@@ -26,7 +26,28 @@ puts "There are #{Company.count} rows in the company table."
 
 
 user_hashes = [
-  { first_name: 'Claire', last_name: 'Lew', user_role: 'Super Admin', company_id: Company.find_by_name('Starter League').id, email: 'clew23@gmail.com', password: 'hi', password_confirmation: 'hi'}
+  { first_name: 'Claire',
+    last_name: 'Lew',
+    user_role: 'Super Admin',
+    company_id: Company.find_by_name('Starter League').id,
+    email: 'clew23@gmail.com',
+    password: 'hi',
+    password_confirmation: 'hi'},
+  { first_name: 'Vince',
+    last_name: 'Cabansag',
+    user_role: 'Admin',
+    company_id: Company.find_by_name('Starter League').id,
+    email: 'vince@starterleague.com',
+    password: 'hi',
+    password_confirmation: 'hi'},
+  { first_name: 'Ben',
+    last_name: 'Block',
+    user_role: 'General',
+    company_id: Company.find_by_name('Starter League').id,
+    email: 'ben@starterleague.com',
+    password: 'hi',
+    password_confirmation: 'hi'},
+
 ]
 
 User.destroy_all
