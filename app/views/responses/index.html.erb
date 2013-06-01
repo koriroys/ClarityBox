@@ -44,7 +44,7 @@
 
             <div class = "user-response group">
 
-            <%= image_tag 'avatar_placeholder.jpg', :class => 'avatar small' %>
+            <%= image_tag response.user.avatar_url, :class => 'avatar small' %>
 
                 <h4><em>"<%= response.response_text %>"</em>   - <%= response.user.first_name %></h4>
 

@@ -1,7 +1,7 @@
 
 <div class = "form">
 
-  <%= form_for @user do |f| %>
+  <%= form_for @user, :html => {:multipart => true} do |f| %>
 
   <div class = "group left">
 
@@ -32,6 +32,7 @@
     <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name), {:class => 'block'} %>
 </div>
 
+
 <div class = "group">
     <%= f.label :password, 'Password',  {:class => 'block label-gray'} %>
     <%= f.password_field :password,  {:class => 'field block'}  %>
@@ -42,6 +43,14 @@
     <%= f.password_field :password_confirmation,  {:class => 'field block'} %>
 
 </div>
+
+
+
+<div class = "group">
+
+    <%= f.label :avatar, 'Upload profile picture', {:class => 'block label-gray'} %>
+    <%= f.file_field :avatar,  { :class => 'field longer'}  %>
+   </div>
 
 
     <%= f.submit :class => 'button blue longer' %>
