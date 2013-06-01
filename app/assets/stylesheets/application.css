@@ -427,6 +427,55 @@ header {
 }
 
 
+
+
+/*Images*/
+
+.avatar{
+  float: left;
+  border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.medium{
+  width: 150px;
+  margin-right: 60px;
+
+}
+
+.small{
+  width: 60px;
+  margin-right: 30px;
+}
+
+.non-color-page h2.with-image{
+  margin-top: 40px;
+  letter-spacing: 4px;
+  color: #616161;
+  float: left;
+  padding: 0;
+}
+
+.user-response{
+  margin: 100px 0;
+}
+
+.user-response h4{
+  margin-top: 12px;
+}
+
+/*Page headers*/
+
+.page-title{
+  width: 830px;
+  margin: 0 auto;
+  padding: 200px 0 60px;
+  text-align: center;
+}
+
+
+
 /*Forms
 */
 
@@ -551,6 +600,19 @@ header {
   margin: 20px 0;
 }
 
+p.right a{
+  border-radius: 5px;
+  border: 3px solid #DEDEDE;
+  background: none;
+  padding: 6px;
+  color: #DEDEDE;
+}
+
+p.right a:hover{
+  border: 3px solid #EBEBEB;
+  color: #EBEBEB;
+}
+
 .button-extra-large{
   width: 360px;
   color: #DEDEDE;
@@ -613,6 +675,10 @@ a{
 
 a:hover{
   color: #CFCFCF ;
+}
+
+p.right{
+float: right;
 }
 
 

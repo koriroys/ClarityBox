@@ -1,8 +1,12 @@
 <div class = "non-color-page">
+  <div class = "container">
 
-<h2><%= @user.first_name %>'s ClarityBox</h2>
+    <div class = "page-title group">
+      <%= image_tag 'avatar_placeholder.jpg', :class => 'avatar medium' %>
+      <h2 class = "with-image"><%= @user.first_name %>'s ClarityBox</h2>
+    </div>
 
-<div class = "smallest-container">
+<div class = "smallest-container group">
   <%= link_to "This week's question", question_url(@question_for_this_week), :class => 'button-extra-large blue block center '%>
 
 
@@ -38,5 +42,6 @@
 
 </div>
 
+</div>
 </div>
 </div>

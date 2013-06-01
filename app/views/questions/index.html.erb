@@ -1,10 +1,12 @@
 <div class = "non-color-page">
 <% if super_admin? %>
-  <h2>All the questions</h2>
+  <h2>All questions</h2>
+  <h5>All companies</h5>
 
 <% else %>
 
- <h2>All the questions for <%= current_user.company.name %></h2>
+ <h2>All questions</h2>
+  <h5><%= current_user.company.name %></h5>
 
 <% end %>
 

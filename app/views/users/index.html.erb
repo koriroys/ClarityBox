@@ -1,41 +1,61 @@
 
 <div class= "non-color-page">
 
-  <% if super_admin? %>
+<% if super_admin? %>
 
-    <h2>All the users for all companies </h2>
+  <h2>All users </h2>
+  <h5>All Companies</h5>
 
-       <div class = "smaller-container">
+  <div class = "smaller-container">
 
-        <% @users.each do |user| %>
+    <% @users.each do |user| %>
 
-          <p><%= user.first_name %> <%= user.last_name %>, <em><%= user.company.name %></em> (<%= user.user_role %>)</p>
+      <div class = "user-display top-space">
 
-          <p> <%= link_to 'Edit', edit_user_url(user) %></p>
+        <%= image_tag 'avatar_placeholder.jpg', :class => 'avatar medium' %>
+
+        <h3><%= user.first_name %> <%= user.last_name %></h3>
+        <h4><%= user.company.name %></h4>
+        <p>(<%= user.user_role %>)</p>
+
+      </div>
+
+      <p class = "right"> <%= link_to 'Edit', edit_user_url(user) %></p>
 
 
-        <% end %>
+    <% end %>
 
-      <p class = "top-space center"> <%= link_to 'Add a user', new_user_url, :class => 'button gray' %></p>
+      <p class = "large-top-space center"> <%= link_to 'Add a user', new_user_url, :class => 'button gray' %></p>
 
   <% else %>
 
-  <h2>All the users for <%= current_user.company.name %> </h2>
+  <h2>All users</h2>
+  <h5><%= current_user.company.name %></h5>
 
     <div class = "smaller-container">
 
-    <% @company.users.each do |user| %>
+      <% @company.users.each do |user| %>
 
-            <p><%= user.first_name %> <%= user.last_name %>
+         <div class = "user-display top-space">
+
+           <%= image_tag 'avatar_placeholder.jpg', :class => 'avatar medium' %>
+
+            <h3><%= user.first_name %> <%= user.last_name %></h3>
 
             <% if admin? %>
-              <em>(<%= user.user_role %>)</em>
+              <p>(<%= user.user_role %>)
             </p>
+          </div>
+
+            <% if current_user == user %>
+              <p class = "right"> <%= link_to 'Edit', edit_user_url(user) %></p>
             <% end %>
+
+        <% end %>
      <% end %>
 
     <% if admin? %>
-        <p class = "top-space center"><a href = "#" class = "button gray">Invite users<a></p>
+        <p class = "large-top-space center"><a href = "#" class = "button gray">Invite users<a></p>
     <% end %>
 
   <% end %>
