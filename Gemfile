@@ -45,3 +45,6 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'debugger'
 
 gem 'carrierwave'
+
+# gem 'mail', '2.1.3'
+
