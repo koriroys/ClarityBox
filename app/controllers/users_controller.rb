@@ -38,6 +38,7 @@ class UsersController < ApplicationController
     # @user.password_confirmation = params[:password_confirmation]
 
     if @user.save
+      UserMailer.registration_confirmation(@user).deliver
       redirect_to app_home_url, :notice => "User created."
     else
       redirect_to new_user_url, :notice => "Email address taken."
