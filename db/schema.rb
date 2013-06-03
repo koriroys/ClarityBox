@@ -11,18 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130601044530) do
+ActiveRecord::Schema.define(:version => 20130603173338) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-    t.datetime "send_question_date"
-    t.datetime "send_question_time"
-    t.datetime "send_reminder_date"
-    t.datetime "send_reminder_time"
-    t.datetime "send_rollup_date"
-    t.datetime "send_rollup_time"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.integer  "send_question_day_of_week"
+    t.time     "send_question_time"
+    t.integer  "send_reminder_day_of_week"
+    t.time     "send_reminder_time"
+    t.integer  "send_rollup_day_of_week"
+    t.time     "send_rollup_time"
   end
 
   create_table "questions", :force => true do |t|
