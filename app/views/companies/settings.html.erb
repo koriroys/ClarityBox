@@ -4,21 +4,21 @@
 
         <h3 class = "top-space center">
             Send question every
-              <%= @company.send_question_date.strftime("%A") %>
+              <%= Date::DAYNAMES[@company.send_question_day_of_week] %>
             at
              <%= @company.send_question_time.strftime("%l:%M %p") %>
         </h3>
 
         <h3 class = "top-space center">
             Send reminder every
-              <%= @company.send_reminder_date.strftime("%A") %>
+              <%= Date::DAYNAMES[@company.send_reminder_day_of_week] %>
             at
              <%= @company.send_reminder_time.strftime("%l:%M %p") %>
         </h3>
 
         <h3 class = "top-space center">
             Send rollup every
-              <%= @company.send_rollup_date.strftime("%A") %>
+              <%= Date::DAYNAMES[@company.send_rollup_day_of_week] %>
             at
              <%= @company.send_rollup_time.strftime("%l:%M %p") %>
         </h3>

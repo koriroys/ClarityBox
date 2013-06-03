@@ -10,27 +10,27 @@
 <% end %>
 
   <p class = "center top-space">
-    <%= f.label :send_question_date, 'Send question every', :class => 'label-gray block' %>
-    <%= f.select :send_question_date, ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] %>
+    <%= f.label :send_question_day_of_week, 'Send question every', :class => 'label-gray block' %>
+    <%= f.select :send_question_day_of_week, [['Sunday', 0], ['Monday', 1], ['Tuesday', 2], ['Wednesday', 3], ['Thursday', 4], ['Friday', 5], ['Saturday', 6]] %>
 
     <%= f.label :send_question_time, 'at', :class => 'label-gray block' %>
-    <%= f.select :send_question_time, ['5:00AM', '6:00AM', '7:00AM','8:00AM','9:00AM','10:00AM','11:00AM','12:00PM','1:00PM','2:00PM','3:00PM','4:00PM','5:00PM','6:00PM','7:00PM','8:00PM' ] %>
+    <%= f.time_select :send_question_time, {:minute_step => 30, :ampm => true} %>
   </p>
 
     <p class = "center top-space">
-    <%= f.label :send_reminder_date, 'Send reminder every', :class => 'label-gray block' %>
-    <%= f.select :send_reminder_date, ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', ] %>
+    <%= f.label :send_reminder_day_of_week, 'Send reminder every', :class => 'label-gray block' %>
+    <%= f.select :send_reminder_day_of_week, [['Sunday', 0], ['Monday', 1], ['Tuesday', 2], ['Wednesday', 3], ['Thursday', 4], ['Friday', 5], ['Saturday', 6]]  %>
 
     <%= f.label :send_reminder_time, 'at', :class => 'label-gray block' %>
-    <%= f.select :send_reminder_time, ['5:00AM', '6:00AM', '7:00AM','8:00AM','9:00AM','10:00AM','11:00AM','12:00PM','1:00PM','2:00PM','3:00PM','4:00PM','5:00PM','6:00PM','7:00PM','8:00PM' ] %>
+    <%= f.time_select :send_reminder_time, {:minute_step => 30, :ampm => true} %>
   </p>
 
     <p class = "center top-space">
-    <%= f.label :send_rollup_date, 'Send rollup every', :class => 'label-gray block' %>
-    <%= f.select :send_rollup_date, ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', ] %>
+    <%= f.label :send_rollup_day_of_week, 'Send rollup every', :class => 'label-gray block' %>
+    <%= f.select :send_rollup_day_of_week, [['Sunday', 0], ['Monday', 1], ['Tuesday', 2], ['Wednesday', 3], ['Thursday', 4], ['Friday', 5], ['Saturday', 6]]  %>
 
     <%= f.label :send_rollup_time, 'at', :class => 'label-gray block' %>
-    <%= f.select :send_rollup_time, ['5:00AM', '6:00AM', '7:00AM','8:00AM','9:00AM','10:00AM','11:00AM','12:00PM','1:00PM','2:00PM','3:00PM','4:00PM','5:00PM','6:00PM','7:00PM','8:00PM' ] %>
+    <%= f.time_select :send_rollup_time, {:minute_step => 30, :ampm => true} %>
   </p>
 
 

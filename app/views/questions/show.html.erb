@@ -20,9 +20,9 @@
       <% if @question.send_question == true %>
 
           <p class = "top-space center"><b>Active</b></p>
-          <p class = "small-top-space center">Ask this question on <%= @question.company.send_question_date.strftime("%A") %>
+          <p class = "small-top-space center">Ask this question on <%= @question.ask_at.strftime("%A, %B %e") %>
               at
-            <%= @question.company.send_question_time.strftime("%l:%M %p") %>
+            <%= @question.ask_at.strftime("%l:%M %p") %>
            </p>
       <% else %>
           <p class = "top-space center"><b>Inactive</b></p>
@@ -30,16 +30,16 @@
 
 
         <% if @question.send_reminder == true %>
-            <p class = "small-top-space center">Send a reminder on <%= @question.company.send_reminder_date.strftime("%A") %>
+            <p class = "small-top-space center">Send a reminder on <%= @question.remind_at.strftime("%A, %B %e") %>
               at
-            <%= @question.company.send_reminder_time.strftime("%l:%M %p") %>
+            <%= @question.remind_at.strftime("%l:%M %p") %>
            </p>
         <% end %>
 
        <% if @question.send_rollup == true %>
-            <p class = "small-top-space center">Send a rollup on <%= @question.company.send_rollup_date.strftime("%A") %>
+            <p class = "small-top-space center">Send a rollup on <%= @question.send_roll_up_at.strftime("%A, %B %e") %>
               at
-            <%= @question.company.send_rollup_time.strftime("%l:%M %p") %>
+            <%= @question.send_roll_up_at.strftime("%l:%M %p") %>
       <% end %>
            <p class = "center"><%= link_to 'Edit this question', edit_question_url(@question)%></p>
     <% end %>
