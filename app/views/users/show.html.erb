@@ -6,8 +6,16 @@
       <h2 class = "with-image"><%= @user.first_name %>'s ClarityBox</h2>
     </div>
 
+<% if @question_for_this_week.present? %>
+
 <div class = "smallest-container group">
   <%= link_to "This week's question", question_url(@question_for_this_week), :class => 'button-extra-large blue block center '%>
+
+  <% else %>
+
+  <p class = "center"> There is no question for this week.</p>
+
+  <% end %>
 
 
 <h3 class = "top-space center italic">Your responses</h3>

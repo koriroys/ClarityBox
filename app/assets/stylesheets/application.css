@@ -243,12 +243,16 @@ header {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-image: url('ClarityBox-Logo-v4-small.png');
+  background-image: url('ClarityBox-Logo-v6-white-small.png');
   background-repeat: no-repeat;
-  background-size: 40px;
-  background-position: 0 50%;
-  margin-top: 15px;
+/*  background-size: 40px;*/
+  background-position: 50% 50%;
+  background-color: rgba(205, 110, 87, 0.62);
+  padding: 35px 20px;
+  width: 30px;
 
+/*  margin-top: 15px;
+*/
 }
 
 .nav-logo a{
@@ -263,11 +267,11 @@ header {
 .title {
   width: 400px;
   float: left;
-  margin: 27px 30px 0 ;
+  margin: 27px 38px 0 ;
 }
 
 .title a{
-  font-size: 20px;
+  font-size: 18px;
   font-family: "proxima-nova", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -326,10 +330,8 @@ header {
   font-size: 16px;
   margin-top: 28px;
   width: 300px;
-
-
-
 }
+
 
 
 /*App Home Page*/
@@ -452,6 +454,12 @@ header {
   border: 6px solid #fff;
 }
 
+.extra-small {
+  width: 40px;
+  margin-right: 25px;
+  border: none;
+  margin-top: -13px;
+}
 .non-color-page h2.with-image{
   margin-top: 40px;
   letter-spacing: 4px;
