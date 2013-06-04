@@ -405,8 +405,9 @@ header {
   font-size: 24px;
   font-weight: 100;
   font-style: italic;
-  margin-left: 50px;
-  line-height: 250%;
+/*  margin-left: 50px;
+*/  line-height: 250%;
+  text-align: center;
 }
 
 
@@ -486,7 +487,9 @@ header {
 /* Philosophy */
 
 .philosophy {
-  background: #189E77;
+/*  background: #189E77;
+*/
+  background: #fff;
 }
 
 .philosophy li {
@@ -499,7 +502,9 @@ header {
 /*Story*/
 
 .story {
-  background: #AD3772;
+/*  background: #AD3772;
+*/
+  background: #fff;
 }
 
 /*Forms
