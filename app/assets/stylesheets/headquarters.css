@@ -301,8 +301,8 @@ header {
 /*Main Callout*/
 
 .main-callout{
-  background: #DE6A4E;
-  width: 100%;
+/*  background: #DE6A4E;
+*/  width: 100%;
   height: 700px;
 
 }
@@ -310,21 +310,22 @@ header {
 .main-callout h2{
   padding-top: 350px;
   text-align: center;
-  color: #fff;
+  color: #4D4D4D;
   letter-spacing: 4px;
 
 }
 
 .main-callout h3{
-  color: #fff;
+  color: #4D4D4D;
   font-size: 40px;
   letter-spacing: 1px;
+  line-height: 140%;
 }
 
 /*Section*/
 
 .section {
-  color: #fff;
+  color: #4D4D4D;
   padding-bottom:100px;
 }
 
@@ -377,16 +378,16 @@ header {
 
 
 .section a:link{
-  color: #DEDEDE;
+  color: #454545;
   text-decoration: underline;
 }
 
 .section a:visited{
-  color: #DEDEDE;
+  color: #454545;
 }
 
 .section a:hover{
-  color: #fff;
+  color: #454545;
 }
 
 
@@ -396,25 +397,34 @@ header {
 /*Problem*/
 
 .problem {
-  background: #E8B002;
+/*  background: #E8B002;
+*/
+}
 
+.problem li{
+  font-size: 24px;
+  font-weight: 100;
+  font-style: italic;
+  margin-left: 50px;
+  line-height: 250%;
 }
 
 
 
 
+/*
 .problem p{
   padding-top: 30px ;
   padding-bottom: 100px;
 }
-
+*/
 
 
 /*Solution*/
 
 .solution {
-  background: #488EC7;
-}
+/*  background: #488EC7;
+*/}
 
 
 
@@ -429,8 +439,8 @@ header {
 /*Process*/
 
 .process {
-  background: #189E77;
-}
+/*  background: #189E77;
+*/}
 
 .process li {
   font-size: 24px;
@@ -443,14 +453,14 @@ header {
 /*Who I Am*/
 
 .who {
-  background: #AD3772;
-}
+/*  background: #AD3772;
+*/}
 
 /*Testimonials*/
 
 .testimonials {
-  background: #7B4CB5;
-}
+/*  background: #7B4CB5;
+*/}
 
 .testimonials li {
   font-size: 24px;
@@ -463,14 +473,14 @@ header {
 /*Contact*/
 
 .contact {
-  background: #61C2AA;
-}
+/*  background: #61C2AA;
+*/}
 
 /*Why the name ClarityBox?*/
 
 .why-name{
-  background: #005AA3;
-}
+/*  background: #005AA3;
+*/}
 
 
 /* Philosophy */
@@ -513,8 +523,8 @@ header {
   border: none;
   border-radius: 3px;
   margin: 10px 0;
-/*  box-shadow: 0px 2px 5px #D6D6D6;
-*/
+  box-shadow: 0px 2px 5px #D6D6D6;
+
 }
 
 .longer {
