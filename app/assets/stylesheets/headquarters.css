@@ -267,8 +267,9 @@ header {
 
 
 .nav-elements li{
-  float: left;
-  width: 120px;
+/*  float: left;
+  width: 120px;*/
+  float: right;
   text-align: center;
   font-size: 14px;
   font-family: "proxima-nova", sans-serif;
