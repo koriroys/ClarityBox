@@ -22,7 +22,6 @@ class UsersController < ApplicationController
 
   def invite_new
     @user = User.new
-
   end
 
 
@@ -49,23 +48,19 @@ class UsersController < ApplicationController
   def create
     # raise params.inspect
     @user = User.new(params[:user])
-    # @user.email = params[:user][:email]
-    # @user.password = params[:password]
-    # @user.password_confirmation = params[:password_confirmation]
 
-    if params[:employee_invite] == true
+    # if params[:employee_invite] == true
       temp_pass = User.generate_password
       @user.password = temp_pass
       @user.password_confirmation = temp_pass
-    end
-
+    # end
 
     if @user.save
-      UserMailer.registration_confirmation(@user).deliver
-      # TODO: UserMailer.send_invite(@user, temp_pass)
-      redirect_to app_home_url, :notice => "User created."
+      # UserMailer.registration_confirmation(@user).deliver
+      UserMailer.employee_invite_request(@user, temp_pass).deliver
+      redirect_to app_home_url, :notice => "Invite sent."
     else
-      redirect_to new_user_url, :notice => "Email address taken."
+      redirect_to invite_new_url, :notice => "Invite was not sent."
     end
   end
 

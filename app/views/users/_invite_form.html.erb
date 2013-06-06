@@ -35,6 +35,9 @@
     <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name), {:class => 'block'} %>
 </div>
 
+<!--     <%= f.hidden_field 'employee_invite', :value => true %>
+ -->
+
     <% elsif admin? %>
 
   <div class = "left">
@@ -45,9 +48,8 @@
 
     <%= f.hidden_field :company_id, :value => current_user.company_id %>
 
-    <%= f.hidden_field 'employee_invite', :value => true %>
+<!--     <%= f.hidden_field 'employee_invite', :value => true %> -->
 
-    </div>
 <% end %>
 
 

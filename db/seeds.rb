@@ -30,7 +30,7 @@ user_hashes = [
     last_name: 'Lew',
     user_role: 'Super Admin',
     company_id: Company.find_by_name('Starter League').id,
-    email: 'clew23@gmail.com',
+    email: 'claire@claritybox.co',
     password: 'hi',
     password_confirmation: 'hi'},
   { first_name: 'Vince',
