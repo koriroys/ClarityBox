@@ -1,10 +1,10 @@
 class ChangeSendTimesSettingsinCompanies < ActiveRecord::Migration
-def up
-  remove_column :companies, :send_question_day
+def change
+  remove_column :companies, :send_question_day_of_week
   remove_column :companies, :send_question_time
-  remove_column :companies, :send_reminder_day
+  remove_column :companies, :send_reminder_day_of_week
   remove_column :companies, :send_reminder_time
-  remove_column :companies, :send_rollup_day
+  remove_column :companies, :send_rollup_day_of_week
   remove_column :companies, :send_rollup_time
   add_column :companies, :send_question_day, :integer
   add_column :companies, :send_question_time, :time
