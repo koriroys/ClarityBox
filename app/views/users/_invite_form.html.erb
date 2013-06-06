@@ -1,0 +1,62 @@
+
+<div class = "form">
+
+  <%= form_for @user, :html => {:multipart => true} do |f| %>
+
+  <div class = "group left">
+
+    <%= f.label :first_name, 'First Name', {:class => 'block label-gray'} %>
+    <%= f.text_field :first_name, { :class => 'field'} %>
+</div>
+
+   <div class = "group right">
+    <%= f.label :last_name, 'Last Name', {:class => 'block label-gray'} %>
+    <%= f.text_field :last_name,  { :class => 'field'}  %>
+  </div>
+
+  <div class = "group">
+
+    <%= f.label :email, 'Email', {:class => 'block label-gray'} %>
+    <%= f.text_field :email,  { :class => 'field longer'}  %>
+   </div>
+
+
+
+  <% if super_admin? %>
+    <div class = "left">
+
+    <%= f.label :user_role, 'User role',  {:class => 'block label-gray'} %>
+    <%= f.select :user_role, ['Super Admin', 'Admin', 'General',], {:class => 'inline'} %>
+    </div>
+
+    <div class = "group right">
+
+    <%= f.label :company_id, 'Company',  {:class => 'block label-gray weird'} %>
+    <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name), {:class => 'block'} %>
+</div>
+
+    <% elsif admin? %>
+
+  <div class = "left">
+    <%= f.label :user_role, 'User role',  {:class => 'block label-gray'} %>
+    <%= f.select :user_role, ['Admin', 'General'], {:class => 'inline'} %>
+    </div>
+
+
+    <%= f.hidden_field :company_id, :value => current_user.company_id %>
+
+    <%= f.hidden_field 'employee_invite', :value => true %>
+
+    </div>
+<% end %>
+
+
+
+
+
+    <%= f.submit 'Send invite', :class => 'button blue longer' %>
+
+
+    <% end %>
+
+  </div>

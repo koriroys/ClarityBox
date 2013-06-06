@@ -18,6 +18,10 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
 
 
+def self.generate_password
+  SecureRandom.urlsafe_base64
+end
+
 
 
 

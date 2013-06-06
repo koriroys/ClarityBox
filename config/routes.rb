@@ -130,6 +130,12 @@
 
 # Routes for the User resource:
 
+#INVITE
+
+#See new invite form
+  get '/users/invite' => 'Users#invite_new', as: :invite_new
+
+
 #CREATE
 
   get '/users/new' => 'Users#new', as: :new_user
@@ -141,6 +147,7 @@
   get '/users' => 'Users#index', as: :users
   get '/users/:id' => 'Users#show', as: :user
 
+
 #UPDATE
 
   get '/users/:id/edit' => 'Users#edit', as: :edit_user
@@ -150,6 +157,8 @@
 #DELETE
 
   delete '/users/:id' => 'Users#destroy'
+
+
 
 
 

@@ -4,6 +4,8 @@ require 'clockwork'
 
 include Clockwork
 
+
+
 every(30.minutes, 'Check for scheduled email') do
   user = User.find(2)
   now = DateTime.now
@@ -11,13 +13,13 @@ every(30.minutes, 'Check for scheduled email') do
   questions = Question.all
 
   questions.each do |question|
-    date = question.ask_at.to_date
-    hour = question.ask_at.hour
-    min = question.ask_at.min
 
-    if date == now.to_date && (hour == now.hour || hour == now.hour - 1.hour || hour == now.hour + 1.hour)
-      UserMailer.registration_confirmation(user).deliver # TODO: Write mailers
+    ask_at_datetime = question.ask_at
+
+    if ask_at_datetime >= now - 15.minutes && ask_at_datetime < now + 15.minutes
+      UserMailer.registration_confirmation(user).deliver  # TODO: Write mailer --> Question email
     end
+
   end
 
   # if question.ask_at == DateTime.now

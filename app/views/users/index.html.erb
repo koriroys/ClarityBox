@@ -25,7 +25,9 @@
 
     <% end %>
 
-      <p class = "large-top-space center"> <%= link_to 'Add a user', new_user_url, :class => 'button gray' %></p>
+      <p class = "large-top-space center"> <%= link_to 'Create a user', new_user_url, :class => 'button gray' %></p>
+
+     <p class = "large-top-space center"> <%= link_to 'Invite a user', invite_new_url, :class => 'button gray ' %></p>
 
   <% else %>
 
@@ -58,7 +60,10 @@
      <% end %>
 
     <% if admin? %>
-        <p class = "large-top-space center"><a href = "#" class = "button gray">Invite users<a></p>
+
+          <%= link_to 'Invite users', invite_new_url, :class => 'button gray large-top-space center' %>
+
+
     <% end %>
 
 

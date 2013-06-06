@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   before_filter :authorize_any_user, only: [:show]
   before_filter :require_super_admin, only: [:edit, :update, :destroy]
+  before_filter :require_super_admin_or_admin, only: [:new, :invite_new]
+
+
 
 
   def authorize_any_user
@@ -10,6 +13,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def require_super_admin_or_admin
+    unless admin? || super_admin?
+      redirect_to user_url(current_user), notice: "You're not authorized to view that."
+    end
+  end
+
+
+  def invite_new
+    @user = User.new
+
+  end
+
 
 
   def index
@@ -17,6 +32,7 @@ class UsersController < ApplicationController
     @company = current_user.company
 
   end
+
 
   def show
     @responses = Response.where(:user_id => params[:id])
@@ -31,14 +47,22 @@ class UsersController < ApplicationController
 
 
   def create
-    # raise params[:user].inspect
+    # raise params.inspect
     @user = User.new(params[:user])
     # @user.email = params[:user][:email]
     # @user.password = params[:password]
     # @user.password_confirmation = params[:password_confirmation]
 
+    if params[:employee_invite] == true
+      temp_pass = User.generate_password
+      @user.password = temp_pass
+      @user.password_confirmation = temp_pass
+    end
+
+
     if @user.save
       UserMailer.registration_confirmation(@user).deliver
+      # TODO: UserMailer.send_invite(@user, temp_pass)
       redirect_to app_home_url, :notice => "User created."
     else
       redirect_to new_user_url, :notice => "Email address taken."
@@ -70,5 +94,10 @@ class UsersController < ApplicationController
     @user.destroy
       redirect_to users_url
     end
-  end
+
+
+
+end
+
+
 
