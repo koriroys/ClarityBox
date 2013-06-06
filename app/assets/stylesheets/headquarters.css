@@ -214,39 +214,38 @@ p {
 */
 
 header {
-  background: #fff;
+/*  background: rgba(255,255,255, 0.1);*/
   position: fixed;
 }
 
 .primary-nav{
   height: 120px;
   width: 100%;
-  box-shadow: 0px 1px 2px #D6D6D6;
-  border-bottom: 1px solid #D6D6D6;
-  opacity: 0.98;
+/*  box-shadow: 0px 1px 2px #D6D6D6;
+  border-bottom: 1px solid #D6D6D6;*/
 
 
 }
 
 .sticky{
   height: 20px;
-  padding:50px 0;
+  padding: 50px 0;
 }
 
 .nav-logo{
   float: left;
-  font-size: 24px;
+  font-size: 32px;
   padding: 20px 0 22px 60px;
   font-family: "proxima-nova", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-image: url('ClarityBox-Logo-v5-small.png');
+  background-image: url('ClarityBox-Logo-green.png');
   background-repeat: no-repeat;
   background-size: 40px;
   background-position: 0 50%;
   margin-top: -22px;
-  color: #E08D79;
+  color: #33A190;
 
 }
 
@@ -304,21 +303,29 @@ header {
 .main-callout{
 /*  background: #DE6A4E;
 */  width: 100%;
-  height: 700px;
+  height: 770px;
+  background: #cdcdcd;
+  background: url('mountains6.JPG');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 50%;
+  margin: 0 auto;
+/*  opacity: 0.98;*/
 
 }
 
 .main-callout h2{
-  padding-top: 350px;
+  padding-top: 320px;
   text-align: center;
-  color: #4D4D4D;
+  color: #fff;
   letter-spacing: 4px;
+  font-size: 60px;
 
 }
 
 .main-callout h3{
-  color: #4D4D4D;
-  font-size: 40px;
+  color: #fff;
+  font-size: 35px;
   letter-spacing: 1px;
   line-height: 140%;
 }
@@ -326,8 +333,10 @@ header {
 /*Section*/
 
 .section {
+  width: 100%;
+  margin: 0 auto;
   color: #4D4D4D;
-  padding-bottom:200px;
+  padding-bottom: 100px;
 }
 
 .section h3 {
@@ -341,9 +350,10 @@ header {
 .section h4  {
   text-align: center;
   line-height: 120%;
-  font-size: 55px;
+  font-size: 45px;
   font-weight: 600;
-  padding: 20px;
+  padding-top: 200px;
+  padding-bottom: 50px;
   letter-spacing: 0.05em;
 }
 
@@ -398,17 +408,18 @@ header {
 /*Problem*/
 
 .problem {
-/*  background: #E8B002;
-*/
+/*  background: #292A40;*/
+  background: #23302E;
+  color: #fff;
 }
 
 .problem li{
   font-size: 24px;
   font-weight: 100;
   font-style: italic;
-/*  margin-left: 50px;
-*/  line-height: 250%;
-  text-align: center;
+  margin-left: 50px;
+  line-height: 250%;
+
 }
 
 
@@ -426,7 +437,14 @@ header {
 
 .solution {
 /*  background: #488EC7;
-*/}
+*/
+/*  background: url('light.JPG');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 50%;
+  color: #fff;
+*/
+}
 
 
 
@@ -438,13 +456,13 @@ header {
   line-height: 250%;
 }
 
-/*Process*/
+/*Service*/
 
-.process {
-/*  background: #189E77;
-*/}
+.service {
+  background: #F0F0F0;
+}
 
-.process li {
+.service li {
   font-size: 24px;
   font-weight: 100;
   font-style: italic;
@@ -452,17 +470,24 @@ header {
   line-height: 250%;
 }
 
-/*Who I Am*/
 
-.who {
-/*  background: #AD3772;
+.approach {
+/*  background: #189E77;
 */}
+
+.approach li {
+  font-size: 24px;
+  font-weight: 100;
+  font-style: italic;
+  margin-left: 50px;
+  line-height: 250%;
+}
 
 /*Testimonials*/
 
 .testimonials {
-/*  background: #7B4CB5;
-*/}
+  background: #F0F0F0;
+}
 
 .testimonials li {
   font-size: 24px;
@@ -472,11 +497,20 @@ header {
   line-height: 250%;
 }
 
+
+/*Who I Am*/
+
+.who {
+
+}
+
+
+
 /*Contact*/
 
 .contact {
-/*  background: #61C2AA;
-*/}
+  background: #F0F0F0;
+}
 
 /*Why the name ClarityBox?*/
 
@@ -576,6 +610,9 @@ header {
 
 /*Footer*/
 
+
+
+
 footer{
   width: 100%;
   height: 200px;
@@ -620,10 +657,9 @@ footer a:hover{
 
 footer p{
   text-align: center;
-/*  text-transform: uppercase;
-*/  font-size: 14px;
+text-transform: uppercase;
+font-size: 14px;
   color: #999999;
 }
-
 
 
