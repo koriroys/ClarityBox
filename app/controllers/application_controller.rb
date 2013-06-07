@@ -45,6 +45,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
-
+#   def check_for_temporary_password
+#     if signed_in? && current_user(params[:temp_pass]) == true
+#     redirect_to edit_user_url(current_user), notice: 'You need to change your password'
+#   end
+# end
 
 end

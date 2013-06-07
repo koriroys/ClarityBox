@@ -1,15 +1,13 @@
 class UsersController < ApplicationController
-  before_filter :authorize_any_user, only: [:show]
-  before_filter :require_super_admin, only: [:edit, :update, :destroy]
+  before_filter :authorize_any_user, only: [:show, :edit, :update]
+  before_filter :require_super_admin, only: [:destroy]
   before_filter :require_super_admin_or_admin, only: [:new, :invite_new]
-
-
 
 
   def authorize_any_user
     @user = User.find(params[:id])
     if @user != current_user
-    redirect_to user_url(current_user), notice: 'Nice try'
+    redirect_to user_url(current_user), notice: "Nice try, you're not allowed to edit another person's profile."
     end
   end
 
@@ -20,11 +18,10 @@ class UsersController < ApplicationController
   end
 
 
+
   def invite_new
     @user = User.new
   end
-
-
 
   def index
     @users = User.all
