@@ -13,8 +13,8 @@ default :from => "Claire Lew <claire@claritybox.co>"
        )
   end
 
-  # def app_invite_request(user)
-  # end
+  def app_invite_request(user)
+  end
 
   # def question_email(user)
   # end

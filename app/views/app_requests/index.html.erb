@@ -1,0 +1,29 @@
+<h1>Listing app_requests</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Company</th>
+    <th>Message</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @app_requests.each do |app_request| %>
+  <tr>
+    <td><%= app_request.name %></td>
+    <td><%= app_request.email %></td>
+    <td><%= app_request.company %></td>
+    <td><%= app_request.message %></td>
+    <td><%= link_to 'Show', app_request %></td>
+    <td><%= link_to 'Edit', edit_app_request_path(app_request) %></td>
+    <td><%= link_to 'Destroy', app_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New App request', new_app_request_path %>

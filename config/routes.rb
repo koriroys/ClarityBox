@@ -1,5 +1,7 @@
   ClarityBox::Application.routes.draw do
 
+  resources :app_requests
+
 # -- Routes for Homepage
 
 	# get '/', :controller => 'Pages', :action => 'index', :as => 'home'
@@ -31,6 +33,8 @@
       get '/app', :controller => 'App', :action => 'index', :as => 'app_home'
 
 
+
+
 #------------------------------
 
   # Routes for Signin for App
@@ -40,7 +44,6 @@
     delete '/sessions' => 'sessions#destroy', as: 'session'
 
     #------------------------------
-
 
 
      # Routes for the Company resource:
@@ -91,6 +94,40 @@
   #------------------------------
 
 
+
+# Routes for the User resource:
+
+#EMPLOYEE INVITE
+
+#See new invite form
+  get '/users/invite' => 'Users#invite_new', as: :invite_new
+
+
+#CREATE
+
+  get '/users/new' => 'Users#new', as: :new_user
+  post '/users' => 'Users#create'
+
+
+#READ
+
+  get '/users' => 'Users#index', as: :users
+  get '/users/:id' => 'Users#show', as: :user
+
+
+#UPDATE
+
+  get '/users/:id/edit' => 'Users#edit', as: :edit_user
+  put '/users/:id' => 'Users#update'
+
+
+#DELETE
+
+  delete '/users/:id' => 'Users#destroy'
+
+
+
+
  # # Routes for the Question resource:
  #  # CREATE
  #  get '/questions/new', controller: 'Questions', action: 'new', as: 'new_question'
@@ -126,41 +163,6 @@
  #  # DELETE
  #  delete '/responses/:id', controller: 'Responses', action: 'destroy'
   #------------------------------
-
-
-# Routes for the User resource:
-
-#INVITE
-
-#See new invite form
-  get '/users/invite' => 'Users#invite_new', as: :invite_new
-
-
-#CREATE
-
-  get '/users/new' => 'Users#new', as: :new_user
-  post '/users' => 'Users#create'
-
-
-#READ
-
-  get '/users' => 'Users#index', as: :users
-  get '/users/:id' => 'Users#show', as: :user
-
-
-#UPDATE
-
-  get '/users/:id/edit' => 'Users#edit', as: :edit_user
-  put '/users/:id' => 'Users#update'
-
-
-#DELETE
-
-  delete '/users/:id' => 'Users#destroy'
-
-
-
-
 
 
 
