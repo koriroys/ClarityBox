@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   belongs_to :company
   has_many :questions
   has_many :responses
+  has_many :app_requests
 
   mount_uploader :avatar, AvatarUploader
 

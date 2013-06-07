@@ -11,23 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+
+  <div class = "form">
+
+    <div class = "group left">
+      <%= f.label :name, {:class => 'block label-gray'} %>
+      <%= f.text_field :name, {:class => 'field'} %>
+    </div>
+
+
+  <div class="group right">
+    <%= f.label :company, {:class => 'block label-gray'} %>
+    <%= f.text_field :company, {:class => 'field'} %>
   </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+
+
+  <div class="group">
+    <%= f.label :email, 'Your Email', {:class => 'block label-gray'} %>
+    <%= f.text_field :email, {:class => 'field longer'} %>
   </div>
-  <div class="field">
-    <%= f.label :company %><br />
-    <%= f.text_field :company %>
+
+
+  <div class="group">
+    <%= f.label :message, 'Say hi! (optional)', {:class => 'block label-gray' } %>
+    <%= f.text_field :message, {:class => 'field longer tall'}%>
   </div>
-  <div class="field">
-    <%= f.label :message %><br />
-    <%= f.text_field :message %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+    <%= f.submit 'Send', {:class => 'button blue longer'} %>
+
 <% end %>
+
+</div>
+

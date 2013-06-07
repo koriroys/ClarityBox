@@ -1,6 +1,6 @@
   ClarityBox::Application.routes.draw do
 
-  resources :app_requests
+
 
 # -- Routes for Homepage
 
@@ -32,8 +32,28 @@
 
       get '/app', :controller => 'App', :action => 'index', :as => 'app_home'
 
+#------------------------------
 
 
+# Routes for App Requests
+
+
+  # resources :app_requests
+
+
+# CREATE
+  get '/app_requests/new', controller: 'AppRequests', action: 'new', as: 'new_app_request'
+  post '/app_requests', controller: 'AppRequests', action: 'create'
+
+  # READ
+  get '/app_requests', controller: 'AppRequests', action: 'index', as: 'app_requests'
+
+  # DELETE
+  delete '/app_requests/:id', controller: 'AppRequests', action: 'destroy'
+
+
+
+  get '/app_requests/thanks' => 'AppRequests#thanks', :as => 'thanks'
 
 #------------------------------
 
