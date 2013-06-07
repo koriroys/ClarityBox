@@ -21,11 +21,10 @@
       </div>
 
       <p class = "right"> <%= link_to 'Edit', edit_user_url(user) %></p>
+     <p><%= link_to 'Delete', user_url(user), method: 'delete', data: { confirm: 'You sure about that?'} %></p>
 
 
     <% end %>
-
-      <p class = "large-top-space center"> <%= link_to 'Create a user', new_user_url, :class => 'button gray' %></p>
 
      <p class = "large-top-space center"> <%= link_to 'Invite a user', invite_new_url, :class => 'button gray ' %></p>
 
