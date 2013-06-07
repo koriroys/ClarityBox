@@ -1,6 +1,6 @@
-<p>Hey <%= @user.first_name %>,</p>
+<p>Hi <%= @user.first_name %>,</p>
 
-<p>To help <%= @company.name %> communicate better, we're using ClarityBox. I've already created an account for you.</p>
+<p><%= @current_user.first_name %> has invited you to ClarityBox, a way to help <%= @company.name %> communicate better.</p>
 
 <p>Here is your temporary password: <%= @temp_pass %>
 

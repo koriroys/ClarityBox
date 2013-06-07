@@ -57,7 +57,7 @@ class UsersController < ApplicationController
 
     if @user.save
       # UserMailer.registration_confirmation(@user).deliver
-      UserMailer.employee_invite_request(@user, temp_pass).deliver
+      UserMailer.employee_invite_request(@user, current_user, temp_pass).deliver
       redirect_to app_home_url, :notice => "Invite sent."
     else
       redirect_to invite_new_url, :notice => "Invite was not sent."
