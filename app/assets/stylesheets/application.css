@@ -276,11 +276,11 @@ header {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 4px;
-  color: #E08D79;
+  color: #E0E0E0;
 }
 
 .title a:hover{
-  color: #F59A84;
+  color: #cdcdcd;
 }
 
 .nav-elements{
@@ -301,9 +301,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 30px;
-  margin-top: 50px;
-/*  padding: 10px;
-  border-left: 1px solid #cdcdcd;*/
+
 }
 
 .nav-elements a{
@@ -329,13 +327,20 @@ p.color {
   color: #fff;
   letter-spacing: 2px;
 }
+
+
+/*
+Notice*/
+
 .notice{
-  float: left;
-  color: #E08D79;
-  font-size: 16px;
-  margin-top: 28px;
-  width: 300px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: #E88766;
+  color: #8A391E;
+  position: fixed;
 }
+
 
 
 
@@ -359,15 +364,15 @@ p.color {
 
 }
 
-/*
+
 .app-home-page h2{
-  padding: 220px 0 20px;
+  padding: 50px 0 20px;
   text-align: center;
   letter-spacing: 4px;
   color: #fff;
 
 }
-*/
+
 
 .large-logo{
   width: 200px;
@@ -552,7 +557,7 @@ p.color {
   border-radius: 3px;
   margin: 10px 0;
   width: 277px;
-  box-shadow: 0px 2px 5px #D6D6D6;
+  box-shadow: 0px 2px 2px #D6D6D6;
   color: #616161;
 }
 
@@ -583,7 +588,7 @@ p.color {
 /*Labels*/
 
 .label{
-  color: #fff;
+  color: #267569;
   font-size: 20px;
   padding: 5px 0 2px 0;
   text-transform: uppercase;
@@ -619,8 +624,13 @@ p.color {
   font-family:  'proxima-nova', 'Georgia', Arial, Helvetica, sans-serif;
   letter-spacing: 3px;
   margin: 20px 0;
+  font-weight: 400;
 }
 
+a.button.square{
+
+  height: 200px;
+}
 .button.longer {
   width: 100%
 }
@@ -634,7 +644,7 @@ a.button-small{
   color: #DEDEDE;
   font-size: 16px;
   text-transform: uppercase;
-  padding: 10px;
+  padding: 10px 0;
   border-radius: 5px;
   background: none;
   font-family:  'proxima-nova', 'Georgia', Arial, Helvetica, sans-serif;
@@ -644,6 +654,10 @@ a.button-small{
 
 a.button-small.dark{
   color: #267569;
+}
+
+a.button-small.dark:hover{
+  color: #2C8A7B;
 }
 
 
@@ -663,29 +677,25 @@ p.right a:hover{
 
 
 .button-extra-large{
-  width: 360px;
-  color: #DEDEDE;
+  color: #fff;
   font-size: 40px;
   text-transform: uppercase;
   padding: 50px;
   border-radius: 5px;
-  border: 5px solid #DEDEDE;
-  background: none;
   font-family:  'proxima-nova', 'Georgia', Arial, Helvetica, sans-serif;
   letter-spacing: 3px;
   margin: 50px 0 15px ;
   text-align: center;
   line-height: 120%;
+  background: #33a190;
 }
 .gray {
+  background: none;
   color: #A8A8A8;
   border: 5px solid #A8A8A8;
+
 }
 
-.blue{
-  color: #00CFC4;
-  border: 5px solid #00CFC4;
-}
 
 .button:hover {
   color: #fff;
@@ -693,19 +703,17 @@ p.right a:hover{
   background: #267569;
 }
 
-.button.blue:hover {
-  color: #fff;
-  border: 5px solid #00E6D9;
-}
+
 
 .button-extra-large:hover{
-  color: #00E6D9;
-  border: 5px solid #00E6D9;
+  color: #fff;
+  background: #37B09D;
   }
 
 .button.gray:hover {
   color: #DEDEDE;
   border: 5px solid #DEDEDE;
+  background: none;
 }
 
 /*Drop-down select*/

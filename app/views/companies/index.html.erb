@@ -1,12 +1,12 @@
  <div class= "non-color-page">
 
-    <h2>All the companies</h2>
+    <h2>All companies</h2>
 
       <div class = "smallest-container">
 
             <% @companies.each do |company| %>
 
-            <%= link_to company.name, company_url(company), :class => 'button-extra-large blue block' %>
+            <%= link_to company.name, company_url(company), :class => 'button-extra-large block' %>
 
 
 

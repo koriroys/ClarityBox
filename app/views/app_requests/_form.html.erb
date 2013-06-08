@@ -3,7 +3,7 @@
     <div id="error_explanation">
       <p class = "center">
       <% @app_request.errors.full_messages.each do |msg| %>
-        <li><%= msg %></p>
+        <p class = "center"><%= msg %></p>
       <% end %>
     </div>
   <% end %>
@@ -12,29 +12,29 @@
   <div class = "form">
 
     <div class = "group left">
-      <%= f.label :name, 'Full name',{:class => 'block label-gray'} %>
+      <%= f.label :name, 'Full name',{:class => 'block label'} %>
       <%= f.text_field :name, {:class => 'field'} %>
     </div>
 
 
   <div class="group right">
-    <%= f.label :company, 'Your company', {:class => 'block label-gray'} %>
+    <%= f.label :company, 'Your company', {:class => 'block label'} %>
     <%= f.text_field :company, {:class => 'field'} %>
   </div>
 
 
   <div class="group">
-    <%= f.label :email, 'Your Email', {:class => 'block label-gray'} %>
+    <%= f.label :email, 'Your Email', {:class => 'block label'} %>
     <%= f.text_field :email, {:class => 'field longer'} %>
   </div>
 
 
   <div class="group">
-    <%= f.label :message, 'Say hi (optional)', {:class => 'block label-gray' } %>
+    <%= f.label :message, 'Say hi (optional)', {:class => 'block label' } %>
     <%= f.text_area :message, {:class => 'field longer tall'}%>
   </div>
 
-    <%= f.submit 'Send', {:class => 'button blue longer'} %>
+    <%= f.submit 'Send', {:class => 'button longer'} %>
 
 <% end %>
 

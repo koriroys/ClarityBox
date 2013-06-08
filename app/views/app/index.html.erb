@@ -4,20 +4,27 @@
 
   <div class = "container group">
 
+      <% if !signed_in? %>
+
       <h1 class = "center">
         ClarityBox</h1>
 <div class = "large-logo">
 </div>
 
+  <% end %>
+
+<% if signed_in? %>
 
 
-  <% if signed_in? %>
+      <h2 class = "center">
+       Welcome <%= current_user.first_name %>!</h2>
 
-   <div class = "large-logo">
+       <div class = "large-logo">
+      </div>
 
         <% if super_admin? %>
           <div class = "top-space center">
-            <%= link_to 'View the companies', companies_url, :class => 'button'%>
+            <%= link_to 'View companies', companies_url, :class => 'button square'%>
           </div>
 
       <div class = "top-space center">
