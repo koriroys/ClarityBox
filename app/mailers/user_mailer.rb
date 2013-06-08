@@ -47,7 +47,7 @@ default :from => "Claire Lew <claire@claritybox.co>"
       :subject => "Reminder for #{question.week.start_date.strftime("%B %e")}"
        )
   end
-  end
+
 
   def rollup_email(user, question)
     @user = user
@@ -58,7 +58,7 @@ default :from => "Claire Lew <claire@claritybox.co>"
       :subject => "This week's rollup (#{question.week.start_date.strftime("%B %e")})"
        )
   end
-  end
+
 
 
 end

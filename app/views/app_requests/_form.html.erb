@@ -12,13 +12,13 @@
   <div class = "form">
 
     <div class = "group left">
-      <%= f.label :name, {:class => 'block label-gray'} %>
+      <%= f.label :name, 'Full name',{:class => 'block label-gray'} %>
       <%= f.text_field :name, {:class => 'field'} %>
     </div>
 
 
   <div class="group right">
-    <%= f.label :company, {:class => 'block label-gray'} %>
+    <%= f.label :company, 'Your company', {:class => 'block label-gray'} %>
     <%= f.text_field :company, {:class => 'field'} %>
   </div>
 
@@ -30,7 +30,7 @@
 
 
   <div class="group">
-    <%= f.label :message, 'Say hi! (optional)', {:class => 'block label-gray' } %>
+    <%= f.label :message, 'Say hi (optional)', {:class => 'block label-gray' } %>
     <%= f.text_area :message, {:class => 'field longer tall'}%>
   </div>
 
