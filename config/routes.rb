@@ -7,9 +7,10 @@
 
 # -- Routes for About pages
 
-	get '/about', :controller => 'Pages', :action => 'about', :as => 'about'
+	get '/', :controller => 'Pages', :action => 'about', :as => 'about'
 	get '/story', :controller => 'Pages', :action => 'story', :as => 'story'
 	get '/philosophy', :controller => 'Pages', :action => 'philosophy', :as => 'philosophy'
+
 
   get '/about/version1', :controller => 'Pages', :action => 'version1', :as => 'version1'
   get '/about/version2', :controller => 'Pages', :action => 'version2', :as => 'version1'
@@ -19,7 +20,7 @@
     #------------------------------
 
 
-    root to: 'App#index'
+    # root to: 'App#index'
 
 
 #------------------------------
