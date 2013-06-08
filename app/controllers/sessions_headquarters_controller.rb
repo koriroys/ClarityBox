@@ -10,7 +10,7 @@ class SessionsHeadquartersController < ApplicationController
 
       if u.present? && u.authenticate(params[:password])
         session[:user_id] = u.id
-        redirect_to app_home_url, notice: "You've signed in successfully."
+        redirect_to posts_url, notice: "You've signed in successfully."
 
       else
        redirect_to new_session_url, notice: 'Please try signing in again.'
@@ -21,6 +21,6 @@ class SessionsHeadquartersController < ApplicationController
 
   def destroy
     reset_session
-    redirect_to app_home_url, notice: "Thanks for stopping by."
+    redirect_to root_url
   end
 end
