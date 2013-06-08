@@ -337,13 +337,6 @@ header {
 }
 
 
-.no-hover a:hover {
-  background: none;
-  border: none;
-  color: none;
-}
-
-
 
 
 
@@ -461,6 +454,31 @@ header {
 
 
 
+/*Columns*/
+
+.columns p{
+  text-align: center;
+  color: #33a190;
+}
+
+.col-1{
+  width: 375px;
+  float: left;
+}
+
+
+.col-2{
+  width: 375px;
+  float: right;
+  display: inline;
+}
+
+
+.columns a{
+  font-size: 16px;
+}
+
+
 
 /*Problem*/
 
@@ -522,17 +540,24 @@ header {
 }
 
 .service li {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 100;
   font-style: italic;
-  margin-left: 50px;
+/*  margin-left: 50px;*/
   line-height: 250%;
+  text-align: center;
+  letter-spacing: 1px;
+
 }
 
 
 .approach {
 /*  background: #189E77;
 */}
+
+.approach b{
+  color: #33a190;
+}
 
 .approach li {
   font-size: 24px;
@@ -548,12 +573,20 @@ header {
   background: #F0F0F0;
 }
 
+.testimonials p{
+  text-align: center;
+}
+
 .testimonials li {
   font-size: 24px;
   font-weight: 100;
   font-style: italic;
   margin-left: 50px;
   line-height: 250%;
+}
+
+#tsl{
+  size: 60px;
 }
 
 
@@ -744,4 +777,9 @@ font-size: 14px;
   color: #999999;
 }
 
+.no-hover a:hover {
+  background: none;
+  border: none;
+  color: none;
+}
 

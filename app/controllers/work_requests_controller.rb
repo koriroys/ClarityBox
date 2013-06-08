@@ -20,7 +20,7 @@ class WorkRequestsController < ApplicationController
     @work_request = WorkRequest.new(params[:work_request])
 
       if @work_request.save
-        redirect work_request_thanks_url
+        redirect_to work_request_thanks_url
       else
         redirect app_home_url
       end

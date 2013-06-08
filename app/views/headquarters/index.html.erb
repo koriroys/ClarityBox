@@ -67,26 +67,31 @@ ClarityBox gives you the insights to build a happier, more productive company.
   <div class = "smaller-container">
 
           <p>
-          I interview each person in your company, and then present an in-depth, panoramic view of how everyone feels.
+          I interview each person in your company, and then present an indepth, panoramic view of how everyone feels.
         </p>
 
+  <div class = " columns group">
+    <div class = "col-1">
         <p><b>The Interviews:</b></p>
         <ul>
           <li>One hour each</li>
           <li>Completely confidential</li>
-          <li>Conducted in-person or via phone/Skype</li>
-   <%= link_to 'View sample interview questions here.', root_url %></p>
+          <li>In-person or via phone/Skype</li>
+          <p> <%= link_to 'View sample interview questions here.', root_url %></p>
         </ul>
+
+  </div>
+
+  <div class = "col-2">
         <p><b>The Debrief:</b></p>
         <ul>
           <li>A detailed debrief with you</li>
           <li>A presentation to the entire company</li>
-
-          <li>A personally designed deck with the key insights</li>
-          <%= link_to 'View a sample debrief deck here.', root_url %>
+          <li>A deck with the key insights </li>
+          <p><%= link_to 'View a sample debrief deck here.', root_url %></p>
         </ul>
-
-
+  </div>
+</div>
       <p>I am based in Chicago, Illinois. Not local? No worries, we can arrange remote interviews or I can travel to where you are.</p>
 
       <p>The entire project typically lasts one month.</p>
@@ -126,11 +131,17 @@ ClarityBox gives you the insights to build a happier, more productive company.
         I've been fortunate to have worked with some wonderful companies.
       </p>
 
+      <div class = "col-1">
+          <p>37signals</p>
+      </div>
 
-     <ul>
-        <li>37signals</li>
-        <li>The Starter League</li>
-      </ul>
+      <div class = "col-2">
+        <%= link_to image_tag('starter-league-logo-text-large.png', :id => 'tsl'), 'http://starterleague.com', :class => 'no-hover' %>
+        <p>Starter League</p>
+      </div>
+
+
+
   </div>
 </div>
 
