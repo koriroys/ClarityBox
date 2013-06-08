@@ -224,10 +224,11 @@ header {
   border-bottom: 1px solid #D6D6D6;*/
 }
 
-
+/*
 .is-opaque{
   background: rgba(255,255,255, 0.7);
-}
+  display: none;
+}*/
 
 .sticky{
   height: 20px;
@@ -246,16 +247,16 @@ header {
   background-repeat: no-repeat;
   background-size: 40px;
   background-position: 0 50%;
-  margin-top: -22px;
+  margin-top: -28px;
   color: #33A190;
 
 }
 
-/*.nav-logo a{
+.nav-logo a{
   margin-left: 50px;
   color: #E08D79;
 }
-*/
+
 .nav-logo:hover{
   color: #3DB8A5;
 }
@@ -268,8 +269,6 @@ header {
 
 
 .nav-elements li{
-/*  float: left;
-  width: 120px;*/
   float: right;
   text-align: center;
   font-size: 16px;
@@ -279,13 +278,23 @@ header {
   letter-spacing: 1px;
 }
 
+/*.nav-elements.many li{
+  float: left;
+  width: 100px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+*/
 .nav-elements a{
   color: #fff;
 }
 
 
 .nav-elements a:hover{
-  color: #fff;
+  background: #267569;
 }
 
 
@@ -317,7 +326,7 @@ header {
 }
 
 .main-callout h2{
-  padding-top: 320px;
+  padding-top: 300px;
   text-align: center;
   color: #fff;
   letter-spacing: 4px;
@@ -338,7 +347,8 @@ header {
   width: 100%;
   margin: 0 auto;
   color: #4D4D4D;
-  padding-bottom: 100px;
+  padding-top: 160px;
+  padding-bottom: 120px;
 }
 
 .section h3 {
@@ -354,7 +364,7 @@ header {
   line-height: 120%;
   font-size: 45px;
   font-weight: 600;
-  padding-top: 200px;
+/*  padding-top: 160px;*/
   padding-bottom: 50px;
   letter-spacing: 0.05em;
 }
@@ -392,15 +402,21 @@ header {
 
 .section a:link{
   color: #454545;
-  text-decoration: underline;
+  font-weight: 400;
+  border-bottom: 1px solid #454545;
+
 }
 
 .section a:visited{
   color: #454545;
+   border-bottom: 1px solid #cdcdcd;
+
 }
 
 .section a:hover{
-  color: #454545;
+  color: #33a190;
+    border-bottom: 1px solid #33a190;
+
 }
 
 
@@ -412,7 +428,7 @@ header {
 .problem {
 /*  background: #292A40;*/
   background: #23302E;
-  color: #fff;
+  color: #E3E3E3;
 }
 
 .problem li{
@@ -448,7 +464,9 @@ header {
 */
 }
 
-
+.solution b{
+  color: #33a190;
+}
 
 .solution li {
   font-size: 24px;
@@ -514,6 +532,9 @@ header {
   background: #F0F0F0;
 }
 
+.contact h4{
+  color: #33a190;
+}
 /*Why the name ClarityBox?*/
 
 .why-name{
@@ -606,6 +627,9 @@ header {
 
 
 
+
+
+
 .button{
   width: 647px;
   color: #3DB8A5;
@@ -626,6 +650,22 @@ header {
   color: #fff;
 }
 
+.clear{
+  color: #fff;
+  border: 5px solid #fff;
+}
+
+.medium{
+    font-size: 23px;
+    padding: 18px;
+    border: 3px solid;
+    font-weight: 400;
+}
+
+.button-center{
+  text-align: center;
+  padding-top: 20px;
+}
 
 
 

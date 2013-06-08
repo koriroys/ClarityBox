@@ -15,22 +15,38 @@
 
   <!--Navigation-->
 
+
+<script>
+  $(document).scroll(function () {
+    $("header").css("background", "rgba(255,255,255, 0.7)");
+  });
+
+
+  // if $(window).scrollTop(function () {
+  //   $("header").css("background", "none");
+  // });
+
+
+
+</script>
+
+
 <header class = "primary-nav is-opaque">
-
-
 
   <div class = "sticky container">
 
     <h1> <%= link_to 'ClarityBox', root_url, :class => 'nav-logo' %></h1>
 
-    <nav class = "nav-elements">
+    <nav class = "nav-elements many">
       <ul>
-  <!--       <li><a href="/about/#problem">Problem</a></li>
+   <!--      <li><a href="/about/#problem">Problem</a></li>
         <li><a href="/about/#solution">Solution</a></li>
-        <li><a href="/about/#process">Process</a></li>
+         <li><a href="/about/#process">Process</a></li>
+        <li><a href="/about/#process">Values</a></li>
         <li><a href="/about/#testimonials">Testimonials</a></li>
-        <li><a href="/about/#who">Who I Am</a></li> -->
-        <li id = "button-header"><%= link_to 'Contact', '/#contact' %></li>
+        <li><a href="/about/#who">Who I Am</a></li>
+         <li id = "button-header-many"><%= link_to 'Contact', '/#contact' %></li> -->
+      <li id = "button-header"><%= link_to 'Contact', '/#contact' %></li>
       </ul>
     </nav>
 
