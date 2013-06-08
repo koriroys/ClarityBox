@@ -48,11 +48,7 @@
   # READ
   get '/app_requests', controller: 'AppRequests', action: 'index', as: 'app_requests'
 
-  # DELETE
-  delete '/app_requests/:id', controller: 'AppRequests', action: 'destroy'
-
-
-
+# THANKS
   get '/app_requests/thanks' => 'AppRequests#thanks', :as => 'thanks'
 
 #------------------------------

@@ -324,6 +324,10 @@ header {
   color: #FF8142;
 }
 
+p.color {
+  color: #fff;
+  letter-spacing: 2px;
+}
 .notice{
   float: left;
   color: #E08D79;
@@ -604,12 +608,12 @@ header {
 .button-small{
   width: 317px;
   color: #DEDEDE;
-  font-size: 28px;
+  font-size: 16px;
   text-transform: uppercase;
   padding: 25px;
   border-radius: 5px;
-  border: 5px solid #DEDEDE;
-  background: none;
+/*  border: 5px solid #DEDEDE;
+*/  background: none;
   font-family:  'proxima-nova', 'Georgia', Arial, Helvetica, sans-serif;
   letter-spacing: 3px;
   margin: 20px 0;
@@ -700,27 +704,6 @@ float: right;
 
 
 
-/*Table*/
-
-table {
-  width: 960px;
-  margin: 50px auto;
-}
-
-th{
-  padding: 20px;
-  letter-spacing: 4px;
-  color: #BFBDBD;
-  text-transform: uppercase;
-  font-size: 20px;
-}
-
-td{
-  padding: 20px;
-}
-
-
-
 
 /*Progress Bar*/
 
@@ -752,6 +735,44 @@ td{
   float: right;
   margin-top: 29px;
   margin-right: 20px;
+}
+
+
+
+/*Table*/
+
+table {
+  width: 960px;
+  margin: 50px auto;
+}
+
+th{
+  padding: 20px;
+  letter-spacing: 4px;
+  color: #BFBDBD;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+td{
+  padding: 20px;
+  color: #454545;
+}
+
+h3.table {
+  font-size: 20px;
+  font-weight: 400
+}
+
+h4.table {
+  font-size: 16px;
+}
+
+p.table {
+  font-size: 14px;
+  color: #BFBDBD;
+  font-style: italic;
+  text-transform: none;
 }
 
 
