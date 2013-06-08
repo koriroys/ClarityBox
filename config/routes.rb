@@ -1,11 +1,7 @@
   ClarityBox::Application.routes.draw do
 
+
 # -- Routes for Homepage
-
-	# get '/', :controller => 'Pages', :action => 'index', :as => 'home'
-  #------------------------------
-
-# -- Routes for About pages
 
 
     root to: 'Pages#about'
@@ -20,10 +16,19 @@
   get '/about/version3', :controller => 'Pages', :action => 'version3', :as => 'version1'
 
 
+#------------------------------
+
+# -- Routes for Blog
+
+  resources :posts
 
 
 
 #------------------------------
+
+
+
+
 
 
 # Routes for App home page

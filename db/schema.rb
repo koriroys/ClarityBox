@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130603173338) do
+ActiveRecord::Schema.define(:version => 20130608155858) do
+
+  create_table "app_requests", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "company"
+    t.text     "message",    :limit => 255
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -23,6 +32,14 @@ ActiveRecord::Schema.define(:version => 20130603173338) do
     t.time     "send_reminder_time"
     t.integer  "send_rollup_day_of_week"
     t.time     "send_rollup_time"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "name"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "questions", :force => true do |t|
