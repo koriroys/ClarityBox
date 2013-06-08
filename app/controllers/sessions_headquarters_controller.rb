@@ -9,7 +9,7 @@ class SessionsHeadquartersController < ApplicationController
     u = User.find_by_email(params[:email])
 
       if u.present? && u.authenticate(params[:password])
-        session[:user_id] = u.id
+        session[:user_id] = u.id && u.user_role == 'Super Admin'
         redirect_to posts_url, notice: "You've signed in successfully."
 
       else
