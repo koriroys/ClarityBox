@@ -23,7 +23,7 @@
         <td><h4 class = "table"><%= app_request.email %></h4></td>
         <td><h4 class = "table"><%= app_request.company %></h4></td>
         <td><h4 class = "table"><%= app_request.message %></h4></td>
-        <td><p class = "table">Requested <%= time_ago_in_words(app_request.created_at)%> ago<p></td>
+        <td><p class = "table"><%= time_ago_in_words(app_request.created_at)%> ago<p></td>
       </tr>
 
     <% end %>
