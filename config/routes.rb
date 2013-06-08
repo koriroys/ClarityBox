@@ -18,6 +18,19 @@
 
 #------------------------------
 
+
+
+  # Routes for Signin for Headquarters
+
+    get '/signin' => 'SessionsHeadquarters#new', as: 'new_session_hq'
+    post '/sessions' => 'SessionsHeadquarters#create', as: 'sessions'
+    delete '/sessions' => 'SessionsHeadquarters#destroy', as: 'session'
+
+
+
+#------------------------------
+
+
 # -- Routes for Blog
 
   resources :posts
