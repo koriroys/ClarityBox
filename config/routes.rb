@@ -23,6 +23,29 @@
   resources :posts
 
 
+#CREATE
+
+  get '/blog/new' => 'Posts#new', as: :new_post
+  post '/blog' => 'Posts#create'
+
+
+#READ
+
+  get '/blog' => 'Posts#index', as: :posts
+  get '/blog/:id' => 'Posts#show', as: :post
+
+#UPDATE
+
+  get '/blog/:id/edit' => 'Posts#edit', as: :edit_post
+put '/blog/:id' => 'Posts#update'
+
+
+#DELETE
+
+  delete '/blog/:id' => 'Posts#destroy'
+
+
+
 
 #------------------------------
 
