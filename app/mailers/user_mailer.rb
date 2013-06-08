@@ -28,14 +28,37 @@ default :from => "Claire Lew <claire@claritybox.co>"
       )
   end
 
-  # def question_email(user)
-  # end
+  def question_email(user, question)
+    @user = user
+    @question = question
+    @company = user.company
+    mail(
+      :to => "#{user.first_name} #{user.last_name} <#{user.email}>",
+      :subject => "This week's question (#{question.week.start_date.strftime("%B %e")})"
+       )
+  end
 
-  # def reminder_email(user)
-  # end
+  def reminder_email(user, question)
+    @user = user
+    @question = question
+    @company = user.company
+    mail(
+      :to => "#{user.first_name} #{user.last_name} <#{user.email}>",
+      :subject => "Reminder for #{question.week.start_date.strftime("%B %e")}"
+       )
+  end
+  end
 
-  # def rollup_email(user)
-  # end
+  def rollup_email(user, question)
+    @user = user
+    @question = question
+    @company = user.company
+    mail(
+      :to => "#{user.first_name} #{user.last_name} <#{user.email}>",
+      :subject => "This week's rollup (#{question.week.start_date.strftime("%B %e")})"
+       )
+  end
+  end
 
 
 end
