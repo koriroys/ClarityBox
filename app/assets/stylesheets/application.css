@@ -249,7 +249,7 @@ header {
   background-position: 50% 50%;
 /*  background-color: rgba(205, 110, 87, 0.62);*/
   padding: 35px 20px;
-  width: 30px;
+  width: 40px;
 
 /*  margin-top: 15px;
 */
@@ -276,7 +276,7 @@ header {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 4px;
-  color: #E0E0E0;
+  color: #33a190;
 }
 
 .title a:hover{
@@ -357,7 +357,7 @@ Notice*/
 .app-home-page  h1{
   padding: 50px 0 20px;
   text-align: center;
-  letter-spacing: 4px;
+  letter-spacing: 8px;
   color: #fff;
   font-size: 80px;
   text-transform:  uppercase;
@@ -470,6 +470,13 @@ Notice*/
 
 }
 
+.avatar.large{
+  float: none;
+  width: 260px;
+  border: 8px solid #fff;
+  margin: 40px 0 5px;
+}
+
 .medium{
   width: 150px;
   margin-right: 60px;
@@ -484,9 +491,9 @@ Notice*/
 }
 
 .extra-small {
-  width: 40px;
+  width: 35px;
   margin-right: 25px;
-  border: none;
+  border: 2px solid #fff;
   margin-top: -13px;
 }
 .non-color-page h2.with-image{
@@ -745,7 +752,7 @@ float: right;
 /*Progress Bar*/
 
 .progress-bar {
-  background-color: #F77E60;
+  background-color: #E88766;
   height: 70px;
   width: 500px;
   margin: 100px auto 50px;
@@ -753,7 +760,7 @@ float: right;
 }
 
 .progress-bar-yes{
-  background-color: #00CFC4;
+  background-color: #3EB3A1;
   height: 70px;
 /*  width: 40%;
 *//*  border-radius: 10px;*/

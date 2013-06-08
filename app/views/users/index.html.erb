@@ -3,7 +3,7 @@
 
 <% if super_admin? %>
 
-  <h2>All users </h2>
+  <h2>All Employees </h2>
   <h5>All Companies</h5>
 
   <div class = "smaller-container">
@@ -30,7 +30,7 @@
 
   <% else %>
 
-  <h2>All users</h2>
+  <h2>Employees</h2>
   <h5><%= current_user.company.name %></h5>
 
    <div class = "smaller-container">
@@ -60,7 +60,7 @@
 
     <% if admin? %>
 
-          <%= link_to 'Invite users', invite_new_url, :class => 'button gray large-top-space center' %>
+          <p class = "center"><%= link_to 'Invite users', invite_new_url, :class => 'button gray large-top-space center' %></p>
 
 
     <% end %>
