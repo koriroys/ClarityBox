@@ -264,12 +264,12 @@ header {
 .nav-elements{
   float: right;
 /*  margin-top: 5px;*/
-  width: 720px;
+  width: 190px;
 }
 
 
 .nav-elements li{
-  float: right;
+  float: left;
   text-align: center;
   font-size: 16px;
   font-family: "proxima-nova", sans-serif;
@@ -277,6 +277,35 @@ header {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+/*Contact Nav Icon*/
+
+#button-header{
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 3px;
+  border: 3px solid #3DB8A5;
+  background: #3DB8A5;
+  margin-top: -10px;
+}
+
+#button-header:hover {
+  background: #2A7D70;
+  border: 3px solid #2A7D70;
+  color: #fff;
+}
+
+
+/*Twitter Nav Icon*/
+
+#twitter{
+  height: 35px;
+  padding-left: 20px;
+  margin-top: -5px;
+}
+
+
 
 /*.nav-elements.many li{
   float: left;
@@ -306,6 +335,16 @@ header {
 .color a:hover{
   color: #FF8142;
 }
+
+
+.no-hover a:hover {
+  background: none;
+  border: none;
+  color: none;
+}
+
+
+
 
 
 
@@ -608,24 +647,6 @@ header {
 
 
 /*Buttons*/
-
-#button-header{
-  color: #fff;
-  text-transform: uppercase;
-  padding: 10px;
-  border-radius: 3px;
-  border: 3px solid #3DB8A5;
-  background: #3DB8A5;
-  margin-top: -10px;
-}
-
-#button-header:hover {
-  background: #2A7D70;
-  border: 3px solid #2A7D70;
-  color: #fff;
-}
-
-
 
 
 
