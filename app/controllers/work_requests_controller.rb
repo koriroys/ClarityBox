@@ -11,17 +11,22 @@ class WorkRequestsController < ApplicationController
   end
 
 
-
+  # def new
+  #   @work_request = WorkRequest.new
+  # end
 
 
   def create
     @work_request = WorkRequest.new(params[:work_request])
 
       if @work_request.save
-        redirect root_url
+        redirect work_request_thanks_url
       else
         redirect app_home_url
       end
+  end
+
+  def thanks
   end
 
   # PUT /work_requests/1

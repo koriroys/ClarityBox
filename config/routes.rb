@@ -1,15 +1,5 @@
   ClarityBox::Application.routes.draw do
 
-# -- Routes for Work_requests
-
-
-#CREATE
-  # Form for a new work request in the Headquarters index
-  post '/work_requests' => 'WorkRequests#create'
-
-#READ
-  get '/work_requests' => 'WorkRequests#index', as: :work_requests
-
 
 
 # -- Routes for Homepage
@@ -37,6 +27,23 @@ root to: 'Headquarters#index'
     delete '/sessions' => 'SessionsHeadquarters#destroy', as: 'session'
 
 
+
+#------------------------------
+
+# -- Routes for Work_requests
+
+
+#CREATE
+  # Form for a new work request in the Headquarters index
+  # get '/work_requests/new' => 'WorkRequests#new', as: :new_work_request
+  post '/work_requests' => 'WorkRequests#create'
+
+#READ
+  get '/work_requests' => 'WorkRequests#index', as: :work_requests
+
+#THANKS
+
+  get '/thanks' => 'WorkRequests#thanks', as: :work_request_thanks
 
 #------------------------------
 
