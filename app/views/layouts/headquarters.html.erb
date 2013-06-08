@@ -2,13 +2,12 @@
 <html>
 <head>
   <title>ClarityBox</title>
- <script type="text/javascript" src="//use.typekit.net/bmv8eic.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-
   <%= stylesheet_link_tag    "headquarters", :media => "all" %>
-  <%= javascript_include_tag "headquarters" %>
+   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+   <script type="text/javascript" src="//use.typekit.net/bmv8eic.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
 
 </head>
 <body>
@@ -16,7 +15,9 @@
 
   <!--Navigation-->
 
-<header class = "primary-nav">
+<header class = "primary-nav is-opaque">
+
+
 
   <div class = "sticky container">
 
