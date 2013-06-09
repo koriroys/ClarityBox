@@ -5,15 +5,15 @@
 
 <!--     <h2 class = "center">Sign In</h2> -->
 
-       <div class = "form-small">
+       <div class = "form-small transparent">
 
 
         <%= form_tag sessions_url do %>
 
-          <%= label_tag :email, 'Email',  {:class => 'block label'} %>
-          <%= email_field_tag :email, 'you@example.com', :class => 'field'  %>
+          <%= label_tag :email, 'Email',  {:class => 'block label white'} %>
+          <%= email_field_tag :email, '', :class => 'field', :placeholder => 'you@example.com'  %>
 
-          <%= label_tag :password, 'Password',  {:class => 'block label'} %>
+          <%= label_tag :password, 'Password',  {:class => 'block label white'} %>
           <%= password_field_tag :password, '', :class => 'field  block' %>
 
           <%= submit_tag 'Sign in', :class => 'button matched' %></p>

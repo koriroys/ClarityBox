@@ -363,15 +363,16 @@ Notice*/
   background-repeat: no-repeat;
   background-position: 0 50%;
   background-position: fixed;
-  padding: 150px;
+  padding: 100px 0 30px;
   margin: 0 auto;
   background-size: 100%;
+  height: 650px;
 }
 
 
 
 .app-home-page  h1{
-  padding: 80px 0 0;
+  padding: 100px 0 0;
   text-align: center;
   letter-spacing: 8px;
   color: #fff;
@@ -382,7 +383,7 @@ Notice*/
 
 
 .app-home-page h2{
-/*  padding: 50px 0 20px;*/
+  padding: 100px 0 20px;
   text-align: center;
   letter-spacing: 4px;
   color: #fff;
@@ -396,11 +397,10 @@ Notice*/
   background-image: url('ClarityBox-Logo-white-large.png');
   background-repeat: no-repeat;
   background-size: 100%;
-  margin: 10px auto 90px;
-
-
-
+  margin: 10px auto -40px;
 }
+
+
 
 
 /*Color page*/
@@ -474,9 +474,27 @@ Notice*/
 }
 
 
+/*Small Callout*/
+
+.small-callout{
+  width: 100%;
+  height: 200px;
+  background-image: url('mountains13.JPG');
+  background-repeat: no-repeat;
+  background-position: 0 20%;
+  padding: 100px 0 30px;
+  margin: 0 auto;
+  background-size: 100%;
+}
+
+.small-callout h2 {
+ color: #fff;
+ padding: 70px 0;
+}
 
 
 /*Images*/
+
 
 .avatar{
   float: left;
@@ -488,9 +506,9 @@ Notice*/
 
 .avatar.large{
   float: none;
-  width: 260px;
+  width: 240px;
   border: 8px solid #fff;
-  margin: 40px 0 5px;
+  margin: 30px 0 0;
 }
 
 .medium{
@@ -548,12 +566,19 @@ Notice*/
 
 .form {
   width: 650px;
-  margin: 40px auto;
+  margin: 90px auto 0;
 }
 
 .form-small {
   width: 350px;
-  margin: 30px auto 0;
+  margin: 50px auto 0;
+}
+
+.form-small.transparent{
+  padding: 20px 20px 5px 53px;
+  border-radius: 4px;
+  background: rgba(255,255,255, .2)
+
 }
 
 /*.left {
@@ -563,7 +588,7 @@ Notice*/
 
 .right {
   float: right;
-  margin-top: -136px;
+  margin-top: -90px;
 }
 
 
@@ -630,6 +655,10 @@ Notice*/
   margin-top: 20px;
 }
 
+.label.white{
+  color: #fff;
+}
+
 .label-gray.weird {
   margin-top: 68px;
 }
@@ -646,7 +675,7 @@ Notice*/
   background: #2C8A7B;
   font-family:  'proxima-nova', 'Georgia', Arial, Helvetica, sans-serif;
   letter-spacing: 3px;
-  margin: 20px 0;
+  margin: 20px;
   font-weight: 400;
 }
 
@@ -667,12 +696,16 @@ a.button-small{
   color: #DEDEDE;
   font-size: 16px;
   text-transform: uppercase;
-  padding: 10px 0;
+  padding: 7px;
   border-radius: 5px;
   background: none;
   font-family:  'proxima-nova', 'Georgia', Arial, Helvetica, sans-serif;
   letter-spacing: 3px;
   margin: 20px 0;
+}
+
+a.button-small.outline {
+ border: 2px solid #DEDEDE;
 }
 
 a.button-small.dark{
@@ -681,6 +714,17 @@ a.button-small.dark{
 
 a.button-small.dark:hover{
   color: #2C8A7B;
+}
+
+
+a.button-small.white{
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+a.button-small.white:hover{
+  color: #33a190;
+  border: 2px solid #33a190;
 }
 
 

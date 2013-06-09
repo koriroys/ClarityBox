@@ -29,10 +29,8 @@
         <% if super_admin? %>
           <div class = "top-space center">
             <%= link_to 'View companies', companies_url, :class => 'button square'%>
-          </div>
 
-      <div class = "top-space center">
-        <%= link_to '(View invite requests)', app_requests_url, :class => 'button-small'%>
+        <%= link_to 'View invites', app_requests_url, :class => 'button square'%>
       </div>
         <% end %>
 
@@ -52,7 +50,7 @@
 
 
        <div class = "top-space center">
-          <%= link_to 'Request an invite', new_app_request_url, :class => 'button'%>
+          <%= link_to 'Get an invite', new_app_request_url, :class => 'button'%>
         </div>
   <% end %>
 </div>
