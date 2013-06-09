@@ -505,6 +505,16 @@ Notice*/
   background-size: 100%;
 }
 
+.small-callout#company{
+  background-image: url('starter_league_staff.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding: 100px 0 30px;
+  margin: 0 auto;
+  background-size: 100%;
+}
+
+
 .small-callout h2 {
  color: #fff;
  padding: 70px 0;
@@ -571,6 +581,16 @@ Notice*/
 #user_avatar{
   font-size: 18px;
 }
+
+.indiv-response{
+  width: 600px;
+  margin: 20px auto;
+}
+
+.indiv-response h3{
+  margin-top: 70px;
+}
+
 
 /*Page headers*/
 
@@ -706,8 +726,8 @@ Notice*/
   text-transform: uppercase;
   padding: 25px;
   border-radius: 5px;
-  border: 5px solid #2C8A7B;
-  background: #2C8A7B;
+  border: 5px solid #33a190;
+  background: #33a190;
   font-family:  'proxima-nova', 'Georgia', Arial, Helvetica, sans-serif;
   letter-spacing: 3px;
   margin: 20px;
