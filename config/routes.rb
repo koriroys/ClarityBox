@@ -22,9 +22,9 @@ root to: 'Headquarters#index'
 
   # Routes for Signin for Headquarters
 
-    get '/signin' => 'SessionsHeadquarters#new', as: 'new_session_hq'
-    post '/sessions' => 'SessionsHeadquarters#create', as: 'sessions'
-    delete '/sessions' => 'SessionsHeadquarters#destroy', as: 'session'
+    get '/hq/signin' => 'SessionsHeadquarters#new', as: 'new_session_hq'
+    post '/hq/signin' => 'SessionsHeadquarters#create', as: 'sessions_hq'
+    delete '/hq/signin' => 'SessionsHeadquarters#destroy', as: 'session_hq'
 
 
 
