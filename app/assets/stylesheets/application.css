@@ -568,6 +568,10 @@ Notice*/
   margin: 80px 0;
 }
 
+#user_avatar{
+  font-size: 18px;
+}
+
 /*Page headers*/
 
 .page-title{
@@ -608,6 +612,16 @@ Notice*/
 .right {
   float: right;
   margin-top: -90px;
+}
+
+.right-with-label {
+  float: right;
+  margin-top: -136px;
+}
+
+.right-with-label-weird {
+  float: right;
+  margin-top: -134px;
 }
 
 
@@ -679,8 +693,10 @@ Notice*/
 }
 
 .label-gray.weird {
-  margin-top: 68px;
+  margin-top: 73px;
 }
+
+
 
 /*Buttons*/
 
