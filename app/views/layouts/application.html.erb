@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="//use.typekit.net/bmv8eic.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
+  <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
 </head>
 <body>
 
@@ -15,9 +15,19 @@
   <!-- NAVIGATION -->
 
  <% if notice.present? %>
+
+ <script>
+$(document).scroll(function () {
+  $(".notice").css("display", "none").fadeOut("slow");
+  });
+</script>
+
      <div class = "notice center group">
         <%= notice %>
     </div>
+
+
+
 <% end %>
 
 
