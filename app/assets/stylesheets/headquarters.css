@@ -379,7 +379,7 @@ header {
   width: 100%;
   margin: 0 auto;
   color: #4D4D4D;
-  padding-top: 160px;
+  padding-top: 140px;
   padding-bottom: 120px;
 }
 
@@ -653,15 +653,25 @@ header {
   color: #cdcdcd;
 }
 
+
 /* Philosophy */
 
-.philosophy {
-/*  background: #189E77;
-*/
-  background: #fff;
+.philosophy.main-callout {
+  background: #267569;
+  height: 500px;
 }
 
-.philosophy li {
+.philosophy h3{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 35px;
+    padding-top: 250px;
+    padding-bottom: 80px;
+    margin-left: 330px;
+}
+
+
+.section li.bigger {
   font-size: 24px;
   font-weight: 100;
   margin-left: 50px;
@@ -670,11 +680,39 @@ header {
 
 /*Story*/
 
-.story {
-/*  background: #AD3772;
-*/
-  background: #fff;
+.story.main-callout{
+  background: #267569;
+  height: 500px;
 }
+
+
+.story h3{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 35px;
+    padding-top: 250px;
+    padding-bottom: 80px;
+    margin-left: 330px;
+}
+
+
+/*Blog*/
+
+.blog.main-callout{
+  background: #267569;
+  height: 500px;
+}
+
+
+.blog h3{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 35px;
+    padding-top: 250px;
+    padding-bottom: 80px;
+    margin-left: 330px;
+}
+
 
 /*Forms
 */
