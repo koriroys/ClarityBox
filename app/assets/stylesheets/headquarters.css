@@ -326,6 +326,10 @@ header {
   background: #267569;
 }
 
+.color{
+   color: #33a190;
+}
+
 
 .color a{
   color: #E6785E;
@@ -484,18 +488,18 @@ header {
 /*Problem*/
 
 .problem {
-/*  background: #292A40;*/
   background: #23302E;
-  color: #E3E3E3;
+  color: #cdcdcd;
 }
 
 .problem li{
   font-size: 24px;
   font-weight: 100;
   font-style: italic;
-  margin-left: 50px;
+  /*margin-left: 50px;*/
   line-height: 250%;
-
+  color: #33a190;
+  text-align: center;
 }
 
 
@@ -614,7 +618,16 @@ header {
 
 /*Who I Am*/
 
-.who {
+.headshot{
+  width: 100%;
+  height: 250px;
+  background: url('test_pic.JPG');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 50%;
+  margin: 0 auto;
+  border-radius: 6px;
+
 
 }
 
@@ -657,7 +670,12 @@ header {
 /* Philosophy */
 
 .philosophy.main-callout {
-  background: #267569;
+/*  background: #267569;*/
+  background: url('mountains1.JPG');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 50%;
+  margin: 0 auto;
   height: 500px;
 }
 
@@ -681,7 +699,12 @@ header {
 /*Story*/
 
 .story.main-callout{
-  background: #267569;
+  background: url('test_pic.JPG');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 50%;
+  margin: 0 auto;
+/*  background: #267569;*/
   height: 500px;
 }
 
@@ -699,7 +722,12 @@ header {
 /*Blog*/
 
 .blog.main-callout{
-  background: #267569;
+/*  background: #267569;*/
+  background: url('light.JPG');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 50%;
+  margin: 0 auto;
   height: 500px;
 }
 
@@ -711,6 +739,16 @@ header {
     padding-top: 250px;
     padding-bottom: 80px;
     margin-left: 330px;
+}
+
+h4.blog {
+  text-align: center;
+  line-height: 120%;
+  font-size: 55px;
+  font-weight: 600;
+  padding: 20px 0 10px;
+  letter-spacing: 0.05em;
+
 }
 
 
@@ -798,7 +836,25 @@ header {
   padding-top: 20px;
 }
 
+/*
+Thank you*/
 
+.thanks{
+/*  background: #cdcdcd;*/
+  background: url('clouds.JPG');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 50%;
+  margin: 0 auto;
+}
+
+.transparency{
+  background: rgba(255, 255, 255, .7);
+  padding: 20px 50px;
+  margin-top: 60px;
+  width: 450px;
+  border-radius: 4px;
+}
 
 /*Footer*/
 

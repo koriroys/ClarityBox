@@ -72,7 +72,7 @@ ClarityBox gives you the insights to build a happier, more productive company.
 
   <div class = " columns group">
     <div class = "col-1">
-        <p><b>The Interviews:</b></p>
+        <p><b>The Interviews</b></p>
         <ul>
           <li>One hour each</li>
           <li>Completely confidential</li>
@@ -83,7 +83,7 @@ ClarityBox gives you the insights to build a happier, more productive company.
   </div>
 
   <div class = "col-2">
-        <p><b>The Debrief:</b></p>
+        <p><b>The Debrief</b></p>
         <ul>
           <li>A detailed debrief with you</li>
           <li>A presentation to the entire company</li>
@@ -109,11 +109,13 @@ ClarityBox gives you the insights to build a happier, more productive company.
 
            <div class = "smaller-container">
 
-        <p><b>Care:</b>  <!-- A company is more than a place where people show up to work everyday. It's where people have invested a large majority of their lives. --> I treat each company with a great deal of thoughtfulness. I'm committed to giving each person's perspective the care and attention it deserves. <%= link_to 'Learn more about my philosophy here.', philosophy_url %></p>
+        <p><b>Care:</b>  <!-- A company is more than a place where people show up to work everyday. It's where people have invested a large majority of their lives. --> I treat each company with a great deal of thoughtfulness. I'm committed to giving each person's perspective the care and attention it deserves. </p>
 
         <p><b>Personalization:</b>  <!-- I immerse myself in the nuances of your company:  the people, the circumstances, the dynamics. --> Before the interviews, I sit down with you to learn your company's history and current state. I craft interview questions specific to your company.
 
         <p><b>Truth:</b> When you ask for the truth, you get the truth. I fully absorb each person's perspective, and reflect it back to you as accurately as possible while maintaining complete confidentiality. <!-- I closely examine the language, emotion, and context of what people say, and take note of the motivations and influences that inform each person's viewpoint -->.</p>
+
+<p class = "center"><%= link_to 'Learn more about my philosophy here.', philosophy_url %></p>
 
     </div>
 </div>
@@ -153,10 +155,13 @@ ClarityBox gives you the insights to build a happier, more productive company.
 
    <h4>Who I am</h4>
 
+
     <div class = "smaller-container">
 
-      <p>
-        I'm <%= link_to 'Claire Lew', 'http://clairelew.com'%> and I believe that more people should be happy at work.
+         <div class = "headshot"></div>
+
+<p class = "top-space">
+        I'm <%= link_to 'Claire Lew', 'http://twitter.com/cjlew23'%>.
       </p>
 
       <p>
@@ -164,8 +169,10 @@ ClarityBox gives you the insights to build a happier, more productive company.
       </p>
 
       <p>
-        So I founded ClarityBox. I wanted to create a solution to help people be happier at work.  <%=link_to 'Click here to learn more about my story.', story_url %>
+        So I founded ClarityBox. I wanted to create a solution to help people be happier at work.
       </p>
+
+      <p class = "center"><%=link_to 'Learn more about my story here.', story_url %></p>
     </div>
   </div>
 
@@ -179,10 +186,10 @@ ClarityBox gives you the insights to build a happier, more productive company.
         <%= render 'work_request_form' %>
 
 
-      <p>
+      <p class = "center">
         If you're not a form kind of person, I'd love to hear from you at <a href="mailto:claire@claritybox.co">claire@claritybox.co</a>. Feel free to also give me a ring at 612.520.1476</p>
-      <p>Learn more about <%= link_to 'my story', story_url %> and <%= link_to 'my philosophy', philosophy_url %>.</p>
-      <p class = "last">Say hi on <%= link_to 'Twitter', 'http://twitter.com/cjlew23'%> and follow my <%= link_to 'blog', blog_url %></p>
+      <p class = "center">Learn more about <%= link_to 'my story', story_url %> and <%= link_to 'my philosophy', philosophy_url %>.</p>
+      <p class = "center">Say hi on <%= link_to 'Twitter', 'http://twitter.com/cjlew23'%> and follow my <%= link_to 'blog', blog_url %>.</p>
 
     </div>
   </div>
