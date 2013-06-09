@@ -407,8 +407,7 @@ header {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 25px;
-    padding-top: 50px;
-    padding-bottom: 80px;
+
     font-weight: 100px;
 }
 
@@ -447,7 +446,7 @@ header {
 
 .section a:hover{
   color: #33a190;
-    border-bottom: 1px solid #33a190;
+  border-bottom: 1px solid #33a190;
 
 }
 
@@ -462,15 +461,17 @@ header {
 }
 
 .col-1{
-  width: 375px;
+  width: 345px;
   float: left;
+  padding-right: 30px;
 }
 
 
 .col-2{
-  width: 375px;
+  width: 345px;
   float: right;
   display: inline;
+  padding-left: 30px;
 }
 
 
@@ -586,9 +587,30 @@ header {
 }
 
 #tsl{
-  size: 60px;
+  padding:60px 60px 10px;
 }
 
+#signals{
+  width: 200px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  margin-left: 60px;
+  margin-top: 60px;
+}
+
+.quote{
+  font-size: 18px;
+  font-style: italic;
+}
+
+.quote b{
+  text-transform: none;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 1px;
+  display: block;
+}
 
 /*Who I Am*/
 
@@ -610,9 +632,26 @@ header {
 /*Why the name ClarityBox?*/
 
 .why-name{
-/*  background: #005AA3;
-*/}
+  background: #33a190;
+  padding: 60px 0 20px;
+}
 
+.why-name h5{
+
+  font-size: 20px;
+  text-align: left;
+  color: #cdcdcd;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+
+.why-name p{
+
+  font-size: 16px;
+  text-align: left;
+  color: #cdcdcd;
+}
 
 /* Philosophy */
 
@@ -733,10 +772,12 @@ footer{
   height: 200px;
   margin: 0 auto;
   background: #3B3B3B;
+  padding-bottom: 100px;
+
 }
 
-footer ul{
-  width: 600px;
+footer ul.main-items{
+  width: 900px;
   height: 20px;
   margin: 0 auto;
   padding: 100px 0 10px;
@@ -744,42 +785,63 @@ footer ul{
 
 
 
-footer li{
+footer li.main-items{
   float: left;
-  width: 120px;
+  width: 280px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 22px;
   margin: 0 10px 0;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   font-weight: 100;
 }
 
 
+
 footer a:link{
-  color: #B3B3B3;
+  color: #33a190
+;
 }
 
 footer a:visited{
-  color: #B3B3B3;
+  color: #267569;
 }
 
 footer a:hover{
-  color: #D9D9D9;
+  color: #267569;
 }
 
-
+footer h5 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  color: #999999;
+  margin: 80px 0 30px;
+}
 
 footer p{
   text-align: center;
-text-transform: uppercase;
-font-size: 14px;
+  text-transform: uppercase;
+  font-size: 14px;
   color: #999999;
 }
 
 .no-hover a:hover {
   background: none;
-  border: none;
+  border-bottom: none;
+  color: none;
+}
+
+.section a:link.no-hover{
+  background: none;
+  border-bottom: none;
+  color: none;
+}
+
+.section a:visited.no-hover{
+  background: none;
+  border-bottom: none;
   color: none;
 }
 

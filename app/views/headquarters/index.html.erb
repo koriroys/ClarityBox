@@ -6,7 +6,7 @@
 ClarityBox gives you the insights to build a happier, more productive company.
   </h3>
 
-<p class = "button-center"><%= link_to 'Gain clarity today', '/#problem', :class => 'button clear medium' %></p>
+<p class = "button-center"><%= link_to 'Get clarity today', '/#problem', :class => 'button clear medium' %></p>
 
 </div>
 
@@ -128,16 +128,19 @@ ClarityBox gives you the insights to build a happier, more productive company.
     <div class = "smaller-container">
 
       <p>
-        I've been fortunate to have worked with some wonderful companies.
+        I've been fortunate to have worked with some wonderful companies. Here's what they had to say:
       </p>
 
       <div class = "col-1">
-          <p>37signals</p>
+
+        <%= link_to image_tag('37signals_logo.gif', :id => 'signals'), 'http://37signals.com', :class => 'no-hover' %>
+          <p class = "quote">"Something that someone might say about the service. Hopefully it's something nice and that other people would want to read." <b>- The person's name</b></p>
+
       </div>
 
       <div class = "col-2">
         <%= link_to image_tag('starter-league-logo-text-large.png', :id => 'tsl'), 'http://starterleague.com', :class => 'no-hover' %>
-        <p>Starter League</p>
+        <p class = "quote">"Something that someone might say about the service. Hopefully it's something nice and that other people would want to read." <b> - The person's name</b></p>
       </div>
 
 
@@ -184,10 +187,10 @@ ClarityBox gives you the insights to build a happier, more productive company.
     </div>
   </div>
 
-<div class = "why-name section group">
+<div class = "why-name group">
   <div class = "smaller-container">
-    <h5 class = "top-space">Why the name "ClarityBox"?</h5>
-      <p class = " small">I wanted to create a space that enables you to communicate more honestly and openly at work. A space that you leave with a weight lifted off your mind. A space you trust. A space for clarity. Hence, ClarityBox. </p>
+    <h5>Why the name "ClarityBox"?</h5>
+      <p>I wanted to create a space that enables you to communicate more honestly and openly at work. A space that you leave with a weight lifted off your mind. A space you trust. A space for clarity. Hence, ClarityBox. </p>
    </div>
 </div>
 
