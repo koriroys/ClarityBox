@@ -1,4 +1,5 @@
 class ChangeSendTimesSettingsinCompanies < ActiveRecord::Migration
+
   def change
     remove_column :companies, :send_question_date
     remove_column :companies, :send_question_time
@@ -13,4 +14,5 @@ class ChangeSendTimesSettingsinCompanies < ActiveRecord::Migration
     add_column :companies, :send_rollup_day_of_week, :integer
     add_column :companies, :send_rollup_time, :time
   end
+
 end
