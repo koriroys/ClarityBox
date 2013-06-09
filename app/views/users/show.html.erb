@@ -2,44 +2,53 @@
     <div class = "small-callout">
       <h2 = "small-callout"><%= @user.first_name %>'s ClarityBox</h2>
     </div>
-  <div class = "container">
-<% if @question_for_this_week.present? %>
 
-<div class = "smallest-container group">
-  <%= link_to "This week's question", question_url(@question_for_this_week), :class => 'button-extra-large block center '%>
+  <div class = "container">
+
+
+  <% if @question_for_this_week.present? %>
+
+    <div class = "smaller-container group">
+
+      <h6>This week's question</h6>
+
+      <h5 class = "small-top-space">(<%=@question_for_this_week.week.start_date.strftime("%B %e") %> - <%=@question_for_this_week.week.end_date.strftime("%B %e") %>)</h5>
+
+      <h3 class = "small-top-space center">"<%=@question_for_this_week.question_text %>"</h3>
+
+      <p class = "top-space center"><%= link_to 'Respond', new_question_response_url(@question_for_this_week), :class => 'button ' %></p>
 
   <% else %>
 
-  <p class = "center"> There is no question for this week.</p>
+      <p class = "center"> There is no question for this week.</p>
 
   <% end %>
 
 
-<h3 class = "top-space center italic">Your responses</h3>
+<h2 class = "center">Previous weeks</h2>
 
 <% @responses.each do |response| %>
 
   <h5 class = "top-space center">Week of <%= response.question.week.start_date.strftime("%B %e") %></h5>
 
-  <h4 class = "small-top-space center"><em>"<%= response.question.question_text %>"</em></h4>
+  <h3 class = "small-top-space center">"<%= response.question.question_text %>"</h3>
 
     <% if response.yes_response == true %>
         <h4 class = "small-top-space center">
-          You responded, "Yes."
+          You said, <b class = "color">"Yes."</b>
         </h4>
     <% end %>
 
     <% if response.yes_response == false %>
         <h4 class = "small-top-space center">
-          You responded, "No."
+          You said, <b>"No."</b>
         </h4>
     <% end %>
 
     <p class = "top-space center">
-      <%= link_to 'View your response', question_response_url(response.question, response), :class => 'button blue' %>
-    </p>
-    <p class = "center">
-      <%= link_to 'View the rollup', question_responses_url(response.question) %>
+      <%= link_to 'View your response', question_response_url(response.question, response), :class => 'button-small outline color' %>
+
+      <%= link_to 'View the rollup', question_responses_url(response.question), :class => 'button-small outline color' %>
     </p>
 
 <% end %>

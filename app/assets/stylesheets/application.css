@@ -337,6 +337,9 @@ p.color {
   letter-spacing: 2px;
 }
 
+b.color{
+  color: #3EB3A1;
+}
 
 /*
 Notice*/
@@ -459,6 +462,21 @@ Notice*/
 
 }
 
+.non-color-page  h6{
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;;
+  color: #616161;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 100px;
+
+}
+
+
+
+
+
 .non-color-page  p{
   color: #616161;
   text-transform: uppercase;
@@ -558,6 +576,7 @@ Notice*/
   padding: 200px 0 60px;
   text-align: center;
 }
+
 
 
 
@@ -701,7 +720,7 @@ a.button-small{
   background: none;
   font-family:  'proxima-nova', 'Georgia', Arial, Helvetica, sans-serif;
   letter-spacing: 3px;
-  margin: 20px 0;
+  margin: 20px 10px;
 }
 
 a.button-small.outline {
@@ -725,6 +744,17 @@ a.button-small.white{
 a.button-small.white:hover{
   color: #33a190;
   border: 2px solid #33a190;
+}
+
+
+a.button-small.outline.color{
+  color: #3BB8A4;
+  border: 2px solid #3BB8A4;
+}
+
+a.button-small.outline.color:hover{
+  color: #267569;
+  border: 2px solid #267569;
 }
 
 
@@ -804,6 +834,10 @@ a:hover{
 
 p.right{
 float: right;
+}
+
+p.right a.button{
+
 }
 
 
