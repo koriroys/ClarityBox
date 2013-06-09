@@ -1,0 +1,26 @@
+<h1>Listing work_requests</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Company</th>
+    <th>Email</th>
+    <th>Message</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @work_requests.each do |work_request| %>
+  <tr>
+    <td><%= work_request.name %></td>
+    <td><%= work_request.company %></td>
+    <td><%= work_request.email %></td>
+    <td><%= work_request.message %></td>
+
+  </tr>
+<% end %>
+</table>
+
+<br />
+
