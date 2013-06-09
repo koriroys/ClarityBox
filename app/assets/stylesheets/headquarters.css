@@ -242,7 +242,7 @@ header {
   font-family: "proxima-nova", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   background-image: url('ClarityBox-Logo-green.png');
   background-repeat: no-repeat;
   background-size: 40px;
@@ -651,10 +651,10 @@ header {
 
 .why-name h5{
 
-  font-size: 20px;
+  font-size: 22px;
   text-align: left;
-  color: #cdcdcd;
-  font-style: italic;
+  color: #206359;
+/*  font-style: italic;*/
   letter-spacing: 2px;
 }
 
@@ -663,7 +663,8 @@ header {
 
   font-size: 16px;
   text-align: left;
-  color: #cdcdcd;
+  color: #206359;
+  letter-spacing: 1px;
 }
 
 
@@ -841,11 +842,12 @@ Thank you*/
 
 .thanks{
 /*  background: #cdcdcd;*/
-  background: url('clouds.JPG');
+  background: url('mountains8.JPG');
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 0 50%;
   margin: 0 auto;
+  height: 650px;
 }
 
 .transparency{
