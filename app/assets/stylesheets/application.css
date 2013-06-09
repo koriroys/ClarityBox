@@ -703,12 +703,14 @@ a.button.square{
   height: 200px;
 }
 .button.longer {
-  width: 100%
+  width: 100%;
+  margin: 20px 0;
 }
 
 
 .matched {
-  width: 312px;
+  width: 317px;
+  margin: 20px 0;
 }
 
 a.button-small{

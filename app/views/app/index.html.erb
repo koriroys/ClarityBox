@@ -36,13 +36,14 @@
 
         <% if admin? %>
           <div class = "top-space center">
-            <%= link_to 'See your company clearly', company_url(current_user.company), :class => 'button'%>
+            <%= link_to 'Your company', company_url(current_user.company), :class => 'button'%>
+            <%= link_to 'Your profile', user_url(current_user), :class => 'button square'%>
           </div>
         <% end %>
 
         <% if general_user?  %>
           <div class = "top-space center">
-            <%= link_to 'Enter your ClarityBox', user_url(current_user), :class => 'button'%>
+            <%= link_to 'Enter', user_url(current_user), :class => 'button'%>
           </div>
         <% end %>
 
