@@ -18,7 +18,7 @@
 
       <% if @question_for_this_week.responses.where(:user_id => current_user).present? %>
 
-     <p class = "center">You've already responded to this week's question.</p>
+     <p class = "center border-bottom">You've already responded to this week's question.</p>
 
       <% else %>
 
@@ -28,12 +28,12 @@
 
   <% else %>
 
-      <p class = "center"> There is no question for this week.</p>
+      <p class = "center border-bottom"> There is no question for this week.</p>
 
   <% end %>
 
 
-<h2 class = "center">Previous responses</h2>
+<h6>Previous responses</h6>
 
 <% @responses.each do |response| %>
 
