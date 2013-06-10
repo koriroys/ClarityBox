@@ -13,7 +13,7 @@ class SessionsHeadquartersController < ApplicationController
         redirect_to posts_url, notice: "You've signed in successfully."
 
       else
-       redirect_to new_session_url, notice: 'Please try signing in again.'
+       redirect_to new_session_hq_url, notice: 'Please try signing in again.'
       end
 
     end
