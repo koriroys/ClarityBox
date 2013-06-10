@@ -8,21 +8,24 @@
 
   <div class = "smaller-container">
 
-    <% @users.each do |user| %>
+  <% @users.each do |user| %>
 
-      <div class = "user-display top-space">
+      <% if user.user_role == 'Admin' || user.user_role == 'General' %>
 
-        <%= image_tag user.avatar_url, :class => 'avatar medium' %>
+          <div class = "user-display top-space">
 
-        <h3><%= user.first_name %> <%= user.last_name %></h3>
-        <h4><%= user.company.name %></h4>
-        <p>(<%= user.user_role %>)</p>
+            <%= image_tag user.avatar_url, :class => 'avatar medium' %>
 
-      </div>
+            <h3><%= user.first_name %> <%= user.last_name %></h3>
+            <h4><%= user.company.name %></h4>
+            <p>(<%= user.user_role %>)</p>
 
-      <p class = "right"> <%= link_to 'Edit', edit_user_url(user) %></p>
-     <p><%= link_to 'Delete', user_url(user), method: 'delete', data: { confirm: 'You sure about that?'} %></p>
+          </div>
 
+          <p class = "right"> <%= link_to 'Edit', edit_user_url(user) %></p>
+         <p><%= link_to 'Delete', user_url(user), method: 'delete', data: { confirm: 'You sure about that?'} %></p>
+
+      <% end %>
 
     <% end %>
 
@@ -35,7 +38,11 @@
 
    <div class = "smaller-container">
 
+
+
       <% @company.users.each do |user| %>
+
+         <% if user.user_role == 'Admin' || user.user_role == 'General' %>
 
          <div class = "user-display group">
 
@@ -54,7 +61,7 @@
               <p class = "right"> <%= link_to 'Edit', edit_user_url(user) %></p>
             <% end %>
 
-
+        <% end %>
 
      <% end %>
 
