@@ -20,6 +20,8 @@
     <%= f.text_field :email,  { :class => 'field longer'}  %>
    </div>
 
+   <% if super_admin? %>
+
    <div class = "left">
 
     <%= f.label :user_role, 'User role',  {:class => 'block label-gray'} %>
@@ -28,10 +30,12 @@
 
     <div class = "group right-with-label">
 
+
     <%= f.label :company_id, 'Company',  {:class => 'block label-gray weird'} %>
     <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name), {:class => 'block'} %>
 </div>
 
+  <% end %>
 
 <div class = "group">
     <%= f.label :password, 'Password',  {:class => 'block label-gray'} %>

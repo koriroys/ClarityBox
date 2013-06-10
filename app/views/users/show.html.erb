@@ -16,7 +16,15 @@
 
       <h3 class = "small-top-space center">"<%=@question_for_this_week.question_text %>"</h3>
 
+      <% if @question_for_this_week.responses.where(:user_id => current_user).present? %>
+
+     <p class = "center">You've already responded to this week's question.</p>
+
+      <% else %>
+
       <p class = "top-space center"><%= link_to 'Respond', new_question_response_url(@question_for_this_week), :class => 'button ' %></p>
+
+      <%end %>
 
   <% else %>
 
@@ -25,7 +33,7 @@
   <% end %>
 
 
-<h2 class = "center">Previous weeks</h2>
+<h2 class = "center">Previous responses</h2>
 
 <% @responses.each do |response| %>
 
