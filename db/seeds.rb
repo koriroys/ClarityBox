@@ -144,21 +144,21 @@ question_hashes = [
     :ask_at => ask_at,
     :remind_at => remind_at,
     :send_roll_up_at => send_roll_up_at,
-    :send_question => 'true',
-    :send_reminder => 'true',
-    :send_rollup => 'true'
+    :send_question => 'false',
+    :send_reminder => 'false',
+    :send_rollup => 'false'
      },
 
-  { :question_text => "Is there anything unspoken in the company?",
+  { :question_text => "Should we hire more people?",
     :week_id => Week.find_by_end_date(week.end_date + 1.week).id,
     :user_id => User.find_by_email('clew23@gmail.com').id,
     :company_id => Company.find_by_name('Starter League').id,
     :ask_at => ask_at + 1.week,
     :remind_at => remind_at + 1.week,
     :send_roll_up_at => send_roll_up_at + 1.week,
-    :send_question => 'true',
-    :send_reminder => 'true',
-    :send_rollup => 'true'
+    :send_question => 'false',
+    :send_reminder => 'false',
+    :send_rollup => 'false'
     },
 
   { :question_text => "Do you feel frustrated by anything?",
@@ -168,9 +168,21 @@ question_hashes = [
     :ask_at => ask_at + 2.weeks,
     :remind_at => remind_at + 2.weeks,
     :send_roll_up_at => send_roll_up_at + 2.weeks,
-        :send_question => 'true',
-    :send_reminder => 'true',
-    :send_rollup => 'true'
+        :send_question => 'false',
+    :send_reminder => 'false',
+    :send_rollup => 'false'
+    },
+
+    { :question_text => "Should we meet more often as an entire company?",
+     :week_id => Week.find_by_end_date(week.end_date + 3.weeks).id,
+    :user_id => User.find_by_email('clew23@gmail.com').id,
+    :company_id => Company.find_by_name('Starter League').id,
+    :ask_at => ask_at + 3.weeks,
+    :remind_at => remind_at + 3.weeks,
+    :send_roll_up_at => send_roll_up_at + 3.weeks,
+        :send_question => 'false',
+    :send_reminder => 'false',
+    :send_rollup => 'false'
     },
 
 ]
