@@ -1,11 +1,12 @@
 class User < ActiveRecord::Base
   has_secure_password
 
-  attr_accessible :company_id, :email, :first_name, :last_name, :user_role, :password, :password_confirmation, :avatar
+  attr_accessible :company_id, :email, :first_name, :last_name, :user_role, :password, :password_confirmation, :avatar, :employee_invite
 
   belongs_to :company
   has_many :questions
   has_many :responses
+  has_many :app_requests
 
   mount_uploader :avatar, AvatarUploader
 
@@ -17,6 +18,10 @@ class User < ActiveRecord::Base
   validates :password, presence: true
   validates :password_confirmation, presence: true
 
+
+def self.generate_password
+  SecureRandom.urlsafe_base64
+end
 
 
 

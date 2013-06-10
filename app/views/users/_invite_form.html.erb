@@ -1,0 +1,58 @@
+
+<div class = "form-small">
+
+  <%= form_for @user, :html => {:multipart => true} do |f| %>
+
+  <div class = "group left">
+
+      <%= f.label :first_name, 'First Name', {:class => 'block label-gray'} %>
+      <%= f.text_field :first_name, { :class => 'field'} %>
+  </div>
+
+   <div class = "group">
+    <%= f.label :last_name, 'Last Name', {:class => 'block label-gray'} %>
+    <%= f.text_field :last_name,  { :class => 'field'}  %>
+  </div>
+
+  <div class = "group">
+    <%= f.label :email, 'Email', {:class => 'block label-gray'} %>
+    <%= f.text_field :email,  { :class => 'field'}  %>
+   </div>
+
+
+
+  <% if super_admin? %>
+
+    <div class = "group left">
+    <%= f.label :user_role, 'User role',  {:class => 'block label-gray'} %>
+    <%= f.select :user_role, ['Super Admin', 'Admin', 'General',], {:class => 'inline'} %>
+    </div>
+
+    <div class = "group">
+      <%= f.label :company_id, 'Company',  {:class => 'block label-gray'} %>
+      <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name)%>
+    </div>
+
+<!--     <%= f.hidden_field 'employee_invite', :value => true %>
+ -->
+
+  <% elsif admin? %>
+
+  <div class = "group left">
+    <%= f.label :user_role, 'User role',  {:class => 'block label-gray'} %>
+    <%= f.select :user_role, ['Admin', 'General'], {:class => 'inline'} %>
+  </div>
+
+
+  <%= f.hidden_field :company_id, :value => current_user.company_id %>
+
+  <!--     <%= f.hidden_field 'employee_invite', :value => true %> -->
+
+  <% end %>
+
+
+   <p class = "center"><%= f.submit 'Send invite', :class => 'button blue longer' %></p>
+
+
+  <% end %>
+</div>

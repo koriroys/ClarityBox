@@ -1,26 +1,33 @@
 <div class = "non-color-page">
 
+<div class = "smaller-container">
 
-<h2>Your response</h2>
+  <h2>Your response</h2>
+
+ <h5 class = "small-top-space">(<%=@response.question.week.start_date.strftime("%B %e") %> - <%=@response.question.week.end_date.strftime("%B %e") %>)</h5>
 
 
-    <h3 class = "top-space center italic">
+    <h3 class = "small-top-space center">
       "<%= @response.question.question_text %>"
     </h3>
 
 
-  <% if @response.yes_response == true %>
+<div class = "indiv-response group">
+    <%= image_tag @response.user.avatar_url, :class => 'avatar medium small-top-space' %>
 
-    <h4 class = "top-space center" >You responded, "Yes."</h4>
+    <% if @response.yes_response == true %>
+
+    <h3><b class = "color">Yes</b></h3>
 
     <% else %>
 
-    <h4 class = "top-space center" >You responded, "No."</h4>
+    <h3><b>No</b></h3>
 
   <% end %>
 
+  <h4><em><%= @response.response_text %></em></h4>
 
-  <h4 class = "small-top-space center" >Your thoughts:  "<%= @response.response_text %>"</h4>
+</div>
 
     <% if @response.public_response == true %>
 
@@ -36,10 +43,11 @@
 
   <p class = "center top-space"><%= link_to 'View the rollup', question_responses_url(@question), :class => 'button blue' %></p>
 
-  <p class = "center"><%= link_to 'Edit your response', edit_question_response_url(@question, @response) %></p>
+  <p class = "top-space center"><%= link_to 'Edit your response', edit_question_response_url(@question, @response) %></p>
 
 <% if admin? || super_admin? %>
   <p class = "center"><%= link_to 'Go back to all the questions', questions_url %></p>
 <% end %>
 
+</div>
 </div>

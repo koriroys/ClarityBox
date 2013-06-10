@@ -48,3 +48,5 @@ gem 'carrierwave'
 
 # gem 'mail', '2.1.3'
 
+gem 'clockwork'
+

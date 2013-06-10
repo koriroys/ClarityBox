@@ -1,0 +1,42 @@
+<%= form_for(@app_request) do |f| %>
+  <% if @app_request.errors.any? %>
+    <div id="error_explanation">
+      <p class = "center">
+      <% @app_request.errors.full_messages.each do |msg| %>
+        <p class = "center"><%= msg %></p>
+      <% end %>
+    </div>
+  <% end %>
+
+
+  <div class = "form">
+
+    <div class = "group left">
+<!--      <%= f.label :name, 'Full name',{:class => 'block label white'} %> -->
+      <%= f.text_field :name, {:class => 'field', :placeholder => 'Full Name'} %>
+    </div>
+
+
+  <div class="group right">
+<!--     <%= f.label :company, 'Company name', {:class => 'block label white'} %> -->
+    <%= f.text_field :company, {:class => 'field', :placeholder => 'Company name'} %>
+  </div>
+
+
+  <div class="group">
+<!--     <%= f.label :email, 'Your Email', {:class => 'block label'} %> -->
+    <%= f.text_field :email, {:class => 'field longer', :placeholder => 'you@example.com'} %>
+  </div>
+
+
+  <div class="group">
+<!--     <%= f.label :message, 'Say hi (optional)', {:class => 'block label' } %> -->
+    <%= f.text_area :message, {:class => 'field longer tall', :placeholder => 'Say hi (optional)'}%>
+  </div>
+
+    <%= f.submit 'Get invited', {:class => 'button longer'} %>
+
+<% end %>
+
+</div>
+

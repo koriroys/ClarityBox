@@ -3,7 +3,7 @@
 
 <% if super_admin? %>
 
-  <h2>All users </h2>
+  <h2>All Employees </h2>
   <h5>All Companies</h5>
 
   <div class = "smaller-container">
@@ -21,15 +21,16 @@
       </div>
 
       <p class = "right"> <%= link_to 'Edit', edit_user_url(user) %></p>
+     <p><%= link_to 'Delete', user_url(user), method: 'delete', data: { confirm: 'You sure about that?'} %></p>
 
 
     <% end %>
 
-      <p class = "large-top-space center"> <%= link_to 'Add a user', new_user_url, :class => 'button gray' %></p>
+     <p class = "large-top-space center"> <%= link_to 'Invite a user', invite_new_url, :class => 'button gray ' %></p>
 
   <% else %>
 
-  <h2>All users</h2>
+  <h2>Employees</h2>
   <h5><%= current_user.company.name %></h5>
 
    <div class = "smaller-container">
@@ -58,7 +59,10 @@
      <% end %>
 
     <% if admin? %>
-        <p class = "large-top-space center"><a href = "#" class = "button gray">Invite users<a></p>
+
+          <p class = "center"><%= link_to 'Invite users', invite_new_url, :class => 'button gray large-top-space center' %></p>
+
+
     <% end %>
 
 

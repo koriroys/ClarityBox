@@ -2,27 +2,42 @@
 
 <div class = "app-home-page">
 
-  <div class = "container">
+  <div class = "container group">
 
-      <h1 class = "center">Welcome to
-          <% if signed_in? %>
-            your
-          <% end %>
-        ClarityBox.</h1>
+      <% if !signed_in? %>
+
+      <h1 class = "center">
+        ClarityBox</h1>
+<div class = "large-logo">
+</div>
+
+  <% end %>
+
+<% if signed_in? %>
 
 
+      <h2 class = "center">
+       Welcome <%= current_user.first_name %>!</h2>
 
-  <% if signed_in? %>
+<!--        <div class = "large-logo">
+      </div>
+ -->
+<Div class = "center">
+      <%= image_tag current_user.avatar_url, :class => 'avatar large' %>
 
+</div>
         <% if super_admin? %>
           <div class = "top-space center">
-            <%= link_to 'View the companies', companies_url, :class => 'button'%>
-          </div>
+            <%= link_to 'View companies', companies_url, :class => 'button square'%>
+
+        <%= link_to 'View invites', app_requests_url, :class => 'button square'%>
+      </div>
         <% end %>
 
         <% if admin? %>
           <div class = "top-space center">
-            <%= link_to 'See your company clearly', company_url(current_user.company), :class => 'button'%>
+            <%= link_to 'Your company', company_url(current_user.company), :class => 'button'%>
+            <%= link_to 'Your profile', user_url(current_user), :class => 'button square'%>
           </div>
         <% end %>
 
@@ -36,7 +51,7 @@
 
 
        <div class = "top-space center">
-          <%= link_to 'Create an account', new_user_url, :class => 'button'%>
+          <%= link_to 'Get invited', new_app_request_url, :class => 'button'%>
         </div>
   <% end %>
 </div>

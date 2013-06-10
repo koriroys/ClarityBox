@@ -88,6 +88,24 @@ put '/blog/:id' => 'Posts#update'
 
       get '/app', :controller => 'App', :action => 'index', :as => 'app_home'
 
+#------------------------------
+
+
+# Routes for App Requests
+
+
+  # resources :app_requests
+
+
+# CREATE
+  get '/app_requests/new', controller: 'AppRequests', action: 'new', as: 'new_app_request'
+  post '/app_requests', controller: 'AppRequests', action: 'create'
+
+  # READ
+  get '/app_requests', controller: 'AppRequests', action: 'index', as: 'app_requests'
+
+# THANKS
+  get '/app_requests/thanks' => 'AppRequests#thanks', :as => 'thanks'
 
 #------------------------------
 
@@ -98,7 +116,6 @@ put '/blog/:id' => 'Posts#update'
     delete '/sessions' => 'sessions#destroy', as: 'session'
 
     #------------------------------
-
 
 
      # Routes for the Company resource:
@@ -149,7 +166,14 @@ put '/blog/:id' => 'Posts#update'
   #------------------------------
 
 
+
 # Routes for the User resource:
+
+#EMPLOYEE INVITE
+
+#See new invite form
+  get '/users/invite' => 'Users#invite_new', as: :invite_new
+
 
 #CREATE
 
@@ -171,9 +195,6 @@ put '/blog/:id' => 'Posts#update'
 #DELETE
 
   delete '/users/:id' => 'Users#destroy'
-
-
-
 
 
 

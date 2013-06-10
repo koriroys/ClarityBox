@@ -1,0 +1,12 @@
+<p>Hi <%= @user.first_name %>,</p>
+
+<p><%= @current_user.first_name %> has invited you to ClarityBox, a way to help <%= @company.name %> communicate better.</p>
+
+<p>Here is your temporary password: <%= @temp_pass %>
+
+ <p>You can log in and change your password <%= link_to 'here', new_session_url %>.
+</p>
+
+
+<p>Let me know if you have any questions,</p>
+<p>Claire</p>

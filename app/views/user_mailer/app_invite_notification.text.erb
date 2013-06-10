@@ -1,0 +1,9 @@
+You received an app invite request:
+
+Name:  <%= @app_request.name %>
+Email:  <%= @app_request.email %>
+Company:  <%= @app_request.company %>
+Message:  <%= @app_request.message %>
+Requested at: <%= @app_request.created_at %>
+
+Log in to view it <%= link_to 'here', new_session_url %>.
