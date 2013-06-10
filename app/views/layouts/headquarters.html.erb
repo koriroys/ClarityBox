@@ -2,13 +2,12 @@
 <html>
 <head>
   <title>ClarityBox</title>
- <script type="text/javascript" src="//use.typekit.net/bmv8eic.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-
   <%= stylesheet_link_tag    "headquarters", :media => "all" %>
-  <%= javascript_include_tag "headquarters" %>
+   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+   <script type="text/javascript" src="//use.typekit.net/bmv8eic.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
 
 </head>
 <body>
@@ -16,43 +15,67 @@
 
   <!--Navigation-->
 
-<header class = "primary-nav">
+
+<script>
+  $(document).scroll(function () {
+    $("header").css("background", "rgba(255,255,255, 0.7)");
+  });
+
+
+  // if $(window).scrollTop(function () {
+  //   $("header").css("background", "none");
+  // });
+
+
+
+</script>
+
+
+<header class = "primary-nav is-opaque">
 
   <div class = "sticky container">
 
-    <h1> <%= link_to 'ClarityBox', about_url, :class => 'nav-logo' %></h1>
+    <h1> <%= link_to 'ClarityBox', root_url, :class => 'nav-logo' %></h1>
 
-    <nav class = "nav-elements">
+    <nav class = "nav-elements many">
       <ul>
-        <li><a href="/about/#problem">Problem</a></li>
+   <!--      <li><a href="/about/#problem">Problem</a></li>
         <li><a href="/about/#solution">Solution</a></li>
-        <li><a href="/about/#process">Process</a></li>
-        <li><a href="/about/#who">Who I Am</a></li>
+         <li><a href="/about/#process">Process</a></li>
+        <li><a href="/about/#process">Values</a></li>
         <li><a href="/about/#testimonials">Testimonials</a></li>
-        <li class = "color"><a href="/about/#contact">Contact</a></li>
+        <li><a href="/about/#who">Who I Am</a></li>
+         <li id = "button-header-many"><%= link_to 'Contact', '/#contact' %></li> -->
+      <li id = "button-header"><%= link_to 'Contact', '/#contact' %></li>
+      <li class = "no-hover"><%= link_to image_tag('twitter.png', :id => 'twitter'),'http://twitter.com/theclaritybox' %></li>
+
       </ul>
     </nav>
 
   </div>
 </header>
 
+
 <!-- Main content -->
 
 <%= yield %>
+
 
 <!-- Footer -->
 
 
   <footer class = "group">
 
-    <ul>
-      <li><%= link_to 'Story', story_url %></li>
-      <li><%= link_to 'Philosophy', philosophy_url %></li>
-      <li><%= link_to 'Blog', 'http://clairelew.com/blog' %></li>
-      <li><%= link_to 'Twitter', 'http://twitter.com/theclaritybox' %></li>
+    <ul class = "main-items">
+      <li class = "main-items"><%= link_to 'Story', story_url %></li>
+      <li class = "main-items"><%= link_to 'Philosophy', philosophy_url %></li>
+      <li class = "main-items"><%= link_to 'Blog', posts_url %></li>
     </ul>
 
-    <p class = "footer"> &copy; 2013 Made with love by Claire </p>
+
+      <h5 = "footer-small">claire@claritybox.co | 612.520.1476</h5>
+
+    <p> &copy; 2013 Claire Lew. All rights reserved. </p>
 
   </footer>
 

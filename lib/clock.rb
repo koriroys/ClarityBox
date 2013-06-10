@@ -4,8 +4,6 @@ require 'clockwork'
 
 include Clockwork
 
-
-
 every(30.minutes, 'Check for scheduled email') do
   user = User.find(2)
   now = DateTime.now
