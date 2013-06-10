@@ -1,4 +1,6 @@
-<h1>Listing work_requests</h1>
+<div class = "section container">
+
+<h3 class = "center">All Project Inquiries</h3>
 
 <table>
   <tr>
@@ -17,6 +19,7 @@
     <td><%= work_request.company %></td>
     <td><%= work_request.email %></td>
     <td><%= work_request.message %></td>
+    <td><%= time_ago_in_words(work_request.created_at)%> ago</td>
 
   </tr>
 <% end %>
@@ -24,3 +27,4 @@
 
 <br />
 
+</div>
