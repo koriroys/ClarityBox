@@ -13,22 +13,17 @@ every(30.minutes, 'Check for scheduled email') do
   questions = Question.all
     questions.each do |question|
       ask_at_datetime = question.ask_at
+      remind_at_datetime = question.remind_at
+      send_roll_up_at_datetime = question.send_roll_up_at
+
       if ask_at_datetime >= now - 15.minutes && ask_at_datetime < now + 15.minutes
         UserMailer.question_email(user, question).deliver
       end
-    end
 
-  questions = Question.all
-    questions.each do |question|
-      remind_at_datetime = question.remind_at
       if remind_at_datetime >= now - 15.minutes && remind_at_datetime < now + 15.minutes
         UserMailer.reminder_email(user, question).deliver
       end
-    end
 
-  questions = Question.all
-    questions.each do |question|
-      send_roll_up_at_datetime = question.send_roll_up_at
       if send_roll_up_at_datetime >= now - 15.minutes && send_roll_up_at_datetime < now + 15.minutes
         UserMailer.rollup_email(user, question).deliver
       end
