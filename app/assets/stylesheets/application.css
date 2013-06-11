@@ -548,13 +548,13 @@ p.border-bottom {
 }
 
 .small{
-  width: 60px;
+  width: 70px;
   margin-right: 30px;
   border: 6px solid #fff;
 }
 
 .extra-small {
-  width: 35px;
+  width: 42px;
   margin-right: 25px;
   border: 2px solid #fff;
   margin-top: -13px;
@@ -572,7 +572,7 @@ p.border-bottom {
 }
 
 .user-response h4{
-  margin-top: 12px;
+  margin-top: 5px;
 }
 
 .user-display{
