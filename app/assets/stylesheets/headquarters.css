@@ -111,7 +111,7 @@ b, strong {
 
 body {
   background: #FFF;
-  font-family: 'proxima-nova', 'Georgia', Arial, Helvetica, sans-serif;
+  font-family: 'proxima-nova', Arial, Helvetica, sans-serif;
   color: #454545;
 }
 
@@ -125,9 +125,9 @@ body {
 a:link {
   text-decoration:none;
 -webkit-transition: all .2s ease-out;
-  -moz-transition: all .2s ease-out;
-   -o-transition: all .2s ease-out;
-      transition: all .2s ease-out;
+   -moz-transition: all .2s ease-out;
+     -o-transition: all .2s ease-out;
+        transition: all .2s ease-out;
 /*  color: #F37359;*/
 /*  color: #BABABA;*/
 }
@@ -219,6 +219,10 @@ p {
 
 header {
   position: fixed;
+    -webkit-transition: background 1s ease-out;
+     -moz-transition: background 1s ease-out;
+       -o-transition: background 1s ease-out;
+          transition: background 1s ease-out;
 }
 
 .primary-nav{
@@ -228,11 +232,10 @@ header {
   border-bottom: 1px solid #D6D6D6;*/
 }
 
-/*
+
 .is-opaque{
   background: rgba(255,255,255, 0.7);
-  display: none;
-}*/
+}
 
 .sticky{
   height: 20px;
@@ -281,6 +284,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
 
 /*Contact Nav Icon*/
 
@@ -604,15 +608,36 @@ header {
 
 #tsl{
   padding:60px 60px 10px;
+  opacity: .5;
+  -webkit-transition: opacity .3s linear;
+     -moz-transition: opacity .3s linear;
+       -o-transition: opacity .3s linear;
+          transition: opacity .3s linear;
+
+}
+
+#tsl:hover{
+  opacity: 1;
 }
 
 #signals{
   width: 200px;
-  background: #fff;
+/*  background: #fff;*/
   padding: 20px;
   border-radius: 4px;
   margin-left: 60px;
   margin-top: 60px;
+  opacity: .5;
+  -webkit-transition: opacity .3s linear;
+     -moz-transition: opacity .3s linear;
+       -o-transition: opacity .3s linear;
+          transition: opacity .3s linear;
+/*  -webkit-filter: grayscale(0);*/
+}
+
+#signals:hover{
+  opacity: 1;
+/*    opacity: .5;*/
 }
 
 .quote{
@@ -827,6 +852,10 @@ h4.blog {
   font-family:  'proxima-nova', 'Georgia', Arial, Helvetica, sans-serif;
   letter-spacing: 3px;
   margin: 10px 0;
+  -webkit-transition: all .2s ease-out;
+     -moz-transition: all .2s ease-out;
+       -o-transition: all .2s ease-out;
+          transition: all .2s ease-out;
 }
 
 .button:hover {
@@ -845,6 +874,7 @@ h4.blog {
     padding: 18px;
     border: 3px solid;
     font-weight: 400;
+
 }
 
 .button-center{
@@ -956,7 +986,8 @@ footer a:link{
 }
 
 footer a:visited{
-  color: #267569;
+  color: #33a190;
+
 }
 
 footer a:hover{

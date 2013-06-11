@@ -17,21 +17,31 @@
 
 
 <script>
+$(document).ready(function () {
+  /* Header scroll */
   $(document).scroll(function () {
-    $("header").css("background", "rgba(255,255,255, 0.7)");
+    var scrollTop = $(document).scrollTop();
+    if (scrollTop <= 175){
+      $("header").removeClass("is-opaque");
+    }
+    else{
+      $("header").addClass("is-opaque");
+    }
   });
 
-
-  // if $(window).scrollTop(function () {
-  //   $("header").css("background", "none");
-  // });
-
-
+  /* Local scroll*/
+  $("#button-header").click(function(){
+    var offset = $("#contact").offset();
+      console.log(offset["top"]);
+    $("html, body").animate({ scrollTop: offset["top"]}, 3000);
+    return false;
+  });
+});
 
 </script>
 
 
-<header class = "primary-nav is-opaque">
+<header class = "primary-nav">
 
   <div class = "sticky container">
 
@@ -46,7 +56,7 @@
         <li><a href="/about/#testimonials">Testimonials</a></li>
         <li><a href="/about/#who">Who I Am</a></li>
          <li id = "button-header-many"><%= link_to 'Contact', '/#contact' %></li> -->
-      <li id = "button-header"><%= link_to 'Contact', '/#contact' %></li>
+      <li><%= link_to 'Contact', '/#contact', :id => "button-header" %></li>
       <li class = "no-hover"><%= link_to image_tag('twitter.png'),'http://twitter.com/theclaritybox', :id => 'twitter' %></li>
 
       </ul>
