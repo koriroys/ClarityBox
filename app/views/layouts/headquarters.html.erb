@@ -29,13 +29,30 @@ $(document).ready(function () {
     }
   });
 
-  /* Local scroll*/
+    /* Local "Logo" scroll*/
+  $(".nav-logo").click(function(){
+    var offset = $(".main-callout").offset();
+      console.log(offset["top"]);
+    $("html, body").animate({ scrollTop: offset["top"]}, 70);
+    return false;
+  });
+
+  /* Local "Contact" scroll*/
   $("#button-header").click(function(){
     var offset = $("#contact").offset();
       console.log(offset["top"]);
     $("html, body").animate({ scrollTop: offset["top"]}, 3000);
     return false;
   });
+
+    /* Local "Get Clarity" scroll*/
+  $("#call-to-action").click(function(){
+    var offset = $("#problem").offset();
+      console.log(offset["top"]);
+    $("html, body").animate({ scrollTop: offset["top"]}, 500);
+    return false;
+  });
+
 });
 
 </script>
