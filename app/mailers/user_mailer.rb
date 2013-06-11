@@ -7,15 +7,15 @@ default :from => "Claire Lew <claire@claritybox.co>"
     @current_user = current_user
     @company = user.company
     mail(
-      :to => "#{user.first_name} #{user.last_name} <#{user.email}>",
-      :subject => "#{current_user.first_name} invited you to ClarityBox"
+      :to => "#{@user.first_name} #{@user.last_name} <#{@user.email}>",
+      :subject => "#{@current_user.first_name} invited you to ClarityBox"
        )
   end
 
   def app_invite_request(app_request)
     @app_request = app_request
     mail(
-      :to => "#{app_request.name} <#{app_request.email}>",
+      :to => "#{@app_request.name} <#{@app_request.email}>",
       :subject => "Thanks for your invite request!"
        )
   end
@@ -24,7 +24,7 @@ default :from => "Claire Lew <claire@claritybox.co>"
     @app_request = app_request
     mail(
       :to => "Claire Lew <claire@claritybox.co>",
-      :subject => "App invite request from #{app_request.name}"
+      :subject => "App invite request from #{@app_request.name}"
       )
   end
 
@@ -33,8 +33,8 @@ default :from => "Claire Lew <claire@claritybox.co>"
     @question = question
     @company = user.company
     mail(
-      :to => "#{user.first_name} #{user.last_name} <#{user.email}>",
-      :subject => "This week's question (#{question.week.start_date.strftime("%B %e")})"
+      :to => "#{@user.first_name} #{@user.last_name} <#{@user.email}>",
+      :subject => "This week's question (#{@question.week.start_date.strftime("%B %e")})"
        )
   end
 
@@ -43,8 +43,8 @@ default :from => "Claire Lew <claire@claritybox.co>"
     @question = question
     @company = user.company
     mail(
-      :to => "#{user.first_name} #{user.last_name} <#{user.email}>",
-      :subject => "Reminder for #{question.week.start_date.strftime("%B %e")}"
+      :to => "#{@user.first_name} #{@user.last_name} <#{@user.email}>",
+      :subject => "Reminder for #{@question.week.start_date.strftime("%B %e")}"
        )
   end
 
@@ -54,11 +54,19 @@ default :from => "Claire Lew <claire@claritybox.co>"
     @question = question
     @company = user.company
     mail(
-      :to => "#{user.first_name} #{user.last_name} <#{user.email}>",
-      :subject => "This week's rollup (#{question.week.start_date.strftime("%B %e")})"
+      :to => "#{@user.first_name} #{@user.last_name} <#{@user.email}>",
+      :subject => "This week's rollup (#{@question.week.start_date.strftime("%B %e")})"
        )
   end
 
+
+  def work_request_notification(work_request)
+    @work_request = work_request
+    mail(
+      :to => "Claire Lew <claire@claritybox.co>",
+      :subject => "Project inquiry from #{@work_request.name}"
+      )
+  end
 
 
 end

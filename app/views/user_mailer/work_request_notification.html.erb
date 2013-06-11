@@ -1,0 +1,10 @@
+<p>You received a Project Inquiry from:</p>
+
+<p>Name:  <%= @work_request.name %></p>
+<p>Company:  <%= @work_request.company %></p>
+<p>Email:  <%= @work_request.email %></p>
+<p>Message:  <%= @work_request.message %></p>
+
+<p>Created at:  <%= @work_request.created_at.strftime("%D") %> at <%= @work_request.created_at.strftime("%l:%M %p") %></p>
+
+<p>Log in to view it <%= link_to 'here', new_session_url %>.</p>

@@ -23,6 +23,7 @@ class WorkRequestsController < ApplicationController
     @work_request = WorkRequest.new(params[:work_request])
 
       if @work_request.save
+        UserMailer.work_request_notification(@work_request).deliver
         redirect_to work_request_thanks_url
       else
         redirect_to root_url, notice: "Woops, make sure you enter an email address before submitting the form."
