@@ -1,5 +1,6 @@
 class WorkRequestsController < ApplicationController
-
+  before_filter :require_signed_in_user, only: [:index]
+  before_filter :require_super_admin, only: [:index]
 
   # GET /work_requests
   # GET /work_requests.json
