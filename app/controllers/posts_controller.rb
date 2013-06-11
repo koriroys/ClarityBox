@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  before_filter :require_signed_in_user, except: [:index, :show]
+  before_filter :require_super_admin, except: [:index, :show]
+
   # GET /posts
   # GET /posts.json
 
