@@ -22,15 +22,20 @@
 <!--        <div class = "large-logo">
       </div>
  -->
-<Div class = "center">
+<div class = "center">
       <%= image_tag current_user.avatar_url, :class => 'avatar large' %>
 
 </div>
         <% if super_admin? %>
           <div class = "top-space center">
-            <%= link_to 'View companies', companies_url, :class => 'button square'%>
+            <%= link_to 'All companies', companies_url, :class => 'button-small outline'%>
 
-        <%= link_to 'View invites', app_requests_url, :class => 'button square'%>
+        <%= link_to 'App invites', app_requests_url, :class => 'button-small outline'%>
+
+        <%= link_to 'Project inquiries', work_requests_url, :class => 'button-small outline' %>
+
+        <%= link_to 'New blog post', new_post_url, :class => 'button-small outline' %>
+
       </div>
         <% end %>
 
