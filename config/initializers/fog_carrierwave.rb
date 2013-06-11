@@ -1,8 +1,8 @@
 CarrierWave.configure do |config|
   config.fog_credentials = {
     :provider               => 'AWS',
-    :aws_access_key_id      => 'AKIAIMZAREP3R6ZG7JSQ',
-    :aws_secret_access_key  => '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',
+    :aws_access_key_id      => ENV['CLARITYBOX_S3_KEY'],
+    :aws_secret_access_key  => ENV['CLARITYBOX_S3_SECRET'],
   }
   config.fog_directory = 'claritybox'
   config.fog_public = false
