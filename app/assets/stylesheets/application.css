@@ -589,8 +589,13 @@ p.border-bottom {
 }
 
 .indiv-response h3{
-  margin-top: 60px;
+  margin-top: 40px;
 }
+
+.indiv-response h4{
+  font-size: 20px;
+}
+
 
 
 /*Page headers*/
