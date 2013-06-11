@@ -114,6 +114,7 @@ put '/blog/:id' => 'Posts#update'
     get '/app/signin' => 'sessions#new', as: 'new_session'
     post '/sessions' => 'sessions#create', as: 'sessions'
     delete '/sessions' => 'sessions#destroy', as: 'session'
+    get '/signout' => 'sessions#destroy', as: 'signout'
 
     #------------------------------
 
