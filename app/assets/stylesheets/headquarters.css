@@ -66,6 +66,18 @@ b, strong {
 }
 
 
+/*
+Notice*/
+
+.notice{
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  background-color: #E88766;
+  color: #8A391E;
+/*  position: fixed;*/
+}
+
 
 
 /*

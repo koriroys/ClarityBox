@@ -1,4 +1,6 @@
 class WorkRequestsController < ApplicationController
+
+
   # GET /work_requests
   # GET /work_requests.json
 
@@ -22,7 +24,7 @@ class WorkRequestsController < ApplicationController
       if @work_request.save
         redirect_to work_request_thanks_url
       else
-        redirect app_home_url
+        redirect_to root_url, notice: "Woops, make sure you enter an email address before submitting the form."
       end
   end
 
