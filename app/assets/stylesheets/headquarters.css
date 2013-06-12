@@ -619,13 +619,14 @@ header {
 }
 
 #tsl{
+  width: 280px;
   padding:60px 60px 10px;
-  opacity: .5;
+  opacity: .7;
   -webkit-transition: opacity .3s linear;
      -moz-transition: opacity .3s linear;
        -o-transition: opacity .3s linear;
           transition: opacity .3s linear;
-
+  -webkit-filter: grayscale(1);
 }
 
 #tsl:hover{
@@ -633,13 +634,12 @@ header {
 }
 
 #signals{
-  width: 200px;
+  width: 280px;
 /*  background: #fff;*/
-  padding: 20px;
   border-radius: 4px;
-  margin-left: 60px;
-  margin-top: 60px;
+  margin-top: 30px;
   opacity: .5;
+  -webkit-filter: grayscale(1);
   -webkit-transition: opacity .3s linear;
      -moz-transition: opacity .3s linear;
        -o-transition: opacity .3s linear;
@@ -653,7 +653,7 @@ header {
 }
 
 .quote{
-  font-size: 17px;
+  font-size: 22px;
   font-style: italic;
 }
 
@@ -663,7 +663,15 @@ header {
   text-align: center;
   letter-spacing: 1px;
   display: block;
-  margin-top: 5px;
+  margin-top: 7px;
+  font-size: 22px;
+}
+
+.quote i{
+  text-transform: none;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-style: normal;
 }
 
 /*Who I Am*/
