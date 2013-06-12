@@ -622,15 +622,21 @@ header {
   width: 280px;
   padding:60px 60px 10px;
   opacity: .7;
-  -webkit-transition: opacity .3s linear;
+/*  -webkit-transition: opacity .3s linear;
      -moz-transition: opacity .3s linear;
        -o-transition: opacity .3s linear;
-          transition: opacity .3s linear;
+          transition: opacity .3s linear;*/
   -webkit-filter: grayscale(1);
+   -webkit-transition: all .3s linear;
+     -moz-transition: all .3s linear;
+       -o-transition: all .3s linear;
+          transition: all .3s linear;
+
 }
 
 #tsl:hover{
   opacity: 1;
+    -webkit-filter: grayscale(0);
 }
 
 #signals{

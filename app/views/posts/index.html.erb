@@ -14,7 +14,7 @@
 
     <p class = "small center">by <%= post.name %></p>
 
-    <p class = "top-space"><%= post.content %></p>
+    <p class = "top-space"><%= truncate(post.content, :length => 250) %></p>
 
 
     <%= link_to 'Show', post %>
