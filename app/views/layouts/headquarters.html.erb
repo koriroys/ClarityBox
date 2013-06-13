@@ -110,11 +110,7 @@ $(document).scroll(function () {
         <li><a href="/about/#who">Who I Am</a></li>
          <li id = "button-header-many"><%= link_to 'Contact', '/#contact' %></li> -->
       <li id = "tell-friend">
-        <%= mail_to '?',
-            'Tell your friends',
-            :subject => 'Have you heard of ClarityBox?',
-            :body => "It's is a service that helps you see your company clearly. You get the insights to improve your company through in-depth interviews, comprehensive and thoughtful analysis, and a carefully-crafted debrief. Check it out and consider contacting them -   http://claritybox.co",
-            :id => 'tell-friend' %>
+        <a href = "mailto:?&subject=Have you heard of ClarityBox?&body=It's a service that helps you see your company clearly. You get the insights to improve your company through in-depth interviews, a comprehensive and thoughtful analysis, and a carefully-crafted debrief. Check it out and consider contacting Claire at http://claritybox.co" id = "tell-friend">Tell your friends</a>
       </li>
 
       <li><%= link_to 'Contact', '/#contact', :id => "button-header" %></li>
