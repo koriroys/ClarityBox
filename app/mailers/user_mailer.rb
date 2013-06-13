@@ -16,7 +16,7 @@ default :from => "Claire Lew <claire@claritybox.co>"
     @app_request = app_request
     mail(
       :to => "#{@app_request.name} <#{@app_request.email}>",
-      :subject => "Thanks for your invite request!"
+      :subject => "Your ClarityBox App Invite"
        )
   end
 
