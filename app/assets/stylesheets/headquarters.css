@@ -280,12 +280,18 @@ header {
   color: #3DB8A5;
 }
 
+
+
 .nav-elements{
-  float: right;
+/*  float: right;*/
 /*  margin-top: 5px;*/
-  width: 190px;
+/*  width: 190px;*/
 }
 
+.nav-elements ul{
+  width: 390px;
+  float: right;
+}
 
 .nav-elements li{
   float: left;
@@ -295,8 +301,24 @@ header {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
+  width: 160px;
 }
 
+/*
+Tell a friend*/
+
+li#tell-friend{
+  margin-right: 10px;
+}
+
+a#tell-friend{
+  color: #33a190;
+}
+
+a#tell-friend:hover{
+  color: #2A7D70;
+  background: none;
+}
 
 /*Contact Nav Icon*/
 
@@ -324,13 +346,17 @@ header {
 /*Twitter Nav Icon*/
 
 #twitter{
-  margin-left: 20px;
+  margin-left: 10px;
   margin-top: -9px;
   display: block;
 }
 
 #twitter img{
   height: 35px;
+}
+
+li#twitter-icon.no-hover{
+  width: 50px;
 }
 
 
